@@ -94,10 +94,7 @@ export function SiteFooter({ settings, chapters }: { settings: SiteSetting; chap
 
       <div className="container-x relative flex flex-col gap-3 border-t border-white/10 py-6 font-mono text-xs text-white/45 md:flex-row md:items-center md:justify-between">
         <span>© {new Date().getFullYear()} IEEE Student Branch, University of Peradeniya</span>
-        <span className="flex flex-wrap gap-x-4 gap-y-1">
-          <span>Events synced live from IEEE vTools</span>
-          <a href="https://app.pagescms.org" className="hover:text-white">Webmaster sign-in</a>
-        </span>
+        <span>Events synced live from IEEE vTools</span>
       </div>
     </footer>
   )

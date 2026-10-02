@@ -1,5 +1,5 @@
 {
-  "id": "6",
+  "id": "65dc5c90-1c59-5a30-8d6a-c4f32029a1fd",
   "title": "AI and satellite-driven health forecasting",
   "kind": "recap",
   "date": "2025-07-24",
@@ -7,7 +7,7 @@
   "cover": "/media/wie-health-forecasting.jpg",
   "content": "<p>AI and Satellite-Driven Health Forecasting was a collaborative event organised by the IEEE ComSoc Student Chapter and the IEEE Women in Engineering Student Branch Affinity Group of the University of Peradeniya.</p><p>Held at the Department of Electrical and Electronic Engineering, the session featured Dr. Thilanka Munasinghe, Lead Research Specialist at the Institute for Data Applications and Exploration (IDEA) and Future of Computing Institute (FOCI), Rensselaer Polytechnic Institute, who explored the use of Graph Neural Networks and NASA satellite data to predict dengue outbreaks across Sri Lanka.</p><p>The talk highlighted the powerful intersection of AI, space technology and public-health innovation.</p>",
   "slug": "ai-and-satellite-driven-health-forecasting",
-  "chapter": "2",
+  "chapter": "adebb380-4d49-51bc-a9d9-f005d5cd42d8",
   "featured": true,
   "_status": "published",
   "updatedAt": "2026-09-27T04:47:28.887Z"

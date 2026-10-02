@@ -14,7 +14,8 @@ media:
     output: /files
     categories:
       - document
-      - archive
+      - compressed
+      - spreadsheet
     rename: safe
 components:
   block_chapterAbout:
@@ -2312,6 +2313,8 @@ content:
         type: uuid
         label: Entry ID
         description: Created automatically — used when other entries link to this one.
+        options:
+          generate: false
       - name: layout
         label: Sections
         type: block

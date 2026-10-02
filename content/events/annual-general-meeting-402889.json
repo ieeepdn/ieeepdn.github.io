@@ -1,5 +1,5 @@
 {
-  "id": "vtools-402889",
+  "id": "8a393c74-d813-5424-a0e1-4e92b2d9a384",
   "slug": "annual-general-meeting-402889",
   "title": "Annual General Meeting",
   "start": "2024-01-19T14:15",
@@ -13,9 +13,9 @@
   "hostName": "University of Peradeniya WIE",
   "vtoolsId": "402889",
   "source": "vtools",
-  "chapter": "2",
+  "chapter": "adebb380-4d49-51bc-a9d9-f005d5cd42d8",
   "category": "meeting",
-  "syncedAt": "2026-10-02T14:43:30.678Z",
+  "syncedAt": "2026-10-02T20:13",
   "updatedAt": "2026-10-02T14:43:30.678Z",
   "cover": "/media/vtools-402889-1.jpg",
   "vtoolsMediaDone": true

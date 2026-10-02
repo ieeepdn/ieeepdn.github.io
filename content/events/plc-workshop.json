@@ -1,5 +1,5 @@
 {
-  "id": "190",
+  "id": "b8a74702-4dd1-5499-95f7-7d109d1adef4",
   "title": "PLC Workshop",
   "start": "2021-01-20T17:00",
   "end": "2021-01-20T19:30",
@@ -15,7 +15,7 @@
   "hostName": "University of Peradeniy,PE31",
   "syncedAt": "2026-10-01T22:18",
   "slug": "plc-workshop",
-  "chapter": "6",
+  "chapter": "48524e5f-f32e-57e6-a6b4-84bd5e468dc5",
   "updatedAt": "2026-10-01T16:48:03.199Z",
   "vtoolsMediaDone": true
 }

@@ -1,5 +1,5 @@
 {
-  "id": "vtools-240231",
+  "id": "0108a654-5d97-59d8-8fe4-d1bfae7604e2",
   "slug": "ias-comrades-phase-1",
   "title": "IAS COMRADES phase 1",
   "start": "2020-02-12T14:00",
@@ -13,9 +13,9 @@
   "hostName": "University of Peradeniy,IA34",
   "vtoolsId": "240231",
   "source": "vtools",
-  "chapter": "8",
+  "chapter": "cd19deed-1b1f-55f4-8365-8ab69507e56c",
   "category": "talk",
-  "syncedAt": "2026-10-02T14:43:26.898Z",
+  "syncedAt": "2026-10-02T20:13",
   "updatedAt": "2026-10-02T14:43:26.898Z",
   "vtoolsMediaDone": true
 }

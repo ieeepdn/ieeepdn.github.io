@@ -57,9 +57,6 @@ export default async function ContactPage() {
             </div>
           </div>
         )}
-        <div className="container-x mt-12 text-ink-3">
-          Webmaster? <a href="https://app.pagescms.org" className="font-semibold text-brand hover:underline">Sign in to Pages CMS</a>.
-        </div>
       </section>
     </>
   )

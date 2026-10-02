@@ -1,5 +1,5 @@
 {
-  "id": "vtools-240239",
+  "id": "c6017dfb-600a-5dde-82a4-9558ac8f586c",
   "slug": "ieee-pcb-design-and-fabrication-workshop-240239",
   "title": "IEEE PCB Design and Fabrication Workshop",
   "start": "2020-03-05T14:00",
@@ -13,9 +13,9 @@
   "hostName": "University of Peradeniya,RA24",
   "vtoolsId": "240239",
   "source": "vtools",
-  "chapter": "7",
+  "chapter": "cd6c5b8e-cc11-538f-99a9-bc6173e6aafb",
   "category": "workshop",
-  "syncedAt": "2026-10-02T14:43:29.534Z",
+  "syncedAt": "2026-10-02T20:13",
   "updatedAt": "2026-10-02T14:43:29.534Z",
   "cover": "/media/vtools-240239-1.jpg",
   "gallery": [

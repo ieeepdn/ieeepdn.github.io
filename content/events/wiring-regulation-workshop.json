@@ -1,5 +1,5 @@
 {
-  "id": "vtools-187480",
+  "id": "dbd45d80-7d81-591f-be43-23a08a952549",
   "slug": "wiring-regulation-workshop",
   "title": "Wiring Regulation Workshop",
   "start": "2019-01-15T08:00",
@@ -14,9 +14,9 @@
   "hostName": "University of Peradeniy,IA34",
   "vtoolsId": "187480",
   "source": "vtools",
-  "chapter": "8",
+  "chapter": "cd19deed-1b1f-55f4-8365-8ab69507e56c",
   "category": "workshop",
-  "syncedAt": "2026-10-02T14:43:26.796Z",
+  "syncedAt": "2026-10-02T20:13",
   "updatedAt": "2026-10-02T14:43:26.796Z",
   "vtoolsMediaDone": true
 }

@@ -1,5 +1,5 @@
 {
-  "id": "vtools-240232",
+  "id": "7560ef62-8eac-5811-aaf5-c5c6eebdf6e6",
   "slug": "the-annual-general-meeting-of-the-ieee-ias-student-branch-chapter-university-of",
   "title": "The Annual General Meeting of the IEEE IAS Student Branch Chapter University of Peradeniya 2020",
   "start": "2020-03-02T13:30",
@@ -13,9 +13,9 @@
   "hostName": "University of Peradeniy,IA34",
   "vtoolsId": "240232",
   "source": "vtools",
-  "chapter": "8",
+  "chapter": "cd19deed-1b1f-55f4-8365-8ab69507e56c",
   "category": "meeting",
-  "syncedAt": "2026-10-02T14:43:26.790Z",
+  "syncedAt": "2026-10-02T20:13",
   "updatedAt": "2026-10-02T14:43:26.790Z",
   "cover": "/media/vtools-240232-1.jpg",
   "gallery": [

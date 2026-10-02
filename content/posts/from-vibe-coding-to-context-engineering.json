@@ -1,5 +1,5 @@
 {
-  "id": "4",
+  "id": "8ea14209-4280-5757-91f8-9214dcc24f2c",
   "title": "From vibe coding to context engineering",
   "kind": "recap",
   "date": "2025-12-10",
@@ -7,7 +7,7 @@
   "cover": "/media/cs-context-engineering.jpg",
   "content": "<p>This technical session explored the transition from informal AI-assisted “vibe coding” to structured context engineering.</p><p>Participants learned how to provide AI systems with clear context, make intentional implementation decisions, and transform rapidly generated prototypes into reliable, production-ready applications suitable for professional software development environments.</p>",
   "slug": "from-vibe-coding-to-context-engineering",
-  "chapter": "3",
+  "chapter": "6bc69de4-a368-575b-8b3a-36ad72fbbe75",
   "featured": false,
   "_status": "published",
   "updatedAt": "2026-09-27T04:47:27.701Z"

@@ -1,6 +1,7 @@
 import 'server-only'
 import fs from 'node:fs'
 import path from 'node:path'
+import { execFileSync } from 'node:child_process'
 import { cache } from 'react'
 import schema from '@/content/schema.json'
 
@@ -35,15 +36,41 @@ const readJson = (file: string): any => {
  * explicit +05:30 so the build (which runs in UTC on GitHub Actions) reads them correctly.
  */
 const LOCAL_DT = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?$/
+/** …and treat empty values ("" or null, which an editor may save after clearing a field) as not set. */
 const zoned = (v: any): any => {
   if (typeof v === 'string') return LOCAL_DT.test(v) ? `${v}+05:30` : v
   if (Array.isArray(v)) return v.map(zoned)
   if (v && typeof v === 'object') {
-    for (const k of Object.keys(v)) v[k] = zoned(v[k])
+    for (const k of Object.keys(v)) {
+      if (v[k] === '' || v[k] === null) delete v[k]
+      else v[k] = zoned(v[k])
+    }
     return v
   }
   return v
 }
+
+/**
+ * When each content file last changed, from the Git history (GitHub Actions checks out the full history).
+ * Pages CMS doesn't stamp entries, so this is what "Page updated 2 days ago" is based on.
+ */
+const gitDates = cache((): Map<string, string> => {
+  const out = new Map<string, string>()
+  try {
+    const log = execFileSync('git', ['log', '--format=@%cI', '--name-only', '--', 'content'], { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })
+    let date = ''
+    for (const line of log.split('\n')) {
+      if (line.startsWith('@')) date = line.slice(1)
+      else if (line && !out.has(line)) out.set(line, date) // newest commit comes first
+    }
+  } catch {
+    // not a Git checkout — fall back to the dates stored in the files
+  }
+  return out
+})
+
+const latest = (...dates: (string | undefined)[]) =>
+  dates.filter((d): d is string => Boolean(d) && !Number.isNaN(new Date(d!).getTime())).sort((a, b) => new Date(b).getTime() - new Date(a).getTime())[0]
 
 /** All entries of a collection folder, raw (not hydrated). */
 export const rawCollection = cache((collection: string): Json[] => {
@@ -58,7 +85,7 @@ export const rawCollection = cache((collection: string): Json[] => {
       // entries created in Pages CMS always get an id (uuid field); fall back to the file name just in case
       if (!doc.id) doc.id = f.replace(/\.json$/, '')
       doc.id = String(doc.id)
-      doc.updatedAt ||= doc.createdAt || fs.statSync(path.join(dir, f)).mtime.toISOString()
+      doc.updatedAt = latest(doc.updatedAt, gitDates().get(`content/${collection}/${f}`)) || doc.createdAt || fs.statSync(path.join(dir, f)).mtime.toISOString()
       doc.createdAt ||= doc.updatedAt
       doc._file = f
       return doc

@@ -21,6 +21,7 @@
  */
 import fs from 'node:fs'
 import path from 'node:path'
+import { randomUUID } from 'node:crypto'
 
 const ROOT = process.cwd()
 const CONTENT = path.join(ROOT, 'content')
@@ -303,7 +304,7 @@ try {
       // only touch the file when vTools actually changed something
       if (JSON.stringify(doc) === before && doc.vtoolsMediaDone !== undefined) return
       if (JSON.stringify(doc) !== before) {
-        doc.syncedAt = new Date().toISOString()
+        doc.syncedAt = local(new Date().toISOString())
         doc.updatedAt = doc.syncedAt
         result.updated++
       }
@@ -312,7 +313,8 @@ try {
       let slug = slugify(ev.title) || `vtools-${ev.id}`
       if (usedSlugs.has(slug)) slug = `${slug}-${ev.id}`
       usedSlugs.add(slug)
-      doc = { id: `vtools-${ev.id}`, slug, ...vtoolsOwned, category: categorise(ev), syncedAt: new Date().toISOString(), updatedAt: new Date().toISOString() }
+      // ids are UUIDs, like entries created in Pages CMS (other entries link to an event by its id)
+      doc = { id: randomUUID(), slug, ...vtoolsOwned, category: categorise(ev), syncedAt: local(new Date().toISOString()), updatedAt: new Date().toISOString() }
       file = `${slug}.json`
       result.created++
     }
