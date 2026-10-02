@@ -1,10 +1,20 @@
 {
   "spotlight": {
-    "active": false,
+    "active": true,
     "style": "banner",
-    "linkType": "page",
+    "showUntil": "2026-10-18T23:50",
+    "linkType": "url",
+    "url": "https://ieec.neduet.edu.pk/ieec_drupal/IEEC_2026_SriLanka",
+    "title": "IEEC International Electrical Engineering Conference",
+    "text": "The 12th IEEE International Electrical Engineering Conference (IEEE IEEC 2026) is a global forum dedicated to advancing research and innovation in electrical and electronic engineering. Jointly organized by NED University of Engineering & Technology, the Institution of Engineers Pakistan, and the University of Peradeniya, the hybrid event will take place on 17–18 October 2026 at the University of Peradeniya.",
+    "venue": "University of Peradeniya, Kandy, Sri Lanka",
+    "countdownTo": "2026-10-17T00:01",
+    "countdownLabel": "Starts In",
+    "image": "/media/ieee-flyer-2-5.png",
+    "logo": "/media/ieee-ieec-2026-logo-smz-resized-transparent.png",
     "inTopBar": false,
-    "inMenu": false
+    "inMenu": true,
+    "menuLabel": "ICEEET 2026"
   },
   "heroKicker": "Est. 19 July 2001 · Faculty of Engineering",
   "heroTitle": "Sri Lanka’s first IEEE Student Branch.",
@@ -42,7 +52,7 @@
   "facebook": "https://www.facebook.com/sb.pera",
   "instagram": "https://www.instagram.com/ieeeuop/",
   "linkedin": "https://www.linkedin.com/company/ieee-student-branch-university-of-peradeniya/",
-  "youtube": "https://www.youtube.com/@ieeeperadeniya8445",
+  "youtube": "https://www.youtube.com/@ieeepdn",
   "vtoolsEnabled": true,
   "vtoolsBranchSpoid": "STB18711",
   "vtoolsHostMatch": "Peradeniy"
