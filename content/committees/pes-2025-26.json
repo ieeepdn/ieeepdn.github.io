@@ -1,0 +1,134 @@
+{
+  "id": "3",
+  "title": "PES · 2025/26",
+  "term": "2025/26",
+  "current": true,
+  "advisors": [
+    {
+      "name": "Prof. Janaka Ekanayake",
+      "position": "Advisor",
+      "photo": "/media/pes-111.jpg"
+    }
+  ],
+  "executive": [
+    {
+      "position": "Chairman",
+      "name": "Mahesha Viduranga",
+      "photo": "/media/pes-112.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "Kavini Thenuwara",
+      "photo": "/media/pes-113.jpg"
+    },
+    {
+      "position": "Vice Chairman",
+      "name": "Janitha Rathnayaka",
+      "photo": "/media/pes-114.jpg"
+    },
+    {
+      "position": "Assistant Secretary",
+      "name": "Tharindi Rathnayake",
+      "photo": "/media/pes-115.jpg"
+    },
+    {
+      "position": "Junior Treasurer",
+      "name": "Tharika Liyanage",
+      "photo": "/media/pes-116.jpg"
+    },
+    {
+      "position": "Industrial Coordinator",
+      "name": "Sachith Wijesooriya",
+      "photo": "/media/pes-117.jpg"
+    },
+    {
+      "position": "Editor",
+      "name": "Thirasaree Chamandika",
+      "photo": "/media/pes-118.jpg"
+    },
+    {
+      "position": "Webmaster",
+      "name": "Piumal Rathnayake",
+      "photo": "/media/pes-122.jpg"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Editorial",
+      "members": [
+        {
+          "name": "Nethali Wijekoon",
+          "role": "member",
+          "position": "Junior Editor",
+          "photo": "/media/pes-119.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "members": [
+        {
+          "name": "Akhila Gunawardena",
+          "role": "member",
+          "position": "Designer",
+          "photo": "/media/pes-120.jpg"
+        },
+        {
+          "name": "Pavan Madushanka",
+          "role": "member",
+          "position": "Junior Designer",
+          "photo": "/media/pes-121.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Program & Publicity",
+      "members": [
+        {
+          "name": "Bhashini Jayathunga",
+          "role": "member",
+          "photo": "/media/pes-123.jpg"
+        },
+        {
+          "name": "N.B. Ashini Senara",
+          "role": "member",
+          "photo": "/media/pes-124.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Finance & Logistics",
+      "members": [
+        {
+          "name": "Himal Dilanga Fernando",
+          "role": "member",
+          "photo": "/media/pes-125.jpg"
+        },
+        {
+          "name": "W. D. Prasanna Rangajith",
+          "role": "member",
+          "photo": "/media/pes-126.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Committee",
+      "members": [
+        {
+          "name": "Kavindu Piyumantha",
+          "role": "member",
+          "position": "Committee Member",
+          "photo": "/media/pes-127.jpg"
+        },
+        {
+          "name": "Chanaka Rathnayaka",
+          "role": "member",
+          "position": "Committee Member",
+          "photo": "/media/pes-128.jpg"
+        }
+      ]
+    }
+  ],
+  "chapter": "6",
+  "updatedAt": "2026-09-28T05:20:50.978Z"
+}

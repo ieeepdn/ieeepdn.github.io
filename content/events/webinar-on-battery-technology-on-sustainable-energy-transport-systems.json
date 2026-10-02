@@ -1,0 +1,29 @@
+{
+  "id": "192",
+  "title": "WEBINAR ON BATTERY TECHNOLOGY ON SUSTAINABLE ENERGY & TRANSPORT SYSTEMS",
+  "start": "2020-06-19T16:00",
+  "end": "2020-06-19T17:00",
+  "category": "talk",
+  "summary": "An online session organized by the IEEE PES Student Branch Chapter of the University of Peradeniya.\n Conducted By Prof.Ghanim Putrus ( Department of Mathematics, Physics and Electrical Engineering )\nProf.Ghanim has over 25 years of working experience in the Electrical Power engineering sector with over 170 publicati…",
+  "descriptionHtml": "<p>An online session organized by the IEEE PES Student Branch Chapter of the University of Peradeniya.</p>\r\n<p>Conducted By <strong>Prof.Ghanim Putrus</strong>&nbsp;( Department of Mathematics, Physics and Electrical Engineering )<br />Prof.Ghanim has over 25 years of working experience in the Electrical Power engineering sector with over 170 publications including one patent.</p>",
+  "venue": "Faculty of Engineering",
+  "city": "peradeniya",
+  "virtual": false,
+  "registrationUrl": "http://bit.ly/IEEE_PES_PERA",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/233188",
+  "cover": "/media/vtools-233188-1.jpg",
+  "gallery": [
+    "/media/vtools-233188-2.jpg",
+    "/media/vtools-233188-3.jpg",
+    "/media/vtools-233188-4.jpg",
+    "/media/vtools-233188-5.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "233188",
+  "hostName": "University of Peradeniy,PE31",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "webinar-on-battery-technology-on-sustainable-energy-transport-systems",
+  "chapter": "6",
+  "updatedAt": "2026-10-01T16:48:04.325Z"
+}

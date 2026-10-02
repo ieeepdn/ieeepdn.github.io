@@ -1,0 +1,97 @@
+{
+  "id": "5",
+  "layout": [
+    {
+      "blockType": "chapterAbout",
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "pageLinks",
+      "eyebrow": "MTT-S flagships",
+      "heading": "Our signature events & projects",
+      "pages": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "events",
+      "eyebrow": "MTT-S events",
+      "heading": "Recent events.",
+      "show": "auto",
+      "limit": 6,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "stories",
+      "eyebrow": "What we’ve been doing",
+      "heading": "Stories & recaps.",
+      "limit": 3,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "gallery",
+      "eyebrow": "Moments",
+      "heading": "MTT-S in pictures.",
+      "layout": "mosaic",
+      "background": "dark",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "people",
+      "eyebrow": "Committee",
+      "heading": "Meet the MTT-S team",
+      "source": "committee",
+      "items": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "cta",
+      "heading": "Get involved with MTT-S.",
+      "text": "Join the team, pitch an event or volunteer at the next one. Every chapter committee is built by students like you.",
+      "buttons": [
+        {
+          "label": "Volunteer",
+          "url": "/volunteer",
+          "variant": "primary"
+        }
+      ]
+    }
+  ],
+  "name": "IEEE Microwave Theory and Technology Society",
+  "shortName": "MTT-S",
+  "slug": "mtt-s",
+  "kind": "chapter",
+  "tagline": "Sri Lanka’s first IEEE MTT-S student branch chapter — antennas, RF and radio astronomy.",
+  "about": "The IEEE Microwave Theory and Technology Society is a global organisation with over 10,000 members and 190 branches. We are honoured to be the first IEEE MTT-S Student Branch Chapter in Sri Lanka, initiated in 2016 to be a strong internode in the chain of IEEE MTT-S.\n\nOur mission is to continue to understand and influence microwave technology and to provide a forum for all microwave engineers. The university offers a fully equipped microwave laboratory, and radio astronomy is one of the chapter’s key projects — the society has provided funding for the development of a 4.6 m parabolic antenna that will serve as a radio telescope for receiving transmissions from space.",
+  "accent": "#4F46E5",
+  "founded": 2016,
+  "order": 4,
+  "logo": "/media/logo-mtts.png",
+  "cover": "/media/mtts-satcap-group.jpg",
+  "highlights": [
+    {
+      "value": "1st",
+      "label": "IEEE MTT-S student chapter in Sri Lanka"
+    },
+    {
+      "value": "2016",
+      "label": "Chapter founded"
+    },
+    {
+      "value": "4.6 m",
+      "label": "Parabolic antenna radio-telescope project"
+    }
+  ],
+  "vtools": {
+    "spoid": "SBC18711C",
+    "hostNameMatch": ",MTT17|Microwave"
+  },
+  "links": {
+    "join": "https://mtt.org/membership/"
+  },
+  "updatedAt": "2026-09-28T05:21:00.218Z"
+}

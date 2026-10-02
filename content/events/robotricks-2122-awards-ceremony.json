@@ -1,0 +1,26 @@
+{
+  "id": "202",
+  "title": "Robotricks 21/22  - Awards ceremony",
+  "start": "2021-10-23T19:30",
+  "end": "2021-10-23T20:30",
+  "category": "talk",
+  "summary": "In the hope of appraising the overall effort of the executive committee and the volunteers of the IEEE, RAS student chapter of the University of Peradeniya, and to evaluate the performance of the enthusiastic participants of the Robotrick&rsquo;21, a task was given to the registrants. It was a simple task, but with…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">In the hope of appraising the overall effort of the executive committee and the volunteers of the IEEE, RAS student chapter of the University of Peradeniya, and to evaluate the performance of the enthusiastic participants of the Robotrick&rsquo;21, a task was given to the registrants. It was a simple task, but with some constraints, to test whether the newly approached young souls to the robotics field has grabbed the knowledge provided by the eight webinars and the two workshops.</span></p>\r\n<p><span style=\"font-weight: 400;\">The awarding session was to award the winners of the mini-competition held and inspire the newbies to achieve their dreams on the field. The keynote speech delivered by Dr. Pantaleon Perera on the 23</span><span style=\"font-weight: 400;\">rd</span><span style=\"font-weight: 400;\"> of October, 2021, at the Awarding Ceremony of Robotricks 2021/22, left the participants to ponder. As he shared his thoughts on the industry&rsquo;s current status quo while stressing that even though we may not have the resources to deliver the end product, we&rsquo;ve got the potential to be the driving force behind a robot&rsquo;s creation. His ideas perfectly lined up with the vision of Robotricks 2021/22, which was to spread extensive and domain-specific knowledge on Robotics among young aspiring robot enthusiasts around Sri Lanka.</span></p>\r\n<p><span style=\"font-weight: 400;\">The Robot Simulation task presented to the participants of Robotricks 2021/22 allowed them to cement further the knowledge they had gathered. The participants were presented with the task of building a simulation of a&nbsp; line following robot from scratch on Webots. The submissions were then subjected to a rigorous evaluation process by a panel of experts. Marks were awarded mainly focusing on the robustness of the algorithms used, the feasibility of the physical design, and the number of sensors used to navigate through the tracks. Robot UNICUS 1 was awarded as the most popular robot based on the Facebook likes received. Robot Maywon by Rusiru Tharinda was awarded the fastest robot in the competition for expeditiously navigating the tracks with the least lap time. The awarding ceremony wouldn&rsquo;t have been complete without awarding the participants who had toiled hard to eliminate loopholes in their algorithms while paying careful attention to the physical design as well. It was truly a tedious task for the panel of judges to sift the best of the best out of nearly 50 submissions received. Following the careful scrutinizing of the Judges, Robot Maywon by Rusiru Tharinda and Robot Godspeed, which was a combined effort of Vinura Wanniarachchi, Kithuruwan Prathapasinghe, Limalka Sadith were able to finish as Joint Runners up while Robot Detroit by Dinoj Supunsara bagged the Magicbit Development board which was awarded to the overall winner of the contest.</span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/287813",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/287813",
+  "cover": "/media/vtools-287813-1.png",
+  "gallery": [
+    "/media/vtools-287813-2.jpg",
+    "/media/vtools-287813-3.jpg",
+    "/media/vtools-287813-4.png"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "287813",
+  "hostName": "University of Peradeniya,RA24",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "robotricks-2122-awards-ceremony",
+  "chapter": "7",
+  "updatedAt": "2026-10-01T16:48:10.840Z"
+}

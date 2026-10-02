@@ -1,0 +1,25 @@
+{
+  "id": "91",
+  "title": "Seminar on Delay-Doppler Plane Modulation",
+  "start": "2024-01-24T12:00",
+  "end": "2024-01-24T13:00",
+  "category": "talk",
+  "summary": "The profound session on the promising communication technique of Delay-Doppler Modulation (DDM) was delivered by Dr. Shafie, which is designed to overcome the challenges associated with high-mobility communication scenarios. He discussed how embedding data in the Delay-Doppler (DD) plane could address Doppler challe…",
+  "descriptionHtml": "<p class=\"MsoNormal\"><span lang=\"EN-GB\" style=\"font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif; mso-fareast-font-family: 'Times New Roman';\">The profound session on the promising communication technique of Delay-Doppler Modulation (DDM) was delivered by Dr. Shafie, which is designed to overcome the challenges associated with high-mobility communication scenarios. He discussed how embedding data in the Delay-Doppler (DD) plane could address Doppler challenges and dove into the practical implementation issues that persist, especially in transceiver design. He especially mentioned the ups and downs he faced during his postgraduate time in the related topic while doing his PhD.&nbsp;</span></p>\r\n<p class=\"MsoNormal\"><span lang=\"EN-GB\" style=\"font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif; mso-fareast-font-family: 'Times New Roman';\">The lecture was rich in content, covering the DDM fundamentals and highlighting the distinctive properties of the DD plane. Dr. Shafie also proposed how current 4G/5G wireless communication system transceivers could be adapted to leverage DDM technology. This spurred a lively question-and-answer segment, indicative of the high level of engagement from the attendees.</span></p>\r\n<p class=\"MsoNormal\"><span lang=\"EN-GB\" style=\"font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif; mso-fareast-font-family: 'Times New Roman';\">Dr. Suraweera, along with the students, participated actively, posing insightful questions that led to a dynamic exchange of ideas. Dr. Shafie&rsquo;s comprehensive responses added depth to the participant's understanding of the subject matter. They opened the floor to discussions on the potential trajectories for the future of wireless communication systems.</span></p>\r\n<p class=\"MsoNormal\"><span lang=\"EN-GB\" style=\"font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif; mso-fareast-font-family: 'Times New Roman';\">As the seminar drew to a close, the IEEE Communications Society Student Branch extended heartfelt thanks to Dr. Shafie for his enlightening presentation and to all those present, especially Dr. Suraweera and the students of the Electrical and Electronic Engineering Department, for their enthusiastic involvement and contributions to the session's success.</span></p>\r\n<p class=\"MsoNormal\"><span lang=\"EN-GB\" style=\"font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif; mso-fareast-font-family: 'Times New Roman';\">The seminar was a testament to the IEEE Communications Society Student Branch's commitment to academic excellence and its endeavour to provide platforms for learning and dialogue. The Branch looks forward to organizing further events that will continue to inspire and educate its members and the engineering community at large.</span></p>\r\n<p class=\"MsoNormal\"><span lang=\"EN-GB\" style=\"font-size: 12.0pt; line-height: 107%; font-family: 'Times New Roman',serif; mso-fareast-font-family: 'Times New Roman';\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/734c8f86-a1e2-43b9-9cf0-fc54c7969505\" width=\"386\" height=\"257\"> <img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/fd50e0a0-c626-4b85-b5ec-5e7b57d5d2c0\" width=\"388\" height=\"258\"></span></p>",
+  "venue": "Seminar Room of Department of Electrical and Electronics Engineering, Faculty of Engineering, University of Peradeniya",
+  "city": "Kandy",
+  "virtual": false,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/414624",
+  "cover": "/media/vtools-414624-1.png",
+  "gallery": [
+    "/media/vtools-414624-2.png"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "414624",
+  "hostName": "University of Peradeniya,COM19",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "seminar-on-delay-doppler-plane-modulation",
+  "chapter": "4",
+  "updatedAt": "2026-10-01T16:46:07.102Z"
+}

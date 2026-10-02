@@ -1,0 +1,30 @@
+{
+  "id": "139",
+  "title": "VLSI Workshop 1 by Synopsys",
+  "start": "2025-02-01T08:30",
+  "end": "2025-02-01T16:00",
+  "category": "workshop",
+  "summary": "The VLSI Workshop conducted by Synopsys successfully provided students with hands-on exposure to advanced Electronic Design Automation (EDA) tools, bridging the gap between theoretical learning and practical applications in VLSI design and verification .\n The workshop was effectively executed with a structured appro…",
+  "descriptionHtml": "<p data-start=\"112\" data-end=\"379\"><img style=\"float: left;\" src=\"https://events.vtools.ieee.org/vtools_ui/media/display/b5714d98-4bf8-49f5-9a6c-204fb2a82a9e\" alt=\"\" width=\"259\" height=\"367\"></p>\r\n<p style=\"padding-left: 320px; text-align: justify;\" data-start=\"112\" data-end=\"379\">&nbsp; The <strong data-start=\"116\" data-end=\"155\">VLSI Workshop conducted by Synopsys</strong> successfully provided students with hands-on exposure to&nbsp; &nbsp;advanced <strong data-start=\"222\" data-end=\"260\">Electronic Design Automation (EDA)</strong> tools, bridging the gap between theoretical learning and&nbsp; &nbsp;practical applications in <strong data-start=\"344\" data-end=\"376\">VLSI design and verification</strong>.</p>\r\n<p style=\"padding-left: 320px; text-align: justify;\" data-start=\"112\" data-end=\"379\">&nbsp; The workshop was effectively executed with a structured approach, starting with an introduction to&nbsp; &nbsp;modern semiconductor workflows and progressing to in-depth sessions on industry-standard tools such as&nbsp; &nbsp;<strong data-start=\"617\" data-end=\"632\">VC Spyglass</strong> for static verification, <strong data-start=\"658\" data-end=\"665\">VCS</strong> for functional verification, and <strong data-start=\"699\" data-end=\"718\">Design Compiler</strong> for logic synthesis.&nbsp; &nbsp;Interactive demonstrations and guided explanations ensured participants could directly relate tool usage to&nbsp; &nbsp;real-world design scenarios.</p>\r\n<p style=\"padding-left: 320px; text-align: justify;\" data-start=\"1228\" data-end=\"1537\">This initiative embodied <strong data-start=\"1272\" data-end=\"1327\">IEEE&rsquo;s mission of advancing technology for humanity</strong> by empowering students with relevant technical knowledge. It also promoted <strong data-start=\"1403\" data-end=\"1464\">collaboration, lifelong learning, and professional growth</strong>, aligning with IEEE&rsquo;s commitment to developing future-ready engineers.</p>\r\n<p style=\"padding-left: 320px; text-align: justify;\" data-start=\"1539\" data-end=\"1665\">This impactful workshop set a strong foundation for students aspiring to excel in <strong data-start=\"1621\" data-end=\"1662\">semiconductor design and verification</strong>.</p>\r\n<p style=\"text-align: justify;\" data-start=\"112\" data-end=\"379\">&nbsp;</p>\r\n<p data-start=\"880\" data-end=\"893\"><strong data-start=\"880\" data-end=\"891\">&nbsp; </strong></p>\r\n<p data-start=\"880\" data-end=\"893\">&nbsp;</p>\r\n<p data-start=\"880\" data-end=\"893\">&nbsp;</p>\r\n<p data-start=\"880\" data-end=\"893\">&nbsp;</p>\r\n<p data-start=\"880\" data-end=\"893\"><strong data-start=\"880\" data-end=\"891\">Impact:</strong></p>\r\n<ul data-start=\"894\" data-end=\"1226\">\r\n<li data-start=\"894\" data-end=\"1007\">\r\n<p data-start=\"896\" data-end=\"1007\">Enhanced participants&rsquo; understanding of <strong data-start=\"936\" data-end=\"954\">EDA toolchains</strong> and their relevance in the semiconductor industry.</p>\r\n</li>\r\n<li data-start=\"1008\" data-end=\"1120\">\r\n<p data-start=\"1010\" data-end=\"1120\">Inspired undergraduates to explore career opportunities and research in <strong data-start=\"1082\" data-end=\"1109\">VLSI and digital design</strong> domains.</p>\r\n</li>\r\n<li data-start=\"1121\" data-end=\"1226\">\r\n<p data-start=\"1123\" data-end=\"1226\">Strengthened collaboration between academia and industry by enabling direct interaction with experts.</p>\r\n</li>\r\n</ul>\r\n<p data-start=\"1539\" data-end=\"1665\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/f2f45539-1205-408a-80b8-6af6d6974c76\" alt=\"\" width=\"376\" height=\"283\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/fe2f2a16-6715-4667-ac82-abb56ea7457f\" alt=\"\" width=\"210\" height=\"280\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/a05cf8a6-859b-4eb5-aca1-6b7252c26c53\" alt=\"\" width=\"256\" height=\"276\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/0d4c11f3-269d-45e6-98ab-c1d6c26cc76e\" alt=\"\" width=\"159\" height=\"275\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/cc251393-4618-48fb-8c33-7fcf5bbf0833\" alt=\"\" width=\"162\" height=\"280\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/6af34be7-bfdf-46a6-94c3-ff2b46c6263a\" alt=\"\" width=\"175\" height=\"275\"></p>",
+  "venue": "Computer Lab 02, Faculty of Engineering",
+  "city": "Peradeniya",
+  "virtual": false,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/484828",
+  "cover": "/media/vtools-484828-1.jpg",
+  "gallery": [
+    "/media/vtools-484828-2.jpg",
+    "/media/vtools-484828-3.jpg",
+    "/media/vtools-484828-4.jpg",
+    "/media/vtools-484828-5.jpg",
+    "/media/vtools-484828-6.jpg",
+    "/media/vtools-484828-7.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "484828",
+  "hostName": "University of Peradeniya",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "vlsi-workshop-1-by-synopsys",
+  "chapter": "1",
+  "updatedAt": "2026-10-01T16:46:56.664Z"
+}

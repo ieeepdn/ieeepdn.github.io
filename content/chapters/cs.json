@@ -1,0 +1,93 @@
+{
+  "id": "3",
+  "layout": [
+    {
+      "blockType": "chapterAbout",
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "pageLinks",
+      "eyebrow": "CS flagships",
+      "heading": "Our signature events & projects",
+      "pages": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "events",
+      "eyebrow": "CS events",
+      "heading": "Recent events.",
+      "show": "auto",
+      "limit": 6,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "stories",
+      "eyebrow": "What we’ve been doing",
+      "heading": "Stories & recaps.",
+      "limit": 3,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "gallery",
+      "eyebrow": "Moments",
+      "heading": "CS in pictures.",
+      "layout": "mosaic",
+      "background": "dark",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "people",
+      "eyebrow": "Committee",
+      "heading": "Meet the CS team",
+      "source": "committee",
+      "items": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "cta",
+      "heading": "Get involved with CS.",
+      "text": "Join the team, pitch an event or volunteer at the next one. Every chapter committee is built by students like you.",
+      "buttons": [
+        {
+          "label": "Volunteer",
+          "url": "/volunteer",
+          "variant": "primary"
+        }
+      ]
+    }
+  ],
+  "name": "IEEE Computer Society",
+  "shortName": "CS",
+  "slug": "cs",
+  "kind": "chapter",
+  "tagline": "The newest member of the #ieeepdn family — advancing the theory, practice and application of computing.",
+  "about": "The IEEE Computer Society is dedicated to advancing the theory, practice and application of computer science and engineering. Its objectives are scientific, literary and educational in nature, fostering innovation and excellence in computing and information technology.\n\nThe Student Branch Chapter at Peradeniya promotes high professional standards among its members while supporting research, education and industry collaboration — from career-readiness series with industry partners to humanitarian projects for fellow students.",
+  "accent": "#B45309",
+  "order": 2,
+  "logo": "/media/logo-cs.png",
+  "cover": "/media/cs-guest-lecture-1.jpg",
+  "highlights": [
+    {
+      "value": "350+",
+      "label": "cumulative participants across LEVEL UP 2026"
+    },
+    {
+      "value": "4",
+      "label": "career sessions with IFS, Thomson Reuters & SLT-Mobitel"
+    }
+  ],
+  "vtools": {
+    "spoid": "SBC18711F",
+    "hostNameMatch": ",C16|Computer"
+  },
+  "links": {
+    "email": "ieeecspdn@gmail.com",
+    "join": "https://www.computer.org/membership"
+  },
+  "updatedAt": "2026-09-28T05:20:59.249Z"
+}

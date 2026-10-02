@@ -1,0 +1,118 @@
+{
+  "id": "4",
+  "title": "MTT-S · 2025/26",
+  "term": "2025/26",
+  "current": true,
+  "advisors": [
+    {
+      "name": "Prof. Aruna Gunawardana",
+      "position": "Advisor & Senior Treasurer",
+      "photo": "/media/mtts-092.jpg"
+    }
+  ],
+  "executive": [
+    {
+      "position": "Chair",
+      "name": "Buddhi Wijenayake",
+      "photo": "/media/mtts-093.jpg"
+    },
+    {
+      "position": "Vice Chair",
+      "name": "Dinuja Karunarathne",
+      "photo": "/media/mtts-094.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "Udantha Mahanama",
+      "photo": "/media/mtts-095.jpg"
+    },
+    {
+      "position": "Assistant Secretary",
+      "name": "Ahamed Hathi",
+      "photo": "/media/mtts-096.jpg"
+    },
+    {
+      "position": "Junior Treasurer",
+      "name": "Visal Chathuranga",
+      "photo": "/media/mtts-097.jpg"
+    },
+    {
+      "position": "Webmaster",
+      "name": "Sahan Siriwardena",
+      "photo": "/media/mtts-098.jpg"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Editorial",
+      "members": [
+        {
+          "name": "Pamudi Pathirana",
+          "role": "lead",
+          "photo": "/media/mtts-099.jpg"
+        },
+        {
+          "name": "Pasindu Punsara",
+          "role": "member",
+          "photo": "/media/mtts-100.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Programming",
+      "members": [
+        {
+          "name": "Buwaneka Epakanda",
+          "role": "lead",
+          "photo": "/media/mtts-101.jpg"
+        },
+        {
+          "name": "Chalana Rashmika",
+          "role": "member",
+          "photo": "/media/mtts-102.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "members": [
+        {
+          "name": "Kaveesha Rasangi",
+          "role": "member",
+          "photo": "/media/mtts-103.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Committee",
+      "members": [
+        {
+          "name": "Shanika Sithumini",
+          "role": "member",
+          "position": "Committee Member",
+          "photo": "/media/mtts-104.jpg"
+        },
+        {
+          "name": "Dinithi Lawrencehewa",
+          "role": "member",
+          "position": "Committee Member",
+          "photo": "/media/mtts-105.jpg"
+        },
+        {
+          "name": "Imash Shanelka",
+          "role": "member",
+          "position": "Committee Member",
+          "photo": "/media/mtts-106.jpg"
+        },
+        {
+          "name": "Marlon Ekanayake",
+          "role": "member",
+          "position": "Committee Member",
+          "photo": "/media/mtts-107.jpg"
+        }
+      ]
+    }
+  ],
+  "chapter": "5",
+  "updatedAt": "2026-09-28T05:20:52.217Z"
+}

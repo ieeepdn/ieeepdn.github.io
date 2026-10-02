@@ -1,0 +1,19 @@
+{
+  "id": "196",
+  "title": "RoboEDU - Day 4 - Loops",
+  "start": "2022-02-19T17:30",
+  "end": "2022-02-19T19:30",
+  "category": "social",
+  "summary": "The fourth day of RoboEdu educational workshop, organized by the IEEE Robotics and Automation Society, the student chapter of University of Peradeniya, was held on 29 th of January 2022 from 4.00 p.m via zoom platform and Youtube live. \n The webinar was opened for all the school children interested in Robotics and w…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">The fourth day of RoboEdu educational workshop, organized by the IEEE Robotics and Automation Society, the student chapter of University of Peradeniya, was held on 29</span><span style=\"font-weight: 400;\">th</span><span style=\"font-weight: 400;\"> of January 2022 from 4.00 p.m via zoom platform and Youtube live.&nbsp;</span></p>\r\n<p><span style=\"font-weight: 400;\">The webinar was opened for all the school children interested in Robotics and who prefer to learn about microcontrollers.</span></p>\r\n<p><span style=\"font-weight: 400;\">The main topics discussed were,&nbsp;</span></p>\r\n<ul>\r\n<li><span style=\"font-weight: 400;\"> For loop</span></li>\r\n<li><span style=\"font-weight: 400;\"> while loop</span></li>\r\n<li><span style=\"font-weight: 400;\"> Analog write</span></li>\r\n<li><span style=\"font-weight: 400;\"> PWM (Pulse Width Modulation)</span></li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-weight: 400;\">At the commencement of the event, an introduction of the loops in Arduino programming was delivered. Then he described different types of loops such as &ldquo;For&rdquo; and &ldquo;While&rdquo;. Afterward, </span><span style=\"font-weight: 400;\">the speaker described how to use the above loops in a program very clearly as everyone could understand. Next, he simulated some LED circuits using Tinkercad software. In that, participants could see some practical applications of Arduino.</span></p>\r\n<p><span style=\"font-weight: 400;\">All over the program, the participants were able to ask any question from the speaker and clarify their doubts regarding the Arduino programming and how to use loops in Arduino. Finally, The speaker has assigned some take-home exercises for students to brighten their enthusiastic minds.</span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/311703",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/311703",
+  "source": "vtools",
+  "vtoolsId": "311703",
+  "hostName": "University of Peradeniya,RA24",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "roboedu-day-4-loops",
+  "chapter": "7",
+  "updatedAt": "2026-10-01T16:48:06.857Z"
+}

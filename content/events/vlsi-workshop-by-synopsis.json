@@ -1,0 +1,28 @@
+{
+  "id": "148",
+  "title": "VLSI Workshop by Synopsis",
+  "start": "2024-01-20T08:30",
+  "end": "2024-01-20T16:00",
+  "category": "workshop",
+  "summary": "The VLSI Workshop by Synopsys is an essential part of the practical learning experience for students pursuing the VLSI Design course, providing hands-on exposure to the industry-standard tools and methodologies used in the semiconductor design process. The workshop covers topics like digital design flow, RTL (Regist…",
+  "descriptionHtml": "<p style=\"text-align: justify;\"><img style=\"float: left;\" src=\"https://events.vtools.ieee.org/vtools_ui/media/display/6f8ade17-571c-4499-a473-a5da39304897\" alt=\"\" width=\"255\" height=\"360\"></p>\r\n<p style=\"text-align: justify;\">&nbsp;The VLSI Workshop by Synopsys is an essential part of the practical learning experience for students&nbsp; &nbsp;pursuing&nbsp; &nbsp;the&nbsp; &nbsp;VLSI&nbsp; &nbsp; &nbsp;Design course, providing hands-on exposure to the industry-standard tools and&nbsp; &nbsp;methodologies&nbsp; &nbsp;used in the&nbsp; &nbsp; &nbsp;semiconductor design process. The workshop covers topics like digital&nbsp; &nbsp;design flow, RTL (Register&nbsp; &nbsp;Transfer&nbsp; &nbsp;Level)&nbsp; &nbsp; &nbsp;synthesis, verification techniques, and physical design&nbsp; &nbsp;implementation, providing students&nbsp; &nbsp;with a comprehensive&nbsp; &nbsp;understanding of the VLSI design cycle. It is&nbsp; &nbsp;especially valuable for students aiming to&nbsp; &nbsp;work in the semiconductor&nbsp; &nbsp; &nbsp;industry, giving them real-world&nbsp; &nbsp;experience with tools used in designing and&nbsp; &nbsp;testing integrated circuits (ICs) on a&nbsp; &nbsp;large scale.</p>\r\n<p style=\"text-align: justify;\">&nbsp; The workshop concluded successfully with students gaining practical insights into Synopsys' software&nbsp; &nbsp;tools,&nbsp; &nbsp;such as&nbsp; &nbsp; Design Compiler and IC Compiler. Participants were guided through the design flow&nbsp; &nbsp;starting from&nbsp; &nbsp;high-level design&nbsp; &nbsp; entry using hardware description languages (HDL) to the synthesis of&nbsp; &nbsp;these designs into&nbsp; &nbsp;gate-level implementations. The&nbsp; &nbsp;interactive tutorial sessions, led by experts from&nbsp; &nbsp; &nbsp;Synopsys, helped students&nbsp; &nbsp;work on real-time design challenges&nbsp; &nbsp;and understand optimization&nbsp; &nbsp;techniques&nbsp; for improving performance&nbsp; &nbsp;and&nbsp; power efficiency in VLSI systems. The&nbsp; &nbsp;workshop was an enriching experience, bridging the gap between&nbsp; &nbsp;academic concepts and industry practices.</p>\r\n<div class=\"flex-shrink-0 flex flex-col relative items-end\">\r\n<div>\r\n<div class=\"pt-0\">\r\n<div class=\"gizmo-bot-avatar flex h-8 w-8 items-center justify-center overflow-hidden rounded-full\">&nbsp;</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn\">\r\n<div class=\"flex-col gap-1 md:gap-3\">\r\n<div class=\"flex max-w-full flex-col flex-grow\">\r\n<div class=\"min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5\" dir=\"auto\" data-message-author-role=\"assistant\" data-message-id=\"2c51b36b-fbda-470f-b8b5-fd961327a942\">\r\n<div class=\"flex w-full flex-col gap-1 empty:hidden first:pt-[3px]\">\r\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\r\n<p>&nbsp;<img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/08230c97-c6cd-471b-8eba-594d7b10efd8\" alt=\"\" width=\"268\" height=\"402\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/d55ec9b9-5e66-41f6-9268-d7aa097da181\" alt=\"\" width=\"595\" height=\"396\"></p>\r\n<p>&nbsp;<img style=\"text-align: justify;\" src=\"https://events.vtools.ieee.org/vtools_ui/media/display/2af9969c-2c63-4878-b668-87ab0df20cc1\" alt=\"\" width=\"665\" height=\"443\"><img style=\"float: left;\" src=\"https://events.vtools.ieee.org/vtools_ui/media/display/e18a76d8-588a-47f8-893f-3d98ba8ee774\" alt=\"\" width=\"308\" height=\"463\"></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+  "venue": "Department of Computer Engineering, Computer Laboratory 2, Faculty of Engineering",
+  "city": "Peradeniya",
+  "virtual": false,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/436032",
+  "cover": "/media/vtools-436032-1.jpg",
+  "gallery": [
+    "/media/vtools-436032-2.jpg",
+    "/media/vtools-436032-3.jpg",
+    "/media/vtools-436032-4.jpg",
+    "/media/vtools-436032-5.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "436032",
+  "hostName": "University of Peradeniya",
+  "syncedAt": "2026-10-01T22:17",
+  "slug": "vlsi-workshop-by-synopsis",
+  "chapter": "1",
+  "updatedAt": "2026-10-01T16:47:04.463Z"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "26",
+  "title": "From Vibe Coding to Context Engineering: Build Production-Ready Apps Using AI by IEEE CS & IAS SBC - University of Peradeniya",
+  "start": "2026-02-26T19:00",
+  "end": "2026-02-26T20:30",
+  "category": "talk",
+  "summary": "This session explored the evolving landscape of AI-driven development, guiding participants through the shift from casual, exploratory \"vibe coding\" toward disciplined context engineering for building production-ready applications. The talk offered practical insights and real-world perspectives that encouraged atten…",
+  "descriptionHtml": "<p>This session explored the evolving landscape of AI-driven development, guiding participants through the shift from casual, exploratory \"vibe coding\" toward disciplined context engineering for building production-ready applications. The talk offered practical insights and real-world perspectives that encouraged attendees to think beyond writing code and to build with clear purpose and intent.</p>\r\n<p><strong>Key Topics Covered</strong></p>\r\n<p><em><strong>1. The Shift from Vibe Coding to Context Engineering</strong></em></p>\r\n<p>The discussion traced how AI-assisted development is evolving from ad-hoc, prompt-driven coding toward a more structured approach centered on providing AI systems with well-designed context to produce reliable, production-grade output.</p>\r\n<p><em><strong>2. Building with Purpose</strong></em></p>\r\n<p>Emphasis was placed on moving beyond simply generating code with AI, toward intentional design - understanding the \"why\" behind implementation choices and aligning AI-assisted development with real production requirements.</p>\r\n<p><em><strong>3. Practical Insights for Production-Ready Applications</strong></em></p>\r\n<p>The session shared real-world perspectives on applying AI tools effectively in professional development workflows, highlighting practices that help bridge the gap between quick prototypes and deployable, production-ready software.</p>\r\n<p><strong>Outcome / Impact</strong></p>\r\n<p>The session equipped participants with a deeper understanding of how AI-assisted development is maturing as a discipline, encouraging a more thoughtful and structured approach to building applications with AI - one grounded in context, intent, and production readiness.</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://events.vtools.ieee.org/vtools_ui/media/display/f5073885-dffd-4f0d-8a89-41f0ece6313d\" alt=\"\" width=\"614\" height=\"614\"></p>\r\n<p>&nbsp;</p>\r\n<p>Recorded Session - <a href=\"https://drive.google.com/drive/folders/1im54Wvw1RRrC4-ZPUQufJHiAEsCXnzCg\">https://drive.google.com/drive/folders/1im54Wvw1RRrC4-ZPUQufJHiAEsCXnzCg</a></p>",
+  "virtual": true,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/570527",
+  "cover": "/media/vtools-570527-1.jpg",
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "570527",
+  "hostName": "University of Peradeniya,C16",
+  "syncedAt": "2026-10-01T22:15",
+  "slug": "from-vibe-coding-to-context-engineering-build-production-ready-apps-using-ai-by-ieee-cs-ias-sbc-university-of-peradeniya",
+  "chapter": "3",
+  "updatedAt": "2026-10-01T16:45:07.897Z"
+}

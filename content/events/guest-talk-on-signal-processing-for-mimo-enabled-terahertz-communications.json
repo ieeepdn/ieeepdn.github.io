@@ -1,0 +1,19 @@
+{
+  "id": "104",
+  "title": "Guest Talk on Signal processing for MIMO-enabled Terahertz communications",
+  "start": "2021-12-06T18:00",
+  "end": "2021-12-06T19:00",
+  "category": "talk",
+  "summary": "The webinar was organized by IEEE Communications Society Sri Lanka Chapter in collaboration with the IEEE Communications Society Student Branch Chapter of the University of Peradeniya, University of Moratuwa and University of Ruhuna.\n Terahertz (THz)-band communications are critical enablers for future-generation wi…",
+  "descriptionHtml": "<p>The webinar was organized by IEEE Communications Society Sri Lanka Chapter in collaboration with the IEEE Communications Society Student Branch Chapter of the University of Peradeniya, University of Moratuwa and University of Ruhuna.</p>\r\n<p><span style=\"font-weight: 400;\">Terahertz (THz)-band communications are critical enablers for future-generation wireless communication systems that promise to integrate a wide range of data-demanding applications. Recent advancements in photonic, electronic, and plasmonic technologies are closing the gap in THz transceiver design. Consequently, prospect THz signal generation, modulation, and radiation methods are converging, and the corresponding channel model, noise, and hardware-impairment notions are emerging. Such progress paves the way for well-grounded research into THz-specific signal processing techniques for wireless communications. This talk will present the prospects of ultra-massive multiple-input multiple-output (UM-MIMO) technology to overcome the THz band's communication distance limitations. A three-step approach for THz UM-MIMO signal processing consists of </span></p>\r\n<p><span style=\"font-weight: 400;\">1) modeling THz-specific channel properties </span></p>\r\n<p><span style=\"font-weight: 400;\">2) designing efficient algorithms</span></p>\r\n<p><span style=\"font-weight: 400;\">3) observing terabit-per-second baseband limitations.</span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/298769",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/298769",
+  "source": "vtools",
+  "vtoolsId": "298769",
+  "hostName": "University of Peradeniya,COM19",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "guest-talk-on-signal-processing-for-mimo-enabled-terahertz-communications",
+  "chapter": "4",
+  "updatedAt": "2026-10-01T16:46:18.247Z"
+}

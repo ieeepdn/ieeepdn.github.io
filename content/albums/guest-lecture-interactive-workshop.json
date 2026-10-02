@@ -1,0 +1,14 @@
+{
+  "id": "2",
+  "title": "Guest lecture & interactive workshop",
+  "date": "2026-02-05",
+  "photos": [
+    "/media/cs-guest-lecture-1.jpg",
+    "/media/cs-guest-lecture-2.jpg",
+    "/media/cs-guest-lecture-3.jpg",
+    "/media/cs-guest-lecture-4.jpg"
+  ],
+  "slug": "guest-lecture-interactive-workshop",
+  "chapter": "3",
+  "updatedAt": "2026-09-27T04:47:42.546Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "81",
+  "title": "Introduction to World-Class Supercomputing with the LUMI Supercomputer",
+  "start": "2025-12-30T11:30",
+  "end": "2025-12-30T12:30",
+  "category": "talk",
+  "summary": "The session titled &ldquo;Introduction to World-Class Supercomputing with the LUMI Supercomputer&rdquo; was successfully held on Tuesday, 30th December 2025, at the Smart Room of the Department of Electrical and Electronic Engineering, University of Peradeniya. The event was organized by the IEEE ComSoc Student Chap…",
+  "descriptionHtml": "<p data-start=\"159\" data-end=\"597\">The session titled <em data-start=\"178\" data-end=\"252\">&ldquo;Introduction to World-Class Supercomputing with the LUMI Supercomputer&rdquo;</em> was successfully held on Tuesday, 30th December 2025, at the Smart Room of the Department of Electrical and Electronic Engineering, University of Peradeniya. The event was organized by the IEEE ComSoc Student Chapter with the objective of introducing students to modern High-Performance Computing (HPC) technologies and their real-world impact.</p>\r\n<p data-start=\"599\" data-end=\"1009\">The session was conducted by Mr. Pramod Munaweera, Operations Manager of the LUMI Supercomputer, who provided an insightful overview of HPC fundamentals and the architecture of LUMI, one of the world&rsquo;s most powerful and energy-efficient supercomputers. The speaker explained LUMI&rsquo;s heterogeneous CPU&ndash;GPU design and highlighted how such architectures enable large-scale computations with high energy efficiency.</p>\r\n<p data-start=\"1011\" data-end=\"1441\">Furthermore, the talk explored diverse applications of supercomputing, including climate modeling, cancer research, artificial intelligence and large language models (LLMs), digital twins, and drug discovery. The session concluded with an interactive discussion where participants actively engaged with the speaker, clarifying technical concepts and learning about research and career opportunities in the field of supercomputing.</p>\r\n<p data-start=\"1443\" data-end=\"1617\">Overall, the event successfully enhanced participants&rsquo; understanding of advanced computing systems and inspired interest in high-performance computing and AI-driven research.</p>",
+  "venue": "Smart Room, Smart Room, Department of Electrical and Electronic Department",
+  "city": "Peradeniya",
+  "virtual": false,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/530817",
+  "cover": "/media/vtools-530817-1.png",
+  "gallery": [
+    "/media/vtools-530817-2.jpg",
+    "/media/vtools-530817-3.jpg",
+    "/media/vtools-530817-4.jpg",
+    "/media/vtools-530817-5.jpg",
+    "/media/vtools-530817-6.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "530817",
+  "hostName": "University of Peradeniya,COM19",
+  "syncedAt": "2026-10-01T22:15",
+  "slug": "introduction-to-world-class-supercomputing-with-the-lumi-supercomputer",
+  "chapter": "4",
+  "updatedAt": "2026-10-01T16:45:57.253Z"
+}

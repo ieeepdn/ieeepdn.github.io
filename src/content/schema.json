@@ -1,0 +1,426 @@
+{
+  "chapters": [
+    {
+      "name": "layout",
+      "kind": "blocks",
+      "blocks": {
+        "mediaText": [
+          {
+            "name": "image",
+            "kind": "media",
+            "many": false
+          }
+        ],
+        "cards": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "image",
+                "kind": "media",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "gallery": [
+          {
+            "name": "photos",
+            "kind": "media",
+            "many": true
+          },
+          {
+            "name": "album",
+            "kind": "rel",
+            "to": "albums",
+            "many": false
+          }
+        ],
+        "people": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "photo",
+                "kind": "media",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "form": [
+          {
+            "name": "form",
+            "kind": "rel",
+            "to": "forms",
+            "many": false
+          }
+        ],
+        "downloads": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "file",
+                "kind": "file",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "logos": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "logo",
+                "kind": "media",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "pageLinks": [
+          {
+            "name": "pages",
+            "kind": "rel",
+            "to": "pages",
+            "many": true
+          }
+        ],
+        "speakers": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "photo",
+                "kind": "media",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "venue": [
+          {
+            "name": "image",
+            "kind": "media",
+            "many": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "logo",
+      "kind": "media",
+      "many": false
+    },
+    {
+      "name": "cover",
+      "kind": "media",
+      "many": false
+    }
+  ],
+  "committees": [
+    {
+      "name": "advisors",
+      "kind": "array",
+      "fields": [
+        {
+          "name": "photo",
+          "kind": "media",
+          "many": false
+        }
+      ]
+    },
+    {
+      "name": "executive",
+      "kind": "array",
+      "fields": [
+        {
+          "name": "photo",
+          "kind": "media",
+          "many": false
+        }
+      ]
+    },
+    {
+      "name": "teams",
+      "kind": "array",
+      "fields": [
+        {
+          "name": "members",
+          "kind": "array",
+          "fields": [
+            {
+              "name": "photo",
+              "kind": "media",
+              "many": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "chapter",
+      "kind": "rel",
+      "to": "chapters",
+      "many": false
+    }
+  ],
+  "posts": [
+    {
+      "name": "cover",
+      "kind": "media",
+      "many": false
+    },
+    {
+      "name": "gallery",
+      "kind": "media",
+      "many": true
+    },
+    {
+      "name": "chapter",
+      "kind": "rel",
+      "to": "chapters",
+      "many": false
+    }
+  ],
+  "events": [
+    {
+      "name": "cover",
+      "kind": "media",
+      "many": false
+    },
+    {
+      "name": "gallery",
+      "kind": "media",
+      "many": true
+    },
+    {
+      "name": "chapter",
+      "kind": "rel",
+      "to": "chapters",
+      "many": false
+    }
+  ],
+  "programs": [
+    {
+      "name": "cover",
+      "kind": "media",
+      "many": false
+    },
+    {
+      "name": "logo",
+      "kind": "media",
+      "many": false
+    },
+    {
+      "name": "gallery",
+      "kind": "media",
+      "many": true
+    }
+  ],
+  "albums": [
+    {
+      "name": "photos",
+      "kind": "media",
+      "many": true
+    },
+    {
+      "name": "chapter",
+      "kind": "rel",
+      "to": "chapters",
+      "many": false
+    }
+  ],
+  "pages": [
+    {
+      "name": "layout",
+      "kind": "blocks",
+      "blocks": {
+        "hero": [
+          {
+            "name": "image",
+            "kind": "media",
+            "many": false
+          }
+        ],
+        "mediaText": [
+          {
+            "name": "image",
+            "kind": "media",
+            "many": false
+          }
+        ],
+        "cards": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "image",
+                "kind": "media",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "gallery": [
+          {
+            "name": "photos",
+            "kind": "media",
+            "many": true
+          },
+          {
+            "name": "album",
+            "kind": "rel",
+            "to": "albums",
+            "many": false
+          }
+        ],
+        "people": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "photo",
+                "kind": "media",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "form": [
+          {
+            "name": "form",
+            "kind": "rel",
+            "to": "forms",
+            "many": false
+          }
+        ],
+        "downloads": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "file",
+                "kind": "file",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "logos": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "logo",
+                "kind": "media",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "pageLinks": [
+          {
+            "name": "pages",
+            "kind": "rel",
+            "to": "pages",
+            "many": true
+          }
+        ],
+        "speakers": [
+          {
+            "name": "items",
+            "kind": "array",
+            "fields": [
+              {
+                "name": "photo",
+                "kind": "media",
+                "many": false
+              }
+            ]
+          }
+        ],
+        "venue": [
+          {
+            "name": "image",
+            "kind": "media",
+            "many": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "cover",
+      "kind": "media",
+      "many": false
+    },
+    {
+      "name": "parent",
+      "kind": "rel",
+      "to": "pages",
+      "many": false
+    },
+    {
+      "name": "chapter",
+      "kind": "rel",
+      "to": "chapters",
+      "many": false
+    }
+  ],
+  "forms": [
+    {
+      "name": "fields",
+      "kind": "blocks",
+      "blocks": {}
+    },
+    {
+      "name": "chapter",
+      "kind": "rel",
+      "to": "chapters",
+      "many": false
+    }
+  ],
+  "documents": [
+    {
+      "name": "chapter",
+      "kind": "rel",
+      "to": "chapters",
+      "many": false
+    }
+  ],
+  "site-settings": [
+    {
+      "name": "spotlight",
+      "kind": "group",
+      "fields": [
+        {
+          "name": "page",
+          "kind": "rel",
+          "to": "pages",
+          "many": false
+        },
+        {
+          "name": "image",
+          "kind": "media",
+          "many": false
+        },
+        {
+          "name": "logo",
+          "kind": "media",
+          "many": false
+        }
+      ]
+    }
+  ]
+}

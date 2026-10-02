@@ -1,0 +1,27 @@
+{
+  "id": "183",
+  "title": "PLC Workshop 2025",
+  "start": "2025-03-01T09:00",
+  "end": "2025-03-01T14:00",
+  "category": "workshop",
+  "summary": "It was a technical workshop organized in collaboration with MethG Pvt \nLtd, aimed at providing in-depth knowledge about industrial automation. \nThe session covered key aspects of automation systems, including PLC \nprogramming and real-world applications, offering participants valuable \ninsights into the field. With…",
+  "descriptionHtml": "<p><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/c28c6402-5fb4-4076-a43e-1d2e23f22f97\" alt=\"\" width=\"523\" height=\"523\"></p>\r\n<p>It was a technical workshop organized in collaboration with MethG Pvt&nbsp;<br>Ltd, aimed at providing in-depth knowledge about industrial automation.&nbsp;<br>The session covered key aspects of automation systems, including PLC&nbsp;<br>programming and real-world applications, offering participants valuable&nbsp;<br>insights into the field. With the active participation of about 30 students,&nbsp;<br>the workshop concluded successfully, creating an excellent opportunity&nbsp;<br>for attendees to gain hands-on experience and network with industry&nbsp;<br>professionals.</p>\r\n<p><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/b432dbc4-0760-4ed0-8ac0-ecb851e32be1\" alt=\"\" width=\"339\" height=\"254\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/27f61c13-0e21-4e13-889d-312b9dfeea58\" alt=\"\" width=\"335\" height=\"251\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/f9ac92ff-76e6-4cb2-8407-12140f008dd0\" alt=\"\" width=\"334\" height=\"250\"></p>",
+  "venue": "AR Building, Seminar Room 2, Faculty of Engineering",
+  "city": "Peradeniya",
+  "virtual": false,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/484765",
+  "cover": "/media/vtools-484765-1.jpg",
+  "gallery": [
+    "/media/vtools-484765-2.jpg",
+    "/media/vtools-484765-3.jpg",
+    "/media/vtools-484765-4.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "484765",
+  "hostName": "University of Peradeniy,PE31",
+  "syncedAt": "2026-10-01T22:17",
+  "slug": "plc-workshop-2025",
+  "chapter": "6",
+  "updatedAt": "2026-10-01T16:47:59.500Z"
+}

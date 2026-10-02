@@ -1,0 +1,24 @@
+{
+  "id": "199",
+  "title": "RoboEDU - Day 1 - Introduction to controllers",
+  "start": "2022-01-29T20:00",
+  "end": "2022-01-29T22:00",
+  "category": "social",
+  "summary": "The IEEE Robotics and Automation Society of University of Peradeniya have commenced a six-day online workshop on &ldquo;Getting Started with Robot Design&rdquo;, namely &ldquo;RoboEdu&rdquo;, with a syllabus specially designed for school children from grade six to grade twelve with the hope of teaching the basics of…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">The IEEE Robotics and Automation Society of University of Peradeniya have commenced a six-day online workshop on &ldquo;Getting Started with Robot Design&rdquo;, namely &ldquo;RoboEdu&rdquo;, with a syllabus specially designed for school children from grade six to grade twelve with the hope of teaching the basics of initializing a project on robotics. The basic idea of this project was to provide the fundamental knowledge to the students about \"Arduino\", an open-source electronics platform used to computerize the codes to operate a device such as a robot until they get enough knowledge to finish a project. Throughout the journey of the six days, we were able to fulfil this with great success.&nbsp;</span></p>\r\n<p><span style=\"font-weight: 400;\">With this brilliant idea of educating the youngsters, we thought of giving tasks at the end of each and every day to test the level of the students and to check whether they have grabbed the content taught. Then, the idea came to evaluate their answers, and award the best students at the end of the workshop. So, we thought of having an event partner, and we found Thingerbits, an electrical shop as our event partner.&nbsp;&nbsp;</span></p>\r\n<p><span style=\"font-weight: 400;\">Then, as the first step, we contacted the teacher-in-charge of the Robotics Club/ Innovation Club (or any other relevant society /club)&nbsp; of some selected schools and asked whether the students of the above-said clubs are keen on learning robotics and are willing to participate in our workshop. As the willingness of the students was high and approval was granted, we sent the syllabus to each and every school via E-mail.&nbsp; But, as per the participation count restrictions on the Zoom platform due to the link being a data-charge free version and as we have to allow all the participating schools to join us, we have decided to limit the maximum count from a school to 15 students. But we arranged a separate YouTube live streaming at the same time for others to join and provided the recordings after the sessions for others to refer to.</span></p>\r\n<p><span style=\"font-weight: 400;\">DAY 01</span></p>\r\n<p><span style=\"font-weight: 400;\">The first day of the workshop was&nbsp; 29/01/2021 and with a brief introduction about the workshop, the students were taught starting from why we should learn about robotics. This commenced from 6.30 PM onwards and was until&nbsp; 8.30 PM. The session was conducted by Mr. Pulathisi Perera, vice-chairperson of IEEE RAS UOP. He explained what robotics is, how the trend in automation is invading the world, how we get the first approach to start our own project and how we stick together with our project in difficult situations to witness the final outcome. This was really an encouragement for the young innovative minds and the success of this session can be measured by the submissions of the given task. The audience was really energetic during the session and was eager to clear their doubts during the question and answer session.&nbsp;</span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/311697",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/311697",
+  "cover": "/media/vtools-311697-1.jpg",
+  "gallery": [
+    "/media/vtools-311697-2.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "311697",
+  "hostName": "University of Peradeniya,RA24",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "roboedu-day-1-introduction-to-controllers",
+  "chapter": "7",
+  "updatedAt": "2026-10-01T16:48:09.230Z"
+}

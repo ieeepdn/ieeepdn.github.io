@@ -1,0 +1,22 @@
+{
+  "id": "138",
+  "title": "VLSI Workshop 2 by Synopsys",
+  "start": "2025-06-07T09:00",
+  "end": "2025-06-07T16:00",
+  "category": "workshop",
+  "summary": "The VLSI Workshop II , conducted by Synopsys , is designed to provide participants with hands-on experience in industry-standard Electronic Design Automation (EDA) tools used in power and timing analysis workflows. The workshop covers PrimePower for detailed gate-level power analysis, PrimePower RTL for early-stage…",
+  "descriptionHtml": "<p data-start=\"102\" data-end=\"656\"><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://events.vtools.ieee.org/vtools_ui/media/display/d11f79c6-aba9-4db3-9c7f-91e5c6f53df8\" alt=\"\" width=\"270\" height=\"382\"></p>\r\n<p data-start=\"102\" data-end=\"656\">The <strong data-start=\"106\" data-end=\"126\">VLSI Workshop II</strong>, conducted by <strong data-start=\"141\" data-end=\"153\">Synopsys</strong>, is designed to provide participants with hands-on experience in industry-standard Electronic Design Automation (EDA) tools used in power and timing analysis workflows. The workshop covers <strong data-start=\"343\" data-end=\"357\">PrimePower</strong> for detailed gate-level power analysis, <strong data-start=\"398\" data-end=\"416\">PrimePower RTL</strong> for early-stage power estimation, and <strong data-start=\"455\" data-end=\"468\">PrimeTime</strong> for comprehensive static timing analysis. These sessions will help participants develop a strong understanding of essential methodologies applied in real-world VLSI design environments.</p>\r\n<p data-start=\"658\" data-end=\"1213\">This workshop is ideal for undergraduates passionate about <strong data-start=\"717\" data-end=\"751\">VLSI and digital system design</strong>, offering them exposure to advanced tools widely used in the semiconductor industry. By engaging in practical exercises and guided analysis, participants will gain valuable insights into optimizing designs for power efficiency and timing accuracy. With a focus on bridging academic concepts with professional applications, the workshop provides an excellent opportunity to enhance both technical knowledge and practical skills in modern chip design workflows.</p>",
+  "venue": "Computer Lab 02, Faculty of Engineering",
+  "city": "Peradeniya",
+  "virtual": false,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/495035",
+  "cover": "/media/vtools-495035-1.jpg",
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "495035",
+  "hostName": "University of Peradeniya",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "vlsi-workshop-2-by-synopsys",
+  "chapter": "1",
+  "updatedAt": "2026-10-01T16:46:56.049Z"
+}

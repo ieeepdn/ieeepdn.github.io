@@ -1,0 +1,27 @@
+{
+  "id": "191",
+  "title": "WEBINAR ON POWER QUALITY - A SUBJECT OF INCREASING INTEREST",
+  "start": "2020-07-10T16:00",
+  "end": "2020-07-10T17:00",
+  "category": "talk",
+  "summary": "Power quality is defined as the purity of electricity that is supplied to the connected equipment. Various features and their acceptable levels characterize the quality of electricity. Some of these PQ features are variations and some are events. Both these events and variations have an impact on the quality, depend…",
+  "descriptionHtml": "<p>Power quality is defined as the purity of electricity that is supplied to the connected equipment. Various features and their acceptable levels characterize the quality of electricity. Some of these PQ features are variations and some are events. Both these events and variations have an impact on the quality, depending on the environment the equipment operates. All the stakeholders related to the power sector should have an idea of these power quality problems and how they affect the equipment.</p>",
+  "venue": "Faculty of Engineering",
+  "city": "peradeniya",
+  "virtual": false,
+  "registrationUrl": "https://bit.ly/PES_PERA",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/234815",
+  "cover": "/media/vtools-234815-1.jpg",
+  "gallery": [
+    "/media/vtools-234815-2.jpg",
+    "/media/vtools-234815-3.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "234815",
+  "hostName": "University of Peradeniy,PE31",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "webinar-on-power-quality-a-subject-of-increasing-interest",
+  "chapter": "6",
+  "updatedAt": "2026-10-01T16:48:03.722Z"
+}

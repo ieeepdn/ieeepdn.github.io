@@ -1,0 +1,69 @@
+{
+  "id": "3",
+  "name": "MentorSpark",
+  "slug": "mentorspark",
+  "tagline": "Six weeks. Small circles. A big head start.",
+  "summary": "MentorSpark develops the academic, professional and personal skills of first-year undergraduates at the Faculty of Engineering — sharing the insights that later graduates wish they had in their early years, through workshops, webinars, group challenges, networking sessions, site visits and guided projects.",
+  "accent": "#2563EB",
+  "order": 3,
+  "cover": "/media/mentorspark-foi.jpg",
+  "logo": "/media/logo-mentorspark.png",
+  "stats": [
+    {
+      "value": "6",
+      "label": "weeks"
+    },
+    {
+      "value": "6–8",
+      "label": "members per circle"
+    },
+    {
+      "value": "3",
+      "label": "milestones"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "How circles work",
+      "body": "MentorSpark runs as small groups called Circles. Each circle combines a Mentee Sphere — the students who benefit through a learning and practice phase — with a Mentor Sphere that supports them and transfers wisdom. Circles are formed around each member’s field of interest to maximise compatibility, and together they move through three milestones over six weeks, finishing with a mini-project of their own.",
+      "points": []
+    },
+    {
+      "heading": "Become a mentor",
+      "body": "Are you a final-year undergraduate working on your FYP, a recent graduate in industry, pursuing higher studies overseas, or an academic staff member of the Faculty of Engineering? Join the Mentor Sphere and make a lasting impact on the next generation of engineers.",
+      "points": []
+    },
+    {
+      "heading": "Guidelines",
+      "body": "A few ground rules keep every circle healthy.",
+      "points": [
+        {
+          "text": "Mentees must be second-year undergraduates as of the end date of the programme."
+        },
+        {
+          "text": "Mentors are final-year undergraduates, recent graduates or academic staff of the Faculty of Engineering, University of Peradeniya."
+        },
+        {
+          "text": "Everyone adheres to the honour code and respects every party."
+        },
+        {
+          "text": "Completing at least 80% of the programme, including the full research & engagement phase, is required for awards and certificates."
+        }
+      ]
+    }
+  ],
+  "links": [],
+  "contacts": [
+    {
+      "name": "MentorSpark organising committee",
+      "role": "IEEE Student Branch, University of Peradeniya",
+      "email": "ieeepdn@gmail.com"
+    }
+  ],
+  "gallery": [
+    "/media/mentorspark-foi.jpg",
+    "/media/mentorspark-timeline.jpg",
+    "/media/mentorspark-areas.jpg"
+  ],
+  "updatedAt": "2026-09-27T04:47:18.739Z"
+}

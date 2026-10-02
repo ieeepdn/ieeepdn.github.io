@@ -1,0 +1,267 @@
+@import 'tailwindcss';
+
+/* `dark:` follows the site toggle (data-theme on <html>), not only the OS setting */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+@theme {
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* IEEE master brand blue + a deep-space navy system */
+  --color-ieee: #00629b;
+  --color-ieee-600: #004f7d;
+  --color-ieee-700: #003e63;
+  --color-cyan: #43c6f4;
+  --color-cyan-soft: #9edcf6;
+  --color-signal: #ffb547;
+  --color-signal-ink: #7a4a00;
+  --color-lime: #b7f36b;
+
+  --color-ink: #06121f;
+  --color-ink-2: #2b3d4f;
+  --color-ink-3: #56687a;
+
+  --color-night: #030a13;
+  --color-night-2: #061729;
+  --color-night-3: #0b2338;
+  --color-night-line: rgb(120 190 235 / 0.14);
+
+  /* Light theme surfaces — cool, IEEE-blue tinted (dark values are set under [data-theme='dark']) */
+  --color-paper: #edf3f9;
+  --color-paper-2: #dfe8f1;
+  --color-mist: #e3eef8;
+  --color-surface: #ffffff;
+  --color-line: #cfdbe7;
+  --color-brand: #00629b;
+
+  --radius-xl2: 1.25rem;
+  --radius-xl3: 1.75rem;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+  --animate-pulse-dot: pulse-dot 2.2s var(--ease-out-expo) infinite;
+  --animate-spin-slow: spin 24s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes pulse-dot {
+    0% { box-shadow: 0 0 0 0 rgb(67 198 244 / 0.55); }
+    70% { box-shadow: 0 0 0 10px rgb(67 198 244 / 0); }
+    100% { box-shadow: 0 0 0 0 rgb(67 198 244 / 0); }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --atmos-1: 0.26;
+    --atmos-2: 0.16;
+    --atmos-3: 0.14;
+    --grid-line: rgb(0 98 155 / 0.07);
+    --card-shadow: 0 24px 60px -32px rgb(3 10 19 / 0.28);
+  }
+  /* the whole site in dark mode, or one dark section of a light page (<section data-theme="dark">) */
+  :root[data-theme='dark'],
+  [data-theme='dark'] {
+    color-scheme: dark;
+    --color-ink: #e8f1f8;
+    --color-ink-2: #bccbd8;
+    --color-ink-3: #8fa4b7;
+    --color-paper: #06101b;
+    --color-paper-2: #0f2031;
+    --color-mist: #081626;
+    --color-surface: #0c1b2c;
+    --color-line: #1c3147;
+    --color-brand: #63c7f2;
+    --color-signal-ink: #ffcf87;
+    --atmos-1: 0.12;
+    --atmos-2: 0.22;
+    --atmos-3: 0.06;
+    --grid-line: rgb(120 190 235 / 0.06);
+    --card-shadow: 0 24px 60px -30px rgb(0 0 0 / 0.7);
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss01', 'ss02';
+  }
+  html { transition: background-color 0.4s ease; }
+  ::selection {
+    background: var(--color-cyan);
+    color: var(--color-night);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.025em;
+  }
+  p { text-wrap: pretty; }
+  img { user-select: none; }
+}
+
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 88rem;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 3.5rem);
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='1'/></svg>");
+  }
+  .grid-lines {
+    background-image:
+      linear-gradient(var(--color-night-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-night-line) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  /* Colourful atmosphere for content sections: soft IEEE-blue / cyan / amber light + faint engineering grid */
+  .atmos {
+    position: relative;
+    isolation: isolate;
+  }
+  .atmos::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(42rem 30rem at 6% 0%, rgb(67 198 244 / var(--atmos-1)), transparent 70%),
+      radial-gradient(38rem 32rem at 100% 35%, rgb(0 98 155 / var(--atmos-2)), transparent 70%),
+      radial-gradient(34rem 26rem at 35% 105%, rgb(255 181 71 / var(--atmos-3)), transparent 70%);
+  }
+  .atmos::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black, transparent 75%);
+  }
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    box-shadow: var(--card-shadow);
+  }
+  /* Chapter accents as text/chips — lifted toward white in dark mode so they stay readable */
+  .accent-text { color: var(--accent, var(--color-brand)); }
+  .accent-chip {
+    color: var(--accent, var(--color-brand));
+    background: color-mix(in oklab, var(--accent, var(--color-brand)) 10%, transparent);
+  }
+  [data-theme='dark'] .accent-text { color: color-mix(in oklab, var(--accent, var(--color-brand)) 50%, white); }
+  [data-theme='dark'] .accent-chip {
+    color: color-mix(in oklab, var(--accent, var(--color-brand)) 45%, white);
+    background: color-mix(in oklab, var(--accent, var(--color-brand)) 24%, transparent);
+  }
+  .text-gradient {
+    background: linear-gradient(100deg, #ffffff 10%, var(--color-cyan-soft) 45%, var(--color-cyan) 70%, #ffffff 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 7s linear infinite;
+  }
+  @keyframes shine {
+    to { background-position: -200% 0; }
+  }
+  /* Card with a cursor-following spotlight (set --mx/--my from JS) */
+  .spotlight {
+    position: relative;
+    isolation: isolate;
+  }
+  .spotlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), var(--spot, rgb(67 198 244 / 0.16)), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s var(--ease-out-expo);
+    z-index: -1;
+    pointer-events: none;
+  }
+  .spotlight:hover::before { opacity: 1; }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1.5px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.45s var(--ease-out-expo);
+  }
+  .link-underline:hover { background-size: 100% 1.5px; }
+
+  .prose-ieee p { margin: 0 0 1.1em; line-height: 1.75; color: var(--color-ink-2); font-size: 1.075rem; }
+  .prose-ieee h2 { font-size: 1.9rem; margin: 1.6em 0 0.5em; font-weight: 700; }
+  .prose-ieee h3 { font-size: 1.4rem; margin: 1.4em 0 0.4em; font-weight: 700; }
+  .prose-ieee ul { list-style: disc; padding-left: 1.3em; margin: 0 0 1.2em; color: var(--color-ink-2); }
+  .prose-ieee li { margin: 0.35em 0; line-height: 1.7; }
+  .prose-ieee a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 3px; }
+  .prose-ieee blockquote { border-left: 3px solid var(--color-cyan); padding-left: 1em; font-style: italic; color: var(--color-ink-2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Hero emblem: signal pulses radiating from the branch logo */
+.emblem-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: emblem-pulse 4.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+@keyframes emblem-pulse {
+  0% { transform: scale(0.45); opacity: 0.85; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* Theme switch: circular reveal (animated from ThemeToggle) instead of the default cross-fade */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }

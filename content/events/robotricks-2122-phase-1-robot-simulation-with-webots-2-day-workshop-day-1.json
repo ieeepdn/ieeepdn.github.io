@@ -1,0 +1,21 @@
+{
+  "id": "207",
+  "title": "Robotricks 21/22 - Phase 1 - Robot Simulation with Webots | 2-Day Workshop  - Day 1",
+  "start": "2021-08-01T19:30",
+  "end": "2021-08-01T22:00",
+  "category": "competition",
+  "summary": "Robotics and automation are not just learning theories, and only the theories can&rsquo;t handle a well-controlled robot. So this novel idea of giving the registrants of Robotricks&rsquo;21/22 the experience of simulating a robot through the Webots software is all because of the country&rsquo;s pandemic situation, a…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">Robotics and automation are not just learning theories, and only the theories can&rsquo;t handle a well-controlled robot. So this novel idea of giving the registrants of Robotricks&rsquo;21/22 the experience of simulating a robot through the Webots software is all because of the country&rsquo;s pandemic situation, and the registrants are all stuck inside their houses.</span></p>\r\n<p><span style=\"font-weight: 400;\">Day 01 of the two-day workshop was held on the 1</span><span style=\"font-weight: 400;\">st</span><span style=\"font-weight: 400;\"> of August 2021 via the zoom platform with more than 100 enthusiastic participants. At the commencement of the event, the day&rsquo;s moderator gave a warm welcome to the gathering and a brief introduction about the speaker. The speaker and the instructor of the event was Mr. Udula Ranasinghe, the secretary of the Robotics and Automation Society, who has vast knowledge on robotics and was also a participant in well-known robot competitions.</span></p>\r\n<p><span style=\"font-weight: 400;\">So the first session was started with a presentation about the Webot software environment and some features of the components which we can add when creating the robot. Also, the speaker gave an idea about the possible programming languages that we can execute on Webots. The robot was built from scratch by explaining everything and while debugging the errors encountered. So that the participants were aware of the possible errors and how to rectify them. As the time limited our session to two hours, he had to stop mid-way, hoping to meet the same energetic participants the next day. At the end of the session, he just made the robot go forward and showed us the mid-way outcome. Finally, he mentioned about the first task that will be given to the participants in the near future.</span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/287702",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/287702",
+  "cover": "/media/vtools-287702-1.jpg",
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "287702",
+  "hostName": "University of Peradeniya,RA24",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "robotricks-2122-phase-1-robot-simulation-with-webots-2-day-workshop-day-1",
+  "chapter": "7",
+  "updatedAt": "2026-10-01T16:48:13.211Z"
+}

@@ -1,0 +1,11 @@
+/node_modules
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+npm-debug.log*
+.env*.local
+# generated at build time by scripts/media.mjs
+/public/media/_sizes/
+/src/content/media-index.json

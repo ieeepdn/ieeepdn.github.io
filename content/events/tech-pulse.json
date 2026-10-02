@@ -1,0 +1,29 @@
+{
+  "id": "47",
+  "title": "Tech Pulse",
+  "start": "2025-04-29T09:00",
+  "end": "2025-04-29T10:10",
+  "category": "talk",
+  "summary": "Tech Pulse, an event organized by the IEEE Women in Engineering Affinity Group of Sri Lanka in collaboration with the IEEE Women in Engineering Student Branch Affinity Group of the University of Peradeniya, was successfully held on April 29th from 9:00 AM to 10:00 AM. The event featured an inspiring session by Dr. E…",
+  "descriptionHtml": "<p>Tech Pulse, an event organized by the IEEE Women in Engineering Affinity Group of Sri Lanka in collaboration with the IEEE Women in Engineering Student Branch Affinity Group of the University of Peradeniya, was successfully held on April 29th from 9:00 AM to 10:00 AM. The event featured an inspiring session by Dr. Eng. Kamalanath Samarakoon on Generative AI and Opportunities for Students. Through an engaging exploration of neural networks and various AI concepts, Dr. Samarakoon skillfully demonstrated the complexities of this transformative field with clarity and passion. His talk not only deepened students' understanding of generative technologies but also inspired them to think boldly and pursue innovation. The session left a strong impact on participants while building confidence and encouraging them to explore new possibilities in technology.</p>\r\n<p>&nbsp;</p>\r\n<p><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/0564b881-835e-44e5-8536-00d5cff04ffb\" width=\"470\" height=\"313\">&nbsp; &nbsp; &nbsp; &nbsp;<img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/121d46df-65b8-4a29-9a72-d3a3a4a43021\" width=\"464\" height=\"309\"></p>\r\n<p>&nbsp;<img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/22a218e3-dfed-4d42-9a8c-375a679f6c18\" width=\"471\" height=\"314\">&nbsp; &nbsp; &nbsp; &nbsp;<img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/a54b1410-9a71-43e9-955c-70cfdedb7e0b\" width=\"467\" height=\"311\">&nbsp;</p>\r\n<p>&nbsp; &nbsp;<img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/04faf231-6adc-4fe2-9d07-3188b8b79bcc\" width=\"519\" height=\"346\"></p>",
+  "venue": "Electrical and Electronic Engineering Department., Seminar room, Elementary Laboratory., Faculty of Engineering,",
+  "city": "Peradeniya",
+  "virtual": false,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/484875",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/484875",
+  "cover": "/media/vtools-484875-1.jpg",
+  "gallery": [
+    "/media/vtools-484875-2.jpg",
+    "/media/vtools-484875-3.jpg",
+    "/media/vtools-484875-4.jpg",
+    "/media/vtools-484875-5.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "484875",
+  "hostName": "University of Peradeniya WIE",
+  "syncedAt": "2026-10-01T22:15",
+  "slug": "tech-pulse",
+  "chapter": "2",
+  "updatedAt": "2026-10-01T16:45:27.240Z"
+}

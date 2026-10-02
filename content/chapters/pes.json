@@ -1,0 +1,82 @@
+{
+  "id": "6",
+  "layout": [
+    {
+      "blockType": "chapterAbout",
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "pageLinks",
+      "eyebrow": "PES flagships",
+      "heading": "Our signature events & projects",
+      "pages": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "events",
+      "eyebrow": "PES events",
+      "heading": "Recent events.",
+      "show": "auto",
+      "limit": 6,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "stories",
+      "eyebrow": "What we’ve been doing",
+      "heading": "Stories & recaps.",
+      "limit": 3,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "gallery",
+      "eyebrow": "Moments",
+      "heading": "PES in pictures.",
+      "layout": "mosaic",
+      "background": "dark",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "people",
+      "eyebrow": "Committee",
+      "heading": "Meet the PES team",
+      "source": "committee",
+      "items": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "cta",
+      "heading": "Get involved with PES.",
+      "text": "Join the team, pitch an event or volunteer at the next one. Every chapter committee is built by students like you.",
+      "buttons": [
+        {
+          "label": "Volunteer",
+          "url": "/volunteer",
+          "variant": "primary"
+        }
+      ]
+    }
+  ],
+  "name": "IEEE Power & Energy Society",
+  "shortName": "PES",
+  "slug": "pes",
+  "kind": "chapter",
+  "tagline": "The leading source of scientific and engineering information on electric power and energy — for the betterment of society.",
+  "about": "Guided by the mission “to be the leading provider of scientific and engineering information on electric power and energy for the betterment of society, and preferred professional development source of its members”, the Peradeniya student chapter spreads the latest technological developments in the electric power industry.\n\nBeing solution oriented, we keep educating members of the industry and the general public — through talks such as VoltEdge on smart grids and renewable energy, run together with WIE.",
+  "accent": "#2F7A3A",
+  "order": 5,
+  "logo": "/media/logo-pes.png",
+  "highlights": [],
+  "vtools": {
+    "spoid": "SBC18711A",
+    "hostNameMatch": ",PE31|Power"
+  },
+  "links": {
+    "join": "https://www.ieee-pes.org/membership"
+  },
+  "updatedAt": "2026-09-28T05:21:01.149Z"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "144",
+  "title": "Predicta 1.0 - Workshop 1",
+  "start": "2024-06-13T18:00",
+  "end": "2024-09-13T19:00",
+  "category": "competition",
+  "summary": "The Workshop 1 covered essential techniques like data cleaning, where you learned to handle missing or inconsistent data, ensuring datasets are reliable for analysis. Feature selection was also explored, teaching you how to identify the most relevant variables for your models to improve efficiency and accuracy. Addi…",
+  "descriptionHtml": "<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://events.vtools.ieee.org/vtools_ui/media/display/4061b221-35ab-4575-9e64-5b0a28a825a1\" alt=\"\" width=\"253\" height=\"253\"></p>\r\n<p style=\"text-align: justify;\">The <strong>Workshop 1</strong> covered essential techniques like data cleaning, where you learned to handle missing or inconsistent data, ensuring datasets are reliable for analysis. Feature selection was also explored, teaching you how to identify the most relevant variables for your models to improve efficiency and accuracy. Additionally, data preprocessing techniques were discussed to help prepare raw data for machine learning algorithms. The workshop also introduced the Kaggle platform, a popular online community for data scientists to practice, compete, and collaborate on various data science projects.</p>\r\n<p>&nbsp;</p>",
+  "virtual": true,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/436615",
+  "cover": "/media/vtools-436615-1.jpg",
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "436615",
+  "hostName": "University of Peradeniya",
+  "syncedAt": "2026-10-01T22:17",
+  "slug": "predicta-10-workshop-1",
+  "chapter": "1",
+  "updatedAt": "2026-10-01T16:47:01.947Z"
+}

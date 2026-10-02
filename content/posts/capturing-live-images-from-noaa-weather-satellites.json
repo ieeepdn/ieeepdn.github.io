@@ -1,0 +1,19 @@
+{
+  "id": "21",
+  "title": "Capturing live images from NOAA weather satellites",
+  "kind": "recap",
+  "date": "2023-11-14",
+  "excerpt": "Using SDRSharp and WXtoImg, the team decoded APT signals in real time and captured an image from NOAA 18.",
+  "cover": "/media/comsoc-noaa-image.jpg",
+  "content": "<p>At Open Day UOP 2023, the ComSoc team captured Automatic Picture Transmission (APT) signals from NOAA satellites including NOAA 15, NOAA 18 and NOAA 19, using software such as SDRSharp and WXtoImg.</p><p>The APT streams were processed in real time — and during the event the team captured an image from the NOAA 18 satellite.</p>",
+  "gallery": [
+    "/media/comsoc-openday-3.jpg",
+    "/media/comsoc-openday-4.jpg",
+    "/media/comsoc-openday-7.jpg"
+  ],
+  "slug": "capturing-live-images-from-noaa-weather-satellites",
+  "chapter": "4",
+  "featured": false,
+  "_status": "published",
+  "updatedAt": "2026-09-27T04:47:37.128Z"
+}

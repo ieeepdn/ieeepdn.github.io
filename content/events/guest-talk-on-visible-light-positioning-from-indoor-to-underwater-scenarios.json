@@ -1,0 +1,19 @@
+{
+  "id": "100",
+  "title": "Guest Talk on ‘’Visible Light Positioning: From Indoor to Underwater Scenarios’’.",
+  "start": "2022-05-11T18:00",
+  "end": "2022-05-11T19:30",
+  "category": "talk",
+  "summary": "In next generation 6G networks, one of the main goals is to achieve a very high data rate and very low delays in massive device-to-device communication scenarios. Visible Light Communication is expected to be an enabling solution for 6G networks, while guaranteeing the twofold paradigm of both illumination and commu…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">In next generation 6G networks, one of the main goals is to achieve a very high data rate and very low delays in massive device-to-device communication scenarios. Visible Light Communication is expected to be an enabling solution for 6G networks, while guaranteeing the twofold paradigm of both </span><span style=\"font-weight: 400;\">illumination and communications, both in indoor and outdoor scenarios. The event is a guest talk held under the topic of &ldquo;Visible Light Positioning: From Indoor to Underwater Scenarios&rdquo;. it was organized with the purpose of giving a broad idea about visible light positioning. It was mainly organized by the IEEE ComSoc Sri Lanka Chapter in collaboration with the IEEE ComSoc Student Branch Chapters of Universities of Peradeniya, Moratuwa and Ruhuna. This most informative and valuable talk was brought to us by Assistant Professor Anna Maria Vegni from the Department Industrial, Electronic and Mechanical Engineering, Rome Tre University, Rome, Italy.</span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/315399",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/315399",
+  "source": "vtools",
+  "vtoolsId": "315399",
+  "hostName": "University of Peradeniya,COM19",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "guest-talk-on-visible-light-positioning-from-indoor-to-underwater-scenarios",
+  "chapter": "4",
+  "updatedAt": "2026-10-01T16:46:15.746Z"
+}

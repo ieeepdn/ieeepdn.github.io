@@ -1,0 +1,25 @@
+{
+  "id": "52",
+  "title": "VoltEdge",
+  "start": "2024-10-23T19:00",
+  "end": "2024-10-23T20:30",
+  "category": "talk",
+  "summary": "The IEEE Women in Engineering Student Branch Affinity Group of the University of Peradeniya, in collaboration with the IEEE Power and Energy Society Student Chapter of the University of Peradeniya, hosted VoltEdge, an enlightening lecture on Smart Grids & Renewable Energy. Conducted by Prof. Janaka Ekanayake, the se…",
+  "descriptionHtml": "<p>The IEEE Women in Engineering Student Branch Affinity Group of the University of Peradeniya, in collaboration with the IEEE Power and Energy Society Student Chapter of the University of Peradeniya, hosted VoltEdge, an enlightening lecture on Smart Grids &amp;<em> </em>Renewable Energy. Conducted by Prof. Janaka Ekanayake, the session highlighted transformative advancements in energy systems, focusing on the seamless integration of renewable energy into smart grid technologies to promote sustainability and efficiency. The event provided participants with valuable knowledge about power systems, smart grids, and renewable energy, fostering a deeper understanding of their role in shaping a sustainable energy future.</p>\r\n<p><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/fdafb37c-fda5-415d-a3ed-7fc3ac181388\" alt=\"\" width=\"746\" height=\"398\"></p>\r\n<p><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/53e64a0b-4bb8-4946-8790-8cd25c5595f1\" alt=\"\" width=\"747\" height=\"395\"></p>\r\n<p><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/33ef09b9-7316-4cc8-a133-aaa70ad0345d\" alt=\"\" width=\"746\" height=\"397\"></p>",
+  "virtual": true,
+  "registrationUrl": "https://forms.gle/BacxcEUbEwyumdok6",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/455228",
+  "cover": "/media/vtools-455228-1.jpg",
+  "gallery": [
+    "/media/vtools-455228-2.jpg",
+    "/media/vtools-455228-3.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "455228",
+  "hostName": "University of Peradeniya WIE",
+  "syncedAt": "2026-10-01T22:15",
+  "slug": "voltedge",
+  "chapter": "2",
+  "updatedAt": "2026-10-01T16:45:31.379Z"
+}

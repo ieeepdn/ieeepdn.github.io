@@ -1,0 +1,24 @@
+{
+  "id": "210",
+  "title": "Robotricks 21/22 - Phase 1 -Webinar 2 - Introduction to Webots Simulation Software",
+  "start": "2021-07-11T17:30",
+  "end": "2021-07-11T19:00",
+  "category": "competition",
+  "summary": "The first webinar of Robotrics 21/22 phase 1, organised by the IEEE Robotics and Automation Society, the student chapter of University of Peradeniya, was held on 11 th of July 2021 from 4.00 p.m via zoom platform and Facebook live. The webinar was conducted by a senior lecturer in the Department of Electronic and El…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">The first webinar of Robotrics 21/22 phase 1, organised by the IEEE Robotics and Automation Society, the student chapter of University of Peradeniya, was held on 11</span><span style=\"font-weight: 400;\">th</span><span style=\"font-weight: 400;\"> of July 2021 from 4.00 p.m via zoom platform and Facebook live. The webinar was conducted by a senior lecturer in the Department of Electronic and Electrical Engineering, University of Peradeniya, who has practised and gained good knowledge in various fields such as bio robotics and biomechanical simulation of locomotor control, dynamics of sensory-motor integration and many more technical fields.</span></p>\r\n<p><span style=\"font-weight: 400;\">&nbsp;</span><span style=\"font-weight: 400;\">The webinar was opened for all the undergraduates interested in Robotics and who plan to succeed in the Robotics Industry in the future.</span></p>\r\n<p><span style=\"font-weight: 400;\">The main topics discussed were,&nbsp;</span></p>\r\n<ul>\r\n<li><span style=\"font-weight: 400;\"> What is Webots?</span></li>\r\n<li><span style=\"font-weight: 400;\"> Alternatives to Webots?</span></li>\r\n<li><span style=\"font-weight: 400;\"> Portfolio and features</span></li>\r\n<li><span style=\"font-weight: 400;\"> Webots simulations and user interface</span></li>\r\n<li><span style=\"font-weight: 400;\"> Examples and Tutorials</span></li>\r\n</ul>\r\n<p><span style=\"font-weight: 400;\">At the commencement of the event, an introduction of the keynote speaker was delivered. Afterwards, </span><span style=\"font-weight: 400;\">Dr. Nalin Harischandra started to discuss Webots Simulation software from the basics and presented various robotics projects which are created from the Webots platform. Further, he clarified the languages that can be written in Webots controller.</span></p>\r\n<p><span style=\"font-weight: 400;\">At the end of the main session of the guest speaker, the participants were able to lighten their minds moreover in the Q/A session, where they were able to get answers to a lot of questions and clarify their doubts regarding the Webot simulation software and how to get started robots modelling in Webots platform as robotics enthusiasts.</span></p>\r\n<p><span style=\"font-weight: 400;\">Finally, to remark the end of the first webinar of the webinar series</span><span style=\"font-weight: 400;\">, the Vote of Thanks was delivered by Udula Ranasinghe, the secretary of</span><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">IEEE Robotics and Automation Society.</span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/280317",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/280317",
+  "cover": "/media/vtools-280317-1.jpg",
+  "gallery": [
+    "/media/vtools-280317-2.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "280317",
+  "hostName": "University of Peradeniya,RA24",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "robotricks-2122-phase-1-webinar-2-introduction-to-webots-simulation-software",
+  "chapter": "7",
+  "updatedAt": "2026-10-01T16:48:14.971Z"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "8",
+  "layout": [
+    {
+      "blockType": "chapterAbout",
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "pageLinks",
+      "eyebrow": "IAS flagships",
+      "heading": "Our signature events & projects",
+      "pages": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "events",
+      "eyebrow": "IAS events",
+      "heading": "Recent events.",
+      "show": "auto",
+      "limit": 6,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "stories",
+      "eyebrow": "What we’ve been doing",
+      "heading": "Stories & recaps.",
+      "limit": 3,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "gallery",
+      "eyebrow": "Moments",
+      "heading": "IAS in pictures.",
+      "layout": "mosaic",
+      "background": "dark",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "people",
+      "eyebrow": "Committee",
+      "heading": "Meet the IAS team",
+      "source": "committee",
+      "items": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "cta",
+      "heading": "Get involved with IAS.",
+      "text": "Join the team, pitch an event or volunteer at the next one. Every chapter committee is built by students like you.",
+      "buttons": [
+        {
+          "label": "Volunteer",
+          "url": "/volunteer",
+          "variant": "primary"
+        }
+      ]
+    }
+  ],
+  "name": "IEEE Industry Applications Society",
+  "shortName": "IAS",
+  "slug": "ias",
+  "kind": "chapter",
+  "tagline": "Linking research to practice — engineering for the unique needs of industry and commerce.",
+  "about": "If your engineering interests are the needs of the industrial or commercial sector, the Industry Applications Society will be a valuable professional connection. One of the largest special-interest societies within IEEE, IAS focuses specifically on the unique needs of industry and commerce.\n\nIAS is a source of professional power to nearly 10,000 members worldwide. Through a network of over 100 chapters, regional events and international conferences, the society keeps members abreast of current developments in electricity and electronics — and at Peradeniya we bring that to campus with hands-on workshops such as PLCs & SCADA systems.",
+  "accent": "#15803D",
+  "order": 7,
+  "logo": "/media/logo-ias.png",
+  "cover": "/media/ias-banner.jpg",
+  "highlights": [
+    {
+      "value": "≈10k",
+      "label": "IAS members worldwide"
+    },
+    {
+      "value": "100+",
+      "label": "IAS chapters around the globe"
+    }
+  ],
+  "vtools": {
+    "spoid": "SBC18711B",
+    "hostNameMatch": ",IA34|Industry Applications"
+  },
+  "links": {
+    "join": "https://ias.ieee.org/membership/"
+  },
+  "updatedAt": "2026-09-28T05:21:02.966Z"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "93",
+  "title": "Showcase by IEEE Communications Society, on Open Day - 2023 at University of Peradeniya",
+  "start": "2023-07-01T09:00",
+  "end": "2023-07-01T17:00",
+  "category": "social",
+  "summary": "showcase at open day hosted by the IEEE Communications Society at the University of Peradeniya at Electronic and Electrical Department was a resounding success. The event aimed to provide an engaging and educational experience for participants, focusing on the principles and practical aspects of transmitters, receiv…",
+  "descriptionHtml": "<p>showcase at open day hosted by the IEEE Communications Society at the University of Peradeniya at Electronic and Electrical Department was a resounding success. The event aimed to provide an engaging and educational experience for participants, focusing on the principles and practical aspects of transmitters, receivers, satellite image capturing, and image transmission. <br /><br />Tasks: <br /><br />&bull; Fox Hunt: The Fox Hunt activity provided participants with an exciting challenge to locate a hidden receiver within the faculty premises using a transmitter's indication. This demonstrated the principles associated with transmitting and receiving. To encourage active participation, a surprise reward was attached to the transmitter, making the activity even more thrilling. <br /><br />&bull; Satellite Image Capturing: Participants learned how to capture images from weather satellites using an antenna, software-defined radio (SDR), and specialized software. The theoretical aspects of image data transmission as bit streams and pulses were covered, along with techniques for extracting images from transmitted bit streams using encoding and decoding methods. <br /><br />&bull; Image Transmission via Computer and Mobile App: This task involved constructing a transmitter and receiver to send and capture images. Participants were guided through the process of decoding images into binary bits, which were then transmitted using a dedicated transmitter. The images were received and displayed using a mobile app, providing insight into image transfer and capturing.</p>\r\n<p><br />Attendees: The event attracted numerous outsiders to the university, including students, professionals, and technology enthusiasts and also the undergraduates in the university who are eager to learn about the fascinating world of telecommunication. <br /><br />The event report successfully highlights the engaging tasks and learning experiences provided during the Open Day. The tasks encompassed practical demonstrations and theoretical concepts, providing participants with valuable knowledge in the field of telecommunication. The IEEE Communications Society at the University of Peradeniya looks forward to hosting more such events in the future to continue fostering interest and understanding in this dynamic</p>",
+  "venue": "Department of Electrical and Electronics Engineering",
+  "city": "Kandy",
+  "virtual": false,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/368699",
+  "source": "vtools",
+  "vtoolsId": "368699",
+  "hostName": "University of Peradeniya,COM19",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "showcase-by-ieee-communications-society-on-open-day-2023-at-university-of-peradeniya",
+  "chapter": "4",
+  "updatedAt": "2026-10-01T16:46:09.095Z"
+}

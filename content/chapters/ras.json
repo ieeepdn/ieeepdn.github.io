@@ -1,0 +1,82 @@
+{
+  "id": "7",
+  "layout": [
+    {
+      "blockType": "chapterAbout",
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "pageLinks",
+      "eyebrow": "RAS flagships",
+      "heading": "Our signature events & projects",
+      "pages": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "events",
+      "eyebrow": "RAS events",
+      "heading": "Recent events.",
+      "show": "auto",
+      "limit": 6,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "stories",
+      "eyebrow": "What we’ve been doing",
+      "heading": "Stories & recaps.",
+      "limit": 3,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "gallery",
+      "eyebrow": "Moments",
+      "heading": "RAS in pictures.",
+      "layout": "mosaic",
+      "background": "dark",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "people",
+      "eyebrow": "Committee",
+      "heading": "Meet the RAS team",
+      "source": "committee",
+      "items": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "cta",
+      "heading": "Get involved with RAS.",
+      "text": "Join the team, pitch an event or volunteer at the next one. Every chapter committee is built by students like you.",
+      "buttons": [
+        {
+          "label": "Volunteer",
+          "url": "/volunteer",
+          "variant": "primary"
+        }
+      ]
+    }
+  ],
+  "name": "IEEE Robotics & Automation Society",
+  "shortName": "RAS",
+  "slug": "ras",
+  "kind": "chapter",
+  "tagline": "Advancing the theory and practice of robotics and automation engineering.",
+  "about": "The IEEE Robotics and Automation Society’s objectives are scientific, literary and educational in character. The society strives for the advancement of the theory and the practice of robotics and automation engineering and science, and of the allied arts and sciences — and for the maintenance of high professional standards among its members.\n\nOur team consists of dedicated young individuals with passionate minds who want to take RAS UoP to the next step.",
+  "accent": "#8B1E3F",
+  "order": 6,
+  "logo": "/media/logo-ras.png",
+  "highlights": [],
+  "vtools": {
+    "spoid": "SBC18711D",
+    "hostNameMatch": ",RA24|Robotics"
+  },
+  "links": {
+    "join": "https://www.ieee-ras.org/membership"
+  },
+  "updatedAt": "2026-09-28T05:21:02.045Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "123",
+  "title": "DML - What is my measurement equipment actually doing?",
+  "start": "2020-11-18T19:00",
+  "end": "2020-11-18T21:00",
+  "category": "talk",
+  "summary": "A talk on &ldquo; What is my measurement equipment actually doing? &rdquo; organized by the IEEE MTTS Student Branch Chapter of University of Peradeniya was hosted virtually on the 18th of November 2020. The talk was conducted by Dr. Jon Martens, an Engineer at Anritsu, the Past Chair of MTT measurements technical s…",
+  "descriptionHtml": "<p>A talk on &ldquo;<strong>What is my measurement equipment actually doing?</strong>&rdquo; organized by the IEEE MTTS Student Branch Chapter of University of Peradeniya was hosted virtually on the 18th of November 2020. The talk was conducted by Dr. Jon Martens, an Engineer at Anritsu, the Past Chair of MTT measurements technical subcommittee and Past President of the measurements society ARFTG. <br />It was mainly based on the implications of 5G, mm-Wave and related applications and on how to mitigate the anomalies in microwave and high frequency instrumentation. The event wound up successfully and the participants were able to gain a vast knowledge from the discussion.</p>",
+  "city": "Peradeniya",
+  "virtual": true,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/265305",
+  "source": "vtools",
+  "vtoolsId": "265305",
+  "hostName": "University of Peradeniya,MTT17",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "dml-what-is-my-measurement-equipment-actually-doing",
+  "chapter": "5",
+  "updatedAt": "2026-10-01T16:46:38.514Z"
+}

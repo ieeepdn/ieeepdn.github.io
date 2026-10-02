@@ -1,0 +1,153 @@
+{
+  "id": "5",
+  "title": "ComSoc · 2025/26",
+  "term": "2025/26",
+  "current": true,
+  "advisors": [
+    {
+      "name": "Dr. Himal Suraweera",
+      "position": "Senior Treasurer",
+      "photo": "/media/comsoc-057.jpg"
+    }
+  ],
+  "executive": [
+    {
+      "position": "Chair",
+      "name": "Janidu Rathnasiri",
+      "photo": "/media/comsoc-058.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "Tharuka Welagedara",
+      "photo": "/media/comsoc-059.jpg"
+    },
+    {
+      "position": "Junior Treasurer",
+      "name": "Eeshawa Randiya",
+      "photo": "/media/comsoc-060.jpg"
+    },
+    {
+      "position": "Vice Chair",
+      "name": "Shanan Adams",
+      "photo": "/media/comsoc-061.jpg"
+    },
+    {
+      "position": "Assistant Junior Treasurer",
+      "name": "Savinu Nadew",
+      "photo": "/media/comsoc-066.jpg"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Webmaster",
+      "members": [
+        {
+          "name": "Anupa Rathnayake",
+          "role": "lead",
+          "photo": "/media/comsoc-062.jpg"
+        },
+        {
+          "name": "Shane Baines",
+          "role": "member",
+          "photo": "/media/comsoc-071.jpg"
+        },
+        {
+          "name": "Damindu Thathsara",
+          "role": "member",
+          "photo": "/media/comsoc-072.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "members": [
+        {
+          "name": "Pavani Pathirana",
+          "role": "lead",
+          "photo": "/media/comsoc-063.jpg"
+        },
+        {
+          "name": "Ginuri Ranawaka",
+          "role": "member",
+          "photo": "/media/comsoc-067.jpg"
+        },
+        {
+          "name": "Chama Wickramage",
+          "role": "member",
+          "photo": "/media/comsoc-068.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Program",
+      "members": [
+        {
+          "name": "Chalana Rashmika",
+          "role": "lead",
+          "photo": "/media/comsoc-064.jpg"
+        },
+        {
+          "name": "Sakuni Abeywickrama",
+          "role": "member",
+          "photo": "/media/comsoc-069.jpg"
+        },
+        {
+          "name": "Tishan Dissanayake",
+          "role": "member",
+          "photo": "/media/comsoc-070.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Reporting",
+      "members": [
+        {
+          "name": "Dewmini Chamathka",
+          "role": "lead",
+          "photo": "/media/comsoc-065.jpg"
+        },
+        {
+          "name": "Vibhavi Kariyawasam",
+          "role": "member",
+          "photo": "/media/comsoc-073.jpg"
+        },
+        {
+          "name": "Roshan Milinda",
+          "role": "member",
+          "photo": "/media/comsoc-074.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Committee",
+      "members": [
+        {
+          "name": "G.K. Ashwinthan",
+          "role": "member",
+          "position": "Committee Member (E20)",
+          "photo": "/media/comsoc-075.jpg"
+        },
+        {
+          "name": "Seneth Rashmika",
+          "role": "member",
+          "position": "Committee Member (E21)",
+          "photo": "/media/comsoc-076.jpg"
+        },
+        {
+          "name": "Iresha Madumali",
+          "role": "member",
+          "position": "Committee Member (E22)",
+          "photo": "/media/comsoc-077.jpg"
+        },
+        {
+          "name": "Rusith Pahasara",
+          "role": "member",
+          "position": "Committee Member (E23)",
+          "photo": "/media/comsoc-078.jpg"
+        }
+      ]
+    }
+  ],
+  "chapter": "4",
+  "updatedAt": "2026-09-28T05:20:53.575Z"
+}

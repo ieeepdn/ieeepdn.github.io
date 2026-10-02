@@ -1,0 +1,21 @@
+{
+  "id": "56",
+  "title": "InnovateX'24",
+  "start": "2024-04-26T08:30",
+  "end": "2024-04-26T14:00",
+  "category": "talk",
+  "summary": "\"InnovateX '24 - Inspiring Girls to Innovate, Create, and Lead the Way!\" is an event organized by the IEEE WIE student branch affinity group of the University of Peradeniya. The event was held on April 26, 2024, from 8:30 a.m. to 2:00 p.m. at the Faculty of Engineering, University of Peradeniya. As this was an event…",
+  "descriptionHtml": "<p>\"InnovateX '24 - Inspiring Girls to Innovate, Create, and Lead the Way!\" is an event organized by the IEEE WIE student branch affinity group of the University of Peradeniya. The event was held on April 26, 2024, from 8:30 a.m. to 2:00 p.m. at the Faculty of Engineering, University of Peradeniya. As this was an event to empower girls to cultivate and strengthen their leadership skills and knowledge, around 90 students from girls' schools around the Kandy district participated in this event.</p>\r\n<p>In the morning, a few lectures were conducted to inspire girls towards engineering and to uplift their skills. Then, an interactive session was conducted by volunteers from the Faculty of Engineering, University of Peradeniya, covering some basics of electrical and electronic engineering. It was an interactive session where students actively participated by answering questions and asking their own. Following this, the students were divided into three groups, each with four volunteers to guide them on a tour of the faculty. The tour included visits to the Electrical and Electronic Lab, Fluid Lab, and Mechanical Lab. Each group had the opportunity to explore these laboratories and gain knowledge about the equipment and processes inside. Instructors and lecturers inspired them by teaching in a way that catered to their age, explaining how various machines work and other relevant concepts.</p>\r\n<p>After that, the students were divided into 8 groups, each accompanied by 2 volunteers from the faculty to guide them in circuit designing. During this session, students had the opportunity to gain hands-on experience in circuit designing. All the knowledge was imparted to the students, who then worked together in groups to design the circuit. The students designed a light level indicator using Arduino, and the top three performing groups were awarded gifts. They received comprehensive knowledge ranging from basic to an intermediate level of circuit designing throughout this session.</p>",
+  "venue": "Electrical and Electronic Engineering Department, Seminar room, Elementary Laboratory, Faculty of Engineering",
+  "city": "Peradeniya",
+  "virtual": false,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/419014",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/419014",
+  "source": "vtools",
+  "vtoolsId": "419014",
+  "hostName": "University of Peradeniya WIE",
+  "syncedAt": "2026-10-01T22:15",
+  "slug": "innovatex24",
+  "chapter": "2",
+  "updatedAt": "2026-10-01T16:45:35.769Z"
+}

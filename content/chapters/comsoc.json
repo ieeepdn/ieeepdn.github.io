@@ -1,0 +1,92 @@
+{
+  "id": "4",
+  "layout": [
+    {
+      "blockType": "chapterAbout",
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "pageLinks",
+      "eyebrow": "ComSoc flagships",
+      "heading": "Our signature events & projects",
+      "pages": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "events",
+      "eyebrow": "ComSoc events",
+      "heading": "Recent events.",
+      "show": "auto",
+      "limit": 6,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "stories",
+      "eyebrow": "What we’ve been doing",
+      "heading": "Stories & recaps.",
+      "limit": 3,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "gallery",
+      "eyebrow": "Moments",
+      "heading": "ComSoc in pictures.",
+      "layout": "mosaic",
+      "background": "dark",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "people",
+      "eyebrow": "Committee",
+      "heading": "Meet the ComSoc team",
+      "source": "committee",
+      "items": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "cta",
+      "heading": "Get involved with ComSoc.",
+      "text": "Join the team, pitch an event or volunteer at the next one. Every chapter committee is built by students like you.",
+      "buttons": [
+        {
+          "label": "Volunteer",
+          "url": "/volunteer",
+          "variant": "primary"
+        }
+      ]
+    }
+  ],
+  "name": "IEEE Communications Society",
+  "shortName": "ComSoc",
+  "slug": "comsoc",
+  "kind": "chapter",
+  "tagline": "To advance communications and networking technology for the betterment of humanity.",
+  "about": "With the collective goal “to advance communications and networking technology for the betterment of humanity”, the IEEE Communications Society connects young engineers with a global community of professionals in communication technology across more than 140 countries — engineers, academics, practitioners, scientists and executives developing higher industry standards and changing the way we all communicate.\n\nAs a student branch chapter we organise distinguished lectures, informative talks and hands-on events — from capturing live images from NOAA weather satellites to radio fox hunts across the faculty.",
+  "accent": "#006A8E",
+  "order": 3,
+  "logo": "/media/logo-comsoc.png",
+  "cover": "/media/comsoc-openday-3.jpg",
+  "highlights": [
+    {
+      "value": "140+",
+      "label": "countries in the global ComSoc network"
+    },
+    {
+      "value": "NOAA 18",
+      "label": "satellite image captured live at Open Day 2023"
+    }
+  ],
+  "vtools": {
+    "spoid": "SBC18711E",
+    "hostNameMatch": ",COM19|Communications"
+  },
+  "links": {
+    "join": "https://www.comsoc.org/membership"
+  },
+  "updatedAt": "2026-09-28T05:20:59.731Z"
+}

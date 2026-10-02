@@ -1,0 +1,84 @@
+{
+  "id": "1",
+  "name": "Pera Xtreme",
+  "edition": "Pera.Xtreme-24",
+  "slug": "pera-xtreme",
+  "tagline": "The road to IEEEXtreme — 24 hours, one global leaderboard.",
+  "summary": "IEEEXtreme is a 24-hour global coding competition held on the same day in locations around the world, organised by IEEE. Pera Xtreme is how the branch gets Peradeniya’s teams ready — awareness sessions, practice contests like CodeVortex, proctoring and a night-long coding arcade on campus.",
+  "accent": "#0E7490",
+  "order": 1,
+  "cover": "/media/bg-circuit.jpg",
+  "logo": "/media/banner-peraxtreme.png",
+  "stats": [
+    {
+      "value": "24h",
+      "label": "global coding marathon"
+    },
+    {
+      "value": "3",
+      "label": "members per team"
+    },
+    {
+      "value": "75%",
+      "label": "max membership sponsorship for top CodeVortex teams"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "What is IEEEXtreme?",
+      "body": "Each year thousands of enthusiasts, coders and students of all levels with IEEE Student Membership take part in this internationally recognised challenge to win valuable prizes. The Peradeniya branch runs a full pathway into it — starting with “Path to Xtreme: the what, why and how of IEEEXtreme” awareness sessions.",
+      "points": []
+    },
+    {
+      "heading": "Pera.Xtreme CodeVortex",
+      "body": "A six-hour coding frenzy held each September to turbocharge preparation. Face off in intense challenges, sharpen your skills — and the top three teams can win sponsorship of 50% to 75% of the IEEE Student Membership fee if they commit to IEEEXtreme.",
+      "points": []
+    },
+    {
+      "heading": "How to compete",
+      "body": "Everything you need to go from zero to the global leaderboard.",
+      "points": [
+        {
+          "text": "Team up — create a team of up to three members, each with an active IEEE student or graduate membership."
+        },
+        {
+          "text": "Find a proctor — ask a registered proctor from the student branch to supervise your team."
+        },
+        {
+          "text": "Get added to the University of Peradeniya team listing."
+        },
+        {
+          "text": "Register your team on the IEEEXtreme portal using the branch’s ambassador referral ID."
+        },
+        {
+          "text": "Practice, practice, practice — follow the branch’s training plan and practice rounds."
+        }
+      ]
+    },
+    {
+      "heading": "Bittopia 2023",
+      "body": "Bittopia, the coding arcade under Xtreme.Pera-23, kicked off at 05:30 AM Sri Lanka time at the Faculty of Engineering alongside the global start at 00:00 UTC — with seven teams in person and three more joining remotely.",
+      "points": []
+    }
+  ],
+  "links": [
+    {
+      "label": "ieeextreme.org",
+      "url": "https://ieeextreme.org/",
+      "primary": true
+    },
+    {
+      "label": "Get IEEE membership",
+      "url": "https://www.ieee.org/membership/join/index.html",
+      "primary": false
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Pera Xtreme organising committee",
+      "role": "IEEE Student Branch, University of Peradeniya",
+      "email": "ieeepdn@gmail.com"
+    }
+  ],
+  "updatedAt": "2026-09-27T04:47:13.312Z"
+}

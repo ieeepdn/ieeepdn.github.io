@@ -1,0 +1,27 @@
+{
+  "id": "135",
+  "title": "ICIIS 2025",
+  "start": "2026-01-15T09:00",
+  "end": "2026-02-17T16:30",
+  "category": "talk",
+  "summary": "The International Conference on Industrial and Information Systems (ICIIS) was a peer-reviewed international conference focused on research and development in industrial, electrical, electronic, and information systems engineering. The conference served as a platform for researchers, academics, and industry professi…",
+  "descriptionHtml": "<p data-start=\"162\" data-end=\"575\">The International Conference on Industrial and Information Systems (ICIIS) was a peer-reviewed international conference focused on research and development in industrial, electrical, electronic, and information systems engineering. The conference served as a platform for researchers, academics, and industry professionals to present and exchange innovative research findings and technological advancements.</p>\r\n<p data-start=\"577\" data-end=\"968\">ICIIS 2025 covered a broad scope of topics, including but not limited to artificial intelligence, signal and image processing, embedded systems, communications and information technologies, power and energy engineering, control and robotics, and VLSI design. Accepted papers were published in IEEE-indexed proceedings, contributing to global research visibility and academic impact.</p>\r\n<p data-start=\"970\" data-end=\"1445\">The event was hosted by the IEEE Central Region Subsection in collaboration with the IEEE Student Branch, University of Peradeniya, and was successfully concluded with strong organizational support. More than 50 student volunteers from the IEEE Student Branch actively contributed to the planning and execution of the conference. The event recorded an attendance of over 500 participants, reflecting strong engagement from both academia and industry.</p>\r\n<p data-start=\"970\" data-end=\"1445\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/241a3fa0-0407-417a-b5e4-416eb3ebc0c7\" alt=\"\" width=\"434\" height=\"325\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/6403d4d3-1658-4f14-9bc3-1c458f040b22\" alt=\"\" width=\"225\" height=\"325\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/137276bb-3c08-4318-8fc3-f56fa0468df3\" alt=\"\" width=\"290\" height=\"325\"></p>",
+  "venue": "Faculty of Engineering",
+  "city": "Peradeniya",
+  "virtual": false,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/538194",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/538194",
+  "cover": "/media/vtools-538194-1.jpg",
+  "gallery": [
+    "/media/vtools-538194-2.jpg",
+    "/media/vtools-538194-3.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "538194",
+  "hostName": "University of Peradeniya",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "iciis-2025",
+  "chapter": "1",
+  "updatedAt": "2026-10-01T16:46:53.830Z"
+}

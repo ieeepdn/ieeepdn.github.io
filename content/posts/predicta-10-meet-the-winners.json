@@ -1,0 +1,20 @@
+{
+  "id": "18",
+  "title": "Predicta 1.0: meet the winners",
+  "kind": "achievement",
+  "date": "2024-06-23",
+  "excerpt": "Janeesha Wickramasinghe (University of Moratuwa) wins Sri Lanka’s AI prediction challenge, with Team Optima (UCSC) and Team Datadragons (IIT) as runners-up.",
+  "cover": "/media/predicta-winner.jpg",
+  "content": "<p>Predicta 1.0 — the branch’s AI prediction challenge — brought together undergraduate teams from universities across Sri Lanka to build models predicting the evolution of a real-world dataset on Kaggle.</p><h2>Winners</h2><p>Winner: Janeesha Wickramasinghe, University of Moratuwa. 1st runner-up: Team Optima, University of Colombo School of Computing. 2nd runner-up: Team Datadragons, Informatics Institute of Technology.</p><p>The programme included an awareness session and two workshops — with Mr. Mahesha Viduranga (Multidisciplinary AI Research Centre, University of Peradeniya) and Dr. Kaneeka Vidanage (General Sir John Kotelawala Defence University).</p>",
+  "gallery": [
+    "/media/predicta-optima.jpg",
+    "/media/predicta-datadragons.jpg",
+    "/media/predicta-leaderboard.jpg",
+    "/media/predicta-timeline.jpg"
+  ],
+  "slug": "predicta-10-meet-the-winners",
+  "chapter": "1",
+  "featured": true,
+  "_status": "published",
+  "updatedAt": "2026-09-27T04:47:31.444Z"
+}

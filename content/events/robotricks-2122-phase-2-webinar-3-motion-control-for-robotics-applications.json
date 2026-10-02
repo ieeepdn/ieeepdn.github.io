@@ -1,0 +1,19 @@
+{
+  "id": "203",
+  "title": "Robotricks 21/22 - Phase 2 - Webinar 3-Motion Control for Robotics Applications",
+  "start": "2021-09-15T19:30",
+  "end": "2021-09-15T21:30",
+  "category": "talk",
+  "summary": "The third webinar of Robotricks 21/22, phase 2, organized by the IEEE Robotics and Automation Society, the student chapter of the University of Peradeniya, was held on the 15 th of September 2021 from 6.00 pm onwards via the Zoom platform. The webinar was conducted by a Professor in the Department of Electronic and…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">The third webinar of Robotricks 21/22, phase 2, organized by the IEEE Robotics and Automation Society, the student chapter of the University of Peradeniya, was held on the 15</span><span style=\"font-weight: 400;\">th</span><span style=\"font-weight: 400;\"> of September 2021 from 6.00 pm onwards via the Zoom platform. The webinar was conducted by a Professor in the Department of Electronic and Electrical Engineering at the University of Peradeniya, who has worked in control robotics and automation areas. He has also made over 50 scientific publications, and currently, he is the advisor of the student chapter IEEE Industry application society at the University of Peradeniya.</span></p>\r\n<p><span style=\"font-weight: 400;\">&nbsp;</span><span style=\"font-weight: 400;\">The webinar was opened for all the undergraduates interested in Robotics and who plan to succeed in the Robotics Industry in the future.</span></p>\r\n<p><span style=\"font-weight: 400;\">The main topics discussed were,&nbsp;</span></p>\r\n<ul>\r\n<li><span style=\"font-weight: 400;\"> Robot modelling</span></li>\r\n<li><span style=\"font-weight: 400;\"> Controller design</span></li>\r\n<li><span style=\"font-weight: 400;\"> Controller parameter tuning for unknown systems</span></li>\r\n<li><span style=\"font-weight: 400;\"> Common problems in controllers and solutions</span></li>\r\n<li><span style=\"font-weight: 400;\"> Controller implementation in microprocessor environments</span></li>\r\n</ul>\r\n<p><span style=\"font-weight: 400;\">At the commencement of the event, an introduction of the keynote speaker was delivered. Afterwards, </span><span style=\"font-weight: 400;\">Prof. Lilantha Samaranayake started to discuss Motion control for Robotics applications. As a basic, he clarified how to model a gear train with mathematical simulations. Next, the fundamentals of modelling different kinds of DC motors were discussed, and also the theories of mobile robot platforms were described step by step. Further, he clarified the motion, speed and position control for mobile robots.</span></p>\r\n<p><span style=\"font-weight: 400;\">At the end of the main session of the guest speaker, the participants were able to lighten their minds in the Q/A session, where they were able to get answers to a lot of questions and clarify their doubts regarding the Motion control for Robotics.</span></p>\r\n<p><span style=\"font-weight: 400;\">Finally, to remark the end of the third webinar of the webinar series</span><span style=\"font-weight: 400;\">, the Vote of Thanks was delivered by Mr. Udula Ranasinghe, the secretary of</span><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">IEEE Robotics and Automation Society.</span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/287332",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/287332",
+  "source": "vtools",
+  "vtoolsId": "287332",
+  "hostName": "University of Peradeniya,RA24",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "robotricks-2122-phase-2-webinar-3-motion-control-for-robotics-applications",
+  "chapter": "7",
+  "updatedAt": "2026-10-01T16:48:11.392Z"
+}

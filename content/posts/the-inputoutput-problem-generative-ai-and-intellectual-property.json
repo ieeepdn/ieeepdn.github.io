@@ -1,0 +1,19 @@
+{
+  "id": "2",
+  "title": "The Input–Output Problem: Generative AI and intellectual property",
+  "kind": "recap",
+  "date": "2026-02-05",
+  "excerpt": "A guest lecture on who owns AI-generated content, how regulators around the world are responding, and how to use AI responsibly without losing human creativity.",
+  "cover": "/media/cs-guest-lecture-1.jpg",
+  "content": "<p>This guest lecture examined the legal and ethical implications of generative AI — including ownership of AI-generated content, intellectual property, international regulatory approaches, patents and responsible AI usage.</p><p>The session encouraged participants to use AI as a supportive tool while preserving human creativity, originality and accountability.</p>",
+  "gallery": [
+    "/media/cs-guest-lecture-2.jpg",
+    "/media/cs-guest-lecture-3.jpg",
+    "/media/cs-guest-lecture-4.jpg"
+  ],
+  "slug": "the-inputoutput-problem-generative-ai-and-intellectual-property",
+  "chapter": "3",
+  "featured": true,
+  "_status": "published",
+  "updatedAt": "2026-09-27T04:47:24.076Z"
+}

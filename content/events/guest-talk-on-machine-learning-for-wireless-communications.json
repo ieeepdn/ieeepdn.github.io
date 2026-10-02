@@ -1,0 +1,19 @@
+{
+  "id": "103",
+  "title": "Guest Talk on Machine Learning for Wireless Communications",
+  "start": "2022-01-31T19:00",
+  "end": "2022-01-31T20:00",
+  "category": "talk",
+  "summary": "Wireless technology has changed the way we communicate today and has enormous potential to change the way we live over the next several decades. Future wireless will support high throughput low latency wireless access for emerging applications like Virtual Reality (VR), Industrial Internet of Things (IoT), 3D broadc…",
+  "descriptionHtml": "<p>Wireless technology has changed the way we communicate today and has enormous potential to change the way we live over the next several decades. Future wireless will support high throughput low latency wireless access for emerging applications like Virtual Reality (VR), Industrial Internet of Things (IoT), 3D broadcast video, tele-surgery, etc. These applications require significant increase in data rates and lower latency, with better coverage and spectral efficiency, often in a new communication channel, like Terahertz (THz) spectrum and UAV channels. Furthermore, it is expected that the spectrum access will be congested, competitive, and vulnerable to malicious intents of strong adversaries. This motivates us to innovate in novel machine learning models to tackle the challenges posed in new channels as well as to secure wireless communication. This talk will have two parts. The first part of the talk will discuss development of neural network (NN) models for OFDM receiver, where expert knowledge of wireless communication is infused in different stages of the model to create a practical receiver. The parameters of the NN are derived from underlying theory and can be adapted to different wireless environments. The models are trained with over-the-air captured OFDM signals, transmitted in THz band with 10GHz bandwidth. The results show significant improvement in bit error rate (BER) for different modulation orders compared to existing signal processing based receiver designs. The second part of the talk will discuss a cross-layer solution for addressing wireless security in presence of a strong adversary. A novel NN model pair is created for encryption and decryption that generates an encrypted waveform, which remains undeciphered by the adversary while the intended receiver can recover the secret message. Cooperative learning is introduced to enable the trusted pair to defeat the adversary and learn the encryption and modulation jointly. The NN model can encode any modulation order and improves both reliability and secrecy capacity compared to prior work.</p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/299064",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/299064",
+  "source": "vtools",
+  "vtoolsId": "299064",
+  "hostName": "University of Peradeniya,COM19",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "guest-talk-on-machine-learning-for-wireless-communications",
+  "chapter": "4",
+  "updatedAt": "2026-10-01T16:46:17.627Z"
+}

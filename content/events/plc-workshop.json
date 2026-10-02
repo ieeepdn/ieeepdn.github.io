@@ -1,0 +1,20 @@
+{
+  "id": "190",
+  "title": "PLC Workshop",
+  "start": "2021-01-20T17:00",
+  "end": "2021-01-20T19:30",
+  "category": "workshop",
+  "summary": "An online workshop organized by the *IEEE Power and Energy Society Student Branch Chapter of the University of Peradeniya*.\n PLC is an industrial digital computer that has been ruggedized and adapted for the control of manufacturing processes, such as assembly lines, robotic devices, or any activity that requires hi…",
+  "descriptionHtml": "<div dir=\"auto\">An online workshop organized by the *IEEE Power and Energy Society Student Branch Chapter of the University of Peradeniya*.</div>\r\n<div dir=\"auto\">PLC is an industrial digital computer that has been ruggedized and adapted for the control of manufacturing processes, such as assembly lines, robotic devices, or any activity that requires high reliability, ease of programming, and process fault diagnosis.&nbsp;\r\n<div class=\"o9v6fnle cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q\">\r\n<div dir=\"auto\">The session was conducted Eng. Pramod Fernando (MSc. / BSc.Eng.(Hons.) / Procentec CPE). A certificate was provided for every participant.</div>\r\n</div>\r\n</div>",
+  "city": "Kandy",
+  "virtual": false,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/283289",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/283289",
+  "source": "vtools",
+  "vtoolsId": "283289",
+  "hostName": "University of Peradeniy,PE31",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "plc-workshop",
+  "chapter": "6",
+  "updatedAt": "2026-10-01T16:48:03.199Z"
+}

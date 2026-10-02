@@ -1,0 +1,18 @@
+{
+  "id": "30",
+  "title": "AlgoForge - Session 3",
+  "start": "2024-10-20T19:00",
+  "end": "2024-10-20T21:00",
+  "category": "competition",
+  "summary": "This is the third session of the AlgoForge Webinar Series, focused on exploring Number Theory and Combinatorics (NTC). The session covers key topics such as Key Principles of NTC, Powerful techniques in Combinatorics, Practical applications in coding and problem-solving.\n Whether participants are preparing for IEEEX…",
+  "descriptionHtml": "<p dir=\"ltr\">This is the third session of the AlgoForge Webinar Series, focused on exploring Number Theory and Combinatorics (NTC). The session covers key topics such as Key Principles of NTC, Powerful techniques in Combinatorics, Practical applications in coding and problem-solving.</p>\r\n<p dir=\"ltr\">Whether participants are preparing for IEEEXtreme or other coding challenges, this session aims to strengthen their problem-solving skills and provide a solid foundation in NTC</p>\r\n<p>&nbsp;</p>",
+  "virtual": true,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/439083",
+  "source": "vtools",
+  "vtoolsId": "439083",
+  "hostName": "University of Peradeniya,C16",
+  "syncedAt": "2026-10-01T22:15",
+  "slug": "algoforge-session-3",
+  "chapter": "3",
+  "updatedAt": "2026-10-01T16:45:14.004Z"
+}

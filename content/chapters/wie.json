@@ -1,0 +1,95 @@
+{
+  "id": "2",
+  "layout": [
+    {
+      "blockType": "chapterAbout",
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "pageLinks",
+      "eyebrow": "WIE flagships",
+      "heading": "Our signature events & projects",
+      "pages": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "events",
+      "eyebrow": "WIE events",
+      "heading": "Recent events.",
+      "show": "auto",
+      "limit": 6,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "stories",
+      "eyebrow": "What we’ve been doing",
+      "heading": "Stories & recaps.",
+      "limit": 3,
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "gallery",
+      "eyebrow": "Moments",
+      "heading": "WIE in pictures.",
+      "layout": "mosaic",
+      "background": "dark",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "people",
+      "eyebrow": "Committee",
+      "heading": "Meet the WIE team",
+      "source": "committee",
+      "items": [],
+      "background": "auto",
+      "spacing": "normal"
+    },
+    {
+      "blockType": "cta",
+      "heading": "Get involved with WIE.",
+      "text": "Join the team, pitch an event or volunteer at the next one. Every chapter committee is built by students like you.",
+      "buttons": [
+        {
+          "label": "Volunteer",
+          "url": "/volunteer",
+          "variant": "primary"
+        }
+      ]
+    }
+  ],
+  "name": "IEEE Women in Engineering",
+  "shortName": "WIE",
+  "slug": "wie",
+  "kind": "affinity",
+  "tagline": "Inspiring and empowering young women to use their diverse talents — and to innovate for the betterment of humanity.",
+  "about": "The IEEE Women in Engineering Student Branch Affinity Group of the University of Peradeniya is dedicated to inspiring and empowering young females to use their diverse talents in achieving technical eminence — with the proper maintenance of work-life balance — and to innovate for the betterment of humanity.\n\nFrom InnovateX for Advanced Level students across the Kandy district to field visits, career sessions, wellbeing events and community outreach, WIE runs one of the busiest calendars in the branch.",
+  "accent": "#7E3FA0",
+  "order": 1,
+  "logo": "/media/logo-wie.png",
+  "highlights": [
+    {
+      "value": "130+",
+      "label": "new undergraduates at Radiant Revelry 2024"
+    },
+    {
+      "value": "80+",
+      "label": "A/L students inspired at InnovateX ’24"
+    },
+    {
+      "value": "100+",
+      "label": "participants at Career Ascend"
+    }
+  ],
+  "vtools": {
+    "spoid": "SBA18711",
+    "hostNameMatch": ",WIE|Women in Engineering"
+  },
+  "links": {
+    "join": "https://wie.ieee.org/"
+  },
+  "updatedAt": "2026-09-28T05:20:58.218Z"
+}

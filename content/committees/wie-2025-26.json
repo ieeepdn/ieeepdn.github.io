@@ -1,0 +1,173 @@
+{
+  "id": "7",
+  "title": "WIE · 2025/26",
+  "term": "2025/26",
+  "current": true,
+  "advisors": [
+    {
+      "name": "Dr. Maheshi Dissanayake",
+      "position": "Advisor",
+      "photo": "/media/wie-210.jpg"
+    }
+  ],
+  "executive": [
+    {
+      "position": "Chair",
+      "name": "Chamodya Samarawickrama",
+      "photo": "/media/wie-211.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "Wethmi Ranasinghe",
+      "photo": "/media/wie-212.jpg"
+    },
+    {
+      "position": "Vice Chair",
+      "name": "Mokshika Herath",
+      "photo": "/media/wie-213.jpg"
+    },
+    {
+      "position": "Assistant Secretary",
+      "name": "Sakuni Abeywickrama",
+      "photo": "/media/wie-214.jpg"
+    },
+    {
+      "position": "Treasurer",
+      "name": "Kasundie Hewawasam",
+      "photo": "/media/wie-215.jpg"
+    },
+    {
+      "position": "Junior Treasurer",
+      "name": "Theekshana Thathsarani",
+      "photo": "/media/wie-216.jpg"
+    },
+    {
+      "position": "Webmaster",
+      "name": "Dulanga Jayawardena",
+      "photo": "/media/wie-217.jpg"
+    },
+    {
+      "position": "Junior Webmaster",
+      "name": "Tharushi Kodithuwakku",
+      "photo": "/media/wie-218.jpg"
+    },
+    {
+      "position": "Editor",
+      "name": "Nethmini Basnayake",
+      "photo": "/media/wie-219.jpg"
+    },
+    {
+      "position": "Editor",
+      "name": "Janani Pushpakumara",
+      "photo": "/media/wie-220.jpg"
+    },
+    {
+      "position": "Chief Organiser",
+      "name": "Sithum Abewickrama",
+      "photo": "/media/wie-221.jpg"
+    },
+    {
+      "position": "Chief Organiser",
+      "name": "Dilukshi Umanda",
+      "photo": "/media/wie-222.jpg"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Design",
+      "members": [
+        {
+          "name": "Maithree Dahanayake",
+          "role": "member",
+          "photo": "/media/wie-223.jpg"
+        },
+        {
+          "name": "Yeshini Illagolla",
+          "role": "member",
+          "photo": "/media/wie-224.jpg"
+        },
+        {
+          "name": "Amasha Dissanayake",
+          "role": "member",
+          "photo": "/media/wie-225.jpg"
+        },
+        {
+          "name": "Tharuka Cooray",
+          "role": "member",
+          "photo": "/media/wie-226.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Editorial",
+      "members": [
+        {
+          "name": "Chamodi Senaratne",
+          "role": "member",
+          "photo": "/media/wie-227.jpg"
+        },
+        {
+          "name": "Sanduni Rathnayake",
+          "role": "member",
+          "photo": "/media/wie-228.jpg"
+        },
+        {
+          "name": "Chamali Galagoda",
+          "role": "member",
+          "photo": "/media/wie-229.jpg"
+        },
+        {
+          "name": "R. Shathursima",
+          "role": "member",
+          "photo": "/media/wie-230.jpg"
+        }
+      ]
+    },
+    {
+      "name": "PR",
+      "members": [
+        {
+          "name": "Inuri Liyanage",
+          "role": "member",
+          "photo": "/media/wie-231.jpg"
+        },
+        {
+          "name": "Sayuni Medawatte",
+          "role": "member",
+          "photo": "/media/wie-232.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Committee",
+      "members": [
+        {
+          "name": "Duleesha Samarakoon",
+          "role": "member",
+          "position": "Committee Member (E19)",
+          "photo": "/media/wie-233.jpg"
+        },
+        {
+          "name": "Iresha Ranaweera",
+          "role": "member",
+          "position": "Committee Member (E20)",
+          "photo": "/media/wie-234.jpg"
+        },
+        {
+          "name": "Anjani Tennakoon",
+          "role": "member",
+          "position": "Committee Member (E21)",
+          "photo": "/media/wie-235.jpg"
+        },
+        {
+          "name": "Tharushika Jayasinghe",
+          "role": "member",
+          "position": "Committee Member (E22)",
+          "photo": "/media/wie-236.jpg"
+        }
+      ]
+    }
+  ],
+  "chapter": "2",
+  "updatedAt": "2026-09-28T05:20:55.437Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "159",
+  "title": "Palindromania",
+  "start": "2022-02-22T22:02",
+  "end": "2022-02-22T22:22",
+  "category": "talk",
+  "summary": "Palindromania is a virtual quiz competition organized on the 22nd of February 2022 for undergraduates of state universities and mathematics and science enthusiasts. A maximum of two participants can compete together, and the quiz will be for 20 minutes, including five questions based on the number and word palindrom…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">Palindromania is a virtual quiz competition organized on the 22nd of February 2022 for undergraduates of state universities and mathematics and science enthusiasts. A maximum of two participants can compete together, and the quiz will be for 20 minutes, including five questions based on the number and word palindromes. The winner will be selected based on the number of correct answers and the shortest period to complete the quiz.</span></p>",
+  "virtual": true,
+  "registrationUrl": "http://bit.ly/Palindromania_Registration",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/304688",
+  "cover": "/media/vtools-304688-1.jpg",
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "304688",
+  "hostName": "University of Peradeniya",
+  "syncedAt": "2026-10-01T22:17",
+  "slug": "palindromania",
+  "chapter": "1",
+  "updatedAt": "2026-10-01T16:47:15.019Z"
+}

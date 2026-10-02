@@ -1,0 +1,104 @@
+{
+  "id": "1",
+  "title": "IAS · 2025/26",
+  "term": "2025/26",
+  "current": true,
+  "advisors": [
+    {
+      "name": "Prof. Lilantha Samaranayake",
+      "position": "Senior Treasurer",
+      "photo": "/media/ias-151.jpg"
+    }
+  ],
+  "executive": [
+    {
+      "position": "President",
+      "name": "Ravindu Marapana",
+      "photo": "/media/ias-152.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "Manuli Karunarathna",
+      "photo": "/media/ias-153.jpg"
+    },
+    {
+      "position": "Vice President",
+      "name": "Malith Anuradha",
+      "photo": "/media/ias-154.jpg"
+    },
+    {
+      "position": "Assistant Secretary",
+      "name": "Dewmini Rashmika",
+      "photo": "/media/ias-155.jpg"
+    },
+    {
+      "position": "Junior Treasurer",
+      "name": "Thilina Wakkumbura",
+      "photo": "/media/ias-156.jpg"
+    },
+    {
+      "position": "Editor",
+      "name": "Tharuni Navodya",
+      "photo": "/media/ias-157.jpg"
+    },
+    {
+      "position": "Webmaster",
+      "name": "Kavindu Methpura",
+      "photo": "/media/ias-159.jpg"
+    },
+    {
+      "position": "Industrial Coordinator",
+      "name": "Chamal Pramodya",
+      "photo": "/media/ias-160.jpg"
+    },
+    {
+      "position": "Industrial Coordinator",
+      "name": "Sithum Abewickrama",
+      "photo": "/media/ias-161.jpg"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Editorial",
+      "members": [
+        {
+          "name": "Theekshana Thathsarani",
+          "role": "member",
+          "position": "Sub Editor",
+          "photo": "/media/ias-158.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Committee",
+      "members": [
+        {
+          "name": "Tharindu Wahalathantri",
+          "role": "member",
+          "position": "Committee Member (E20)",
+          "photo": "/media/ias-162.jpg"
+        },
+        {
+          "name": "Upamali Wijayawardhana",
+          "role": "member",
+          "position": "Committee Member (E20)",
+          "photo": "/media/ias-163.jpg"
+        },
+        {
+          "name": "Thilina Dias",
+          "role": "member",
+          "position": "Committee Member (E21)",
+          "photo": "/media/ias-164.jpg"
+        },
+        {
+          "name": "Tharushi Gimhani",
+          "role": "member",
+          "position": "Committee Member (E21)",
+          "photo": "/media/ias-165.jpg"
+        }
+      ]
+    }
+  ],
+  "chapter": "8",
+  "updatedAt": "2026-09-28T05:20:48.742Z"
+}

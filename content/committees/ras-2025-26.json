@@ -1,0 +1,124 @@
+{
+  "id": "2",
+  "title": "RAS · 2025/26",
+  "term": "2025/26",
+  "current": true,
+  "advisors": [
+    {
+      "name": "Dr. Tharindu Weerakoon",
+      "position": "Senior Treasurer",
+      "photo": "/media/ras-132.jpg"
+    }
+  ],
+  "executive": [
+    {
+      "position": "Chair",
+      "name": "Pulasthi Perera",
+      "photo": "/media/ras-131.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "Adheesha Sasanjaya",
+      "photo": "/media/ras-133.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "Trilanka Beddegama",
+      "photo": "/media/ras-134.jpg"
+    },
+    {
+      "position": "Treasurer",
+      "name": "Harindu Hettiarachchi",
+      "photo": "/media/ras-135.jpg"
+    },
+    {
+      "position": "Webmaster",
+      "name": "Avishka Ranasinghe",
+      "photo": "/media/ras-136.jpg"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Reporting",
+      "members": [
+        {
+          "name": "Madhumini Kulathunge",
+          "role": "lead",
+          "photo": "/media/ras-138.jpg"
+        },
+        {
+          "name": "Uthpala Rathnayake",
+          "role": "member",
+          "photo": "/media/ras-137.jpg"
+        },
+        {
+          "name": "Sandunika Ranasinghe",
+          "role": "member",
+          "photo": "/media/ras-139.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Programming",
+      "members": [
+        {
+          "name": "Ravindu Rodrigo",
+          "role": "lead",
+          "photo": "/media/ras-141.jpg"
+        },
+        {
+          "name": "Vidura Abeygunawardana",
+          "role": "member",
+          "photo": "/media/ras-140.jpg"
+        },
+        {
+          "name": "Aftab Naim",
+          "role": "member",
+          "photo": "/media/ras-142.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "members": [
+        {
+          "name": "Gihantha Wijesekara",
+          "role": "lead",
+          "photo": "/media/ras-144.jpg"
+        },
+        {
+          "name": "Avinash Divakaran",
+          "role": "member",
+          "photo": "/media/ras-143.jpg"
+        },
+        {
+          "name": "Dulan Sanjeewa",
+          "role": "member",
+          "photo": "/media/ras-145.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Committee",
+      "members": [
+        {
+          "name": "Shehan Jayasuriya",
+          "role": "lead",
+          "photo": "/media/ras-147.jpg"
+        },
+        {
+          "name": "Sasmitha Kalhara",
+          "role": "member",
+          "photo": "/media/ras-146.jpg"
+        },
+        {
+          "name": "Ruwindya Jayasekara",
+          "role": "member",
+          "photo": "/media/ras-148.jpg"
+        }
+      ]
+    }
+  ],
+  "chapter": "7",
+  "updatedAt": "2026-09-28T05:20:49.711Z"
+}

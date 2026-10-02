@@ -1,0 +1,134 @@
+{
+  "id": "8",
+  "title": "SB · 2025/26",
+  "term": "2025/26",
+  "current": true,
+  "advisors": [
+    {
+      "name": "Dr. Ruwan Ranaweera",
+      "position": "Advisor",
+      "photo": "/media/branch-016.jpg"
+    }
+  ],
+  "executive": [
+    {
+      "position": "Chairman",
+      "name": "Vihanga Madugalla",
+      "photo": "/media/branch-017.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "Sithira Vithanage",
+      "photo": "/media/branch-018.jpg"
+    },
+    {
+      "position": "Vice Chair",
+      "name": "Lahiru Pathum",
+      "photo": "/media/branch-019.jpg"
+    },
+    {
+      "position": "Assistant Secretary",
+      "name": "Venuri Dissanayake",
+      "photo": "/media/branch-020.jpg"
+    },
+    {
+      "position": "Junior Treasurer",
+      "name": "Lahiru Herath",
+      "photo": "/media/branch-021.jpg"
+    },
+    {
+      "position": "Webmaster",
+      "name": "Shanan Adams",
+      "photo": "/media/branch-022.jpg"
+    },
+    {
+      "position": "External Relations Officer",
+      "name": "Nithil Nanayakkara",
+      "photo": "/media/branch-023.jpg"
+    },
+    {
+      "position": "Volunteer Engagement Officer",
+      "name": "Theekshana Dineth",
+      "photo": "/media/branch-024.jpg"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Editorial",
+      "members": [
+        {
+          "name": "Iresha Ranaweera",
+          "role": "lead",
+          "photo": "/media/branch-025.jpg"
+        },
+        {
+          "name": "Abhimani Perera",
+          "role": "member",
+          "photo": "/media/branch-026.jpg"
+        },
+        {
+          "name": "Hiruni Weerasinghe",
+          "role": "member",
+          "photo": "/media/branch-027.jpg"
+        },
+        {
+          "name": "Nethmi Buddhiprabha",
+          "role": "member",
+          "photo": "/media/branch-028.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Programming",
+      "members": [
+        {
+          "name": "Chalana Rashmika",
+          "role": "lead",
+          "photo": "/media/branch-029.jpg"
+        },
+        {
+          "name": "Kosala Madhushanka",
+          "role": "member",
+          "photo": "/media/branch-030.jpg"
+        },
+        {
+          "name": "Shehan Jayasinghe",
+          "role": "member",
+          "photo": "/media/branch-031.jpg"
+        },
+        {
+          "name": "Apurwa Fernando",
+          "role": "member",
+          "photo": "/media/branch-032.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "members": [
+        {
+          "name": "Dilukshi Umanda",
+          "role": "lead",
+          "photo": "/media/branch-033.jpg"
+        },
+        {
+          "name": "Hashni Kavindhya",
+          "role": "member",
+          "photo": "/media/branch-034.jpg"
+        },
+        {
+          "name": "Dasini Amarakoon",
+          "role": "member",
+          "photo": "/media/branch-035.jpg"
+        },
+        {
+          "name": "Hasala Kavinda",
+          "role": "member",
+          "photo": "/media/branch-036.jpg"
+        }
+      ]
+    }
+  ],
+  "chapter": "1",
+  "updatedAt": "2026-09-28T05:20:56.589Z"
+}

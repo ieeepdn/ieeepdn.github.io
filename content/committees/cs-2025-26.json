@@ -1,0 +1,129 @@
+{
+  "id": "6",
+  "title": "CS · 2025/26",
+  "term": "2025/26",
+  "current": true,
+  "advisors": [
+    {
+      "name": "Prof. Roshan G. Ragel",
+      "position": "Advisor & Senior Treasurer",
+      "photo": "/media/cs-168.jpg"
+    }
+  ],
+  "executive": [
+    {
+      "position": "Chairman",
+      "name": "Amanda Siriwardane",
+      "photo": "/media/cs-169.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "Methmi Perera",
+      "photo": "/media/cs-170.jpg"
+    },
+    {
+      "position": "Junior Treasurer",
+      "name": "Lochana Ekanayake",
+      "photo": "/media/cs-171.jpg"
+    },
+    {
+      "position": "Vice Chair",
+      "name": "Anuka Hettiarachchi",
+      "photo": "/media/cs-172.jpg"
+    },
+    {
+      "position": "Assistant Secretary",
+      "name": "Malindu Heshan",
+      "photo": "/media/cs-173.jpg"
+    },
+    {
+      "position": "Webmaster",
+      "name": "Pavindran Velalagan",
+      "photo": "/media/cs-174.jpg"
+    },
+    {
+      "position": "Operations Manager",
+      "name": "Thisen Lakdinu",
+      "photo": "/media/cs-175.jpg"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Programming",
+      "members": [
+        {
+          "name": "Oshada Damutha",
+          "role": "lead",
+          "photo": "/media/cs-176.jpg"
+        },
+        {
+          "name": "Pahan Prabash",
+          "role": "member",
+          "photo": "/media/cs-177.jpg"
+        },
+        {
+          "name": "Malith Anuradha",
+          "role": "member",
+          "photo": "/media/cs-178.jpg"
+        },
+        {
+          "name": "Lakshika Athukorala Senevirathne",
+          "role": "member",
+          "photo": "/media/cs-179.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Marketing",
+      "members": [
+        {
+          "name": "Thushanth Sivashanthan",
+          "role": "lead",
+          "photo": "/media/cs-180.jpg"
+        },
+        {
+          "name": "Nirmal Samarawickrama",
+          "role": "member",
+          "photo": "/media/cs-181.jpg"
+        },
+        {
+          "name": "Brian Selvanayagam",
+          "role": "member",
+          "photo": "/media/cs-182.jpg"
+        },
+        {
+          "name": "Thirumenan Sivakulasingam",
+          "role": "member",
+          "photo": "/media/cs-183.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Editorial",
+      "members": [
+        {
+          "name": "Maithree Dahanayake",
+          "role": "lead",
+          "photo": "/media/cs-184.jpg"
+        },
+        {
+          "name": "Sarathi Jayasekara",
+          "role": "member",
+          "photo": "/media/cs-185.jpg"
+        },
+        {
+          "name": "Pasindu Dissanayake",
+          "role": "member",
+          "photo": "/media/cs-186.jpg"
+        },
+        {
+          "name": "Dhupika Bandara",
+          "role": "member",
+          "photo": "/media/cs-187.jpg"
+        }
+      ]
+    }
+  ],
+  "chapter": "3",
+  "updatedAt": "2026-09-28T05:20:54.762Z"
+}

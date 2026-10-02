@@ -1,0 +1,18 @@
+{
+  "id": "161",
+  "title": "Webinar - IoT in e-Health : From Wearables to Diagnostic Systems",
+  "start": "2021-10-25T18:00",
+  "end": "2021-10-25T19:30",
+  "category": "talk",
+  "summary": "This webinar was organized by IEEE Communications Society Sri Lanka Chapter in collaboration with the IEEE Communications Society Student Branch Chapter of the University of Moratuwa and IEEE Student Branch of the University of Peradeniya.\n The introduction of IoT in healthcare has led to many advancements and added…",
+  "descriptionHtml": "<p>This webinar was organized by IEEE Communications Society Sri Lanka Chapter in collaboration with the IEEE Communications Society Student Branch Chapter of the University of Moratuwa and IEEE Student Branch of the University of Peradeniya.</p>\r\n<p>The introduction of IoT in healthcare has led to many advancements and added new dimensions to the traditional healthcare systems. The interactions between patients and doctors have moved beyond physical visits with the integration of IoT in the healthcare domain. Digital storage of medical data, remote health monitoring, and historical data analysis are some of the significant developments that have been accomplished in the area of healthcare. Wearable devices have played a vital role and have proved to be a game-changer in embedding IoT in healthcare. In the present scenario, wearables have witnessed growing popularity and have become a part of people's lifestyles. Wearables have enabled continuous monitoring of physiological parameters, both locally and remotely. Monitoring the elderly, children, and patients with chronic illnesses have especially benefitted with the availability of wearables. In addition to this, more complex systems for the diagnosis of diseases provide better insights into the patient's condition, which helps in early detection, faster response time, and targeted treatment. IoT-enabled healthcare connects patients from less accessible rural areas to remote healthcare professionals.</p>\r\n<p>In this lecture, the state-of-the-art in the e-Health domain and its evolution with the introduction of wearables and diagnostics systems was discussed.</p>",
+  "virtual": true,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/289555",
+  "source": "vtools",
+  "vtoolsId": "289555",
+  "hostName": "University of Moratuwa-Sri Lanka,COM19",
+  "syncedAt": "2026-10-01T22:17",
+  "slug": "webinar-iot-in-e-health-from-wearables-to-diagnostic-systems",
+  "chapter": "1",
+  "updatedAt": "2026-10-01T16:47:16.209Z"
+}

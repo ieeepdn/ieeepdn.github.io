@@ -1,0 +1,21 @@
+{
+  "id": "212",
+  "title": "Secure wars Day1",
+  "start": "2021-06-17T19:30",
+  "end": "2021-06-17T21:30",
+  "category": "workshop",
+  "summary": "The two-day workshop on ethical hacking, organised by the IET OnCampus University of Peradeniya, in collaboration with the IEEE Robotics and Automation Society of the University of Peradeniya, was held on 17th June 2021 from 6.00 pm onwards and on 20th June 2021 from 4.00 pm onwards via zoom platform. Eng. Thushara…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">The two-day workshop on ethical hacking, organised by the IET OnCampus University of Peradeniya, in collaboration with the IEEE Robotics and Automation Society of the University of Peradeniya, was held on 17th June 2021 from 6.00 pm onwards and on 20th June 2021 from 4.00 pm onwards via zoom platform. Eng. Thushara Deshapriya conducted the workshop as the keynote speaker and made the audience aware of the enormous gap between unethical and ethical hacking.&nbsp;</span></p>\r\n<p><br /><span style=\"font-weight: 400;\">Day one of the workshop started with an introduction about Information Security and why we need to be aware of it in this technology-based society. Also, he explained in detail about the opportunities for a young individual to succeed in Information Security. Then the session became more interesting after the speaker started to talk about the security issues in society and how to find the solutions for them with the aid of</span><span style=\"font-weight: 400;\"> Burp Suite, an application security testing software. From then on, he explained about the practical aspects of Information Security and started the practical session. Finally, with immense exposure to the subject, the participants were given two practical tasks to submit to the organising committee before the second day. Before the end of the session, Eng. Thushara Deshapriya didn&rsquo;t forget to inform the enthusiastic listeners about some valuable tricks when doing the tasks. He was also very eager to answer the questions raised by the participants. The first day was brought to an end with filling the young souls with vast knowledge about the subject. </span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/280208",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/280208",
+  "cover": "/media/vtools-280208-1.jpg",
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "280208",
+  "hostName": "University of Peradeniya,RA24",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "secure-wars-day1",
+  "chapter": "7",
+  "updatedAt": "2026-10-01T16:48:15.999Z"
+}

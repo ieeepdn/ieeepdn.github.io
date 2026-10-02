@@ -1,0 +1,19 @@
+{
+  "id": "170",
+  "title": "IEEE PCB Design and Fabrication Workshop",
+  "start": "2020-03-05T17:30",
+  "end": "2020-03-05T22:30",
+  "category": "workshop",
+  "summary": "IEEE PCB Design and Fabrication Workshop , the Introductory session for PCB Designing was held on 5th March 2020 at the Engineering faculty premises at 5.30 PM onward. The program was carried out by the IEEE Student Branch of the University of Peradeniya, IEEE Robotics and Automation Society of the University of Per…",
+  "descriptionHtml": "<p>IEEE PCB Design and Fabrication Workshop , the Introductory session for PCB Designing was held on 5th March 2020 at the Engineering faculty premises at 5.30 PM onward. The program was carried out by the IEEE Student Branch of the University of Peradeniya, IEEE Robotics and Automation Society of the University of Peradeniya and the Robotics club of the University of Peradeniya. The event saw more than 160 participants with a majority being from the E17 batch.<br /> This event, which is the first phase of a two-day workshop, focused mainly on the PCB layout designing using the Eagle CAD software. The aim of this workshop is to enhance the PCB manufacturing skills of our undergraduates which comes in handy when they are practicing in the industry as well. The students will learn how to fabricate their PCB design and they will make their own working circuit at the end of the day.</p>",
+  "city": "Peradeniya",
+  "virtual": true,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/255545",
+  "source": "vtools",
+  "vtoolsId": "255545",
+  "hostName": "University of Peradeniya",
+  "syncedAt": "2026-10-01T22:17",
+  "slug": "ieee-pcb-design-and-fabrication-workshop",
+  "chapter": "1",
+  "updatedAt": "2026-10-01T16:47:54.776Z"
+}

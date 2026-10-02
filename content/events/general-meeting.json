@@ -1,0 +1,20 @@
+{
+  "id": "61",
+  "title": "General Meeting",
+  "start": "2023-11-16T17:00",
+  "end": "2023-11-16T18:30",
+  "category": "meeting",
+  "summary": "The General Meeting of the IEEE Student Branch at the University of Peradeniya served as a comprehensive platform for knowledge exchange and strategic planning among various subchapters, including IEEE Women in Engineering (WIE), IEEE Power and Energy Society (PES), IEEE Robotics and Automation Society (RAS), IEEE I…",
+  "descriptionHtml": "<p>The General Meeting of the IEEE Student Branch at the University of Peradeniya served as a comprehensive platform for knowledge exchange and strategic planning among various subchapters, including IEEE Women in Engineering (WIE), IEEE Power and Energy Society (PES), IEEE Robotics and Automation Society (RAS), IEEE Industry Applications Society (IAS), IEEE Microwave Theory and Techniques Society (MTTS), IEEE Communications Society (ComSoc). Held under the theme \"Let's shape the future together,\" the event aimed to foster unity and coordination among subchapters and share future plans to align the IEEE community toward common goals.</p>\r\n<p>The meeting featured a diverse range of activities, including presentations, panel discussions, and interactive sessions. Each subchapter had the opportunity to showcase their achievements, ongoing projects, and outline their strategic initiatives for the upcoming year. This facilitated cross-disciplinary discussions and encouraged collaborative efforts among subchapters, enhancing the overall impact of the IEEE Student Branch.</p>",
+  "venue": "Lecture Room 21",
+  "city": "Peradeniya",
+  "virtual": false,
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/396295",
+  "source": "vtools",
+  "vtoolsId": "396295",
+  "hostName": "University of Peradeniya",
+  "syncedAt": "2026-10-01T22:15",
+  "slug": "general-meeting",
+  "chapter": "1",
+  "updatedAt": "2026-10-01T16:45:41.138Z"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "126",
+  "title": "A WIRELESS WORLD WITHOUT BATTERIES",
+  "start": "2019-12-19T09:30",
+  "end": "2019-12-19T11:00",
+  "category": "talk",
+  "summary": "A talk on &ldquo;A wireless world without batteries&rdquo; organized by the IEEE MTT-s Student branch Chapter of University of Peradeniya, was held on the 19 th of December 2019 from 9.30 am to 11.00 am at SLT Auditorium, Colombo\n The talk was conducted by the guest speaker, Prof. Nuno Burges Carvalho, the senior Re…",
+  "descriptionHtml": "<p>A talk on &ldquo;A wireless world without batteries&rdquo; organized by the IEEE MTT-s Student branch Chapter of University of Peradeniya, was held on the 19<sup>th </sup>of December 2019 from 9.30 am to 11.00 am at SLT Auditorium, Colombo</p>\r\n<p>The talk was conducted by the guest speaker, Prof. Nuno Burges Carvalho, the senior Research scientist at the Institute of Telecommunications, University of Aveiro, Portugal. He has been the reviewer and author of over 200 papers and also the co-inventor of six patents covering the areas including software defined radio front-ends, Wireless power transmission, nonlinear distortion analysis in microwave/ wireless circuits and systems and measurement of nonlinear phenomena.</p>\r\n<p>In this talk an overview of the energy problem in IoT wireless communication systems was presented. The main objective discussed in this talk was future wireless paradigms that will be changing with 5G and beyond. The talk started with an overview of the energy needs for future XG networks. Then a presentation of the design of battery-less wireless sensor networks was presented. The issue of battery-less wireless devices, combing wireless power transmission, backscatter communications and characterization of passive backscatter sensors were some of the major areas discussed in the talk.</p>\r\n<p>The participants were able to gain a vast knowledge about wireless systems and its future development from this discussion.</p>",
+  "venue": "Lotus Road",
+  "city": "Colombo 01",
+  "virtual": false,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/227756",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/227756",
+  "cover": "/media/vtools-227756-1.jpg",
+  "gallery": [
+    "/media/vtools-227756-2.jpg",
+    "/media/vtools-227756-3.jpg",
+    "/media/vtools-227756-4.jpg"
+  ],
+  "vtoolsMediaDone": true,
+  "source": "vtools",
+  "vtoolsId": "227756",
+  "hostName": "University of Peradeniya,MTT17",
+  "syncedAt": "2026-10-01T22:16",
+  "slug": "a-wireless-world-without-batteries",
+  "chapter": "5",
+  "updatedAt": "2026-10-01T16:46:47.726Z"
+}

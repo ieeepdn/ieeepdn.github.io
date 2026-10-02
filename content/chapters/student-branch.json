@@ -1,0 +1,24 @@
+{
+  "id": "1",
+  "layout": [],
+  "name": "IEEE Student Branch",
+  "shortName": "SB",
+  "slug": "student-branch",
+  "kind": "branch",
+  "tagline": "Sri Lanka’s first IEEE student branch — the link between the IEEE global body and every engineering student at Peradeniya.",
+  "about": "The IEEE Student Branch of the University of Peradeniya was established on 19 July 2001 with the help of IEEE senior members and dedicated student members. It is the first IEEE student branch established in Sri Lanka and one of the great, very active student branches in the IEEE community.",
+  "accent": "#00629B",
+  "founded": 2001,
+  "order": 0,
+  "logo": "/media/branch-logo.png",
+  "cover": "/media/branch-lecture-hall.jpg",
+  "highlights": [],
+  "vtools": {
+    "spoid": "STB18711"
+  },
+  "links": {
+    "email": "ieeepdn@gmail.com",
+    "join": "https://www.ieee.org/membership/join/index.html"
+  },
+  "updatedAt": "2026-09-27T21:45:52.281Z"
+}

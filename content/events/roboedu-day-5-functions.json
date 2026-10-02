@@ -1,0 +1,19 @@
+{
+  "id": "195",
+  "title": "RoboEDU - Day 5 - Functions",
+  "start": "2022-02-26T20:00",
+  "end": "2022-02-26T22:00",
+  "category": "social",
+  "summary": "The fifth day of the RoboEdu workshop series was held on the 26 th of February 2022, fifth consecutive Saturday from the beginning of the workshop, from 6.30 PM to 8.30 PM. It was conducted by Mr. Aftab Naim, an enthusiastic young innovator who follows his Engineering degree program at the Faculty of Engineering at…",
+  "descriptionHtml": "<p><span style=\"font-weight: 400;\">The fifth day of the RoboEdu workshop series was held on the 26</span><span style=\"font-weight: 400;\">th</span><span style=\"font-weight: 400;\"> of February 2022, fifth consecutive Saturday from the beginning of the workshop, from 6.30 PM to 8.30 PM. It was conducted by Mr. Aftab Naim, an enthusiastic young innovator who follows his Engineering degree program at the Faculty of Engineering at University of Peradeniya. He started the day by reminding the audience of what we have done so far and then started doing about functions, the main topic for the day. After elaborating on how functions work, the key aspects and how we can create our own functions, he continued the lesson by teaching about motor controllers. The physical aspects of robotics and how the interior structure of a robot should be. Then he moved on with some examples and Tinkercad simulations to make the students aware of how those actually work. Finally, he briefly stated the Analog to Digital Conversion and ended the day as time permits him to do so. But, the session was concluded by answering the questions of the audience and giving them the day&rsquo;s task</span></p>",
+  "virtual": true,
+  "registrationUrl": "https://events.vtools.ieee.org/event/register/311705",
+  "vtoolsUrl": "https://events.vtools.ieee.org/m/311705",
+  "source": "vtools",
+  "vtoolsId": "311705",
+  "hostName": "University of Peradeniya,RA24",
+  "syncedAt": "2026-10-01T22:18",
+  "slug": "roboedu-day-5-functions",
+  "chapter": "7",
+  "updatedAt": "2026-10-01T16:48:06.440Z"
+}
