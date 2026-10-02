@@ -1,8 +1,10 @@
 {
   "spotlight": {
+    "active": false,
     "style": "banner",
     "linkType": "page",
-    "buttons": []
+    "inTopBar": false,
+    "inMenu": false
   },
   "heroKicker": "Est. 19 July 2001 · Faculty of Engineering",
   "heroTitle": "Sri Lanka’s first IEEE Student Branch.",
@@ -37,6 +39,9 @@
   "showreel": "HKmoOcV2PG4",
   "email": "ieeepdn@gmail.com",
   "address": "Department of Electrical & Electronic Engineering\nFaculty of Engineering, University of Peradeniya\nPeradeniya 20400, Sri Lanka",
+  "facebook": "https://www.facebook.com/sb.pera",
+  "instagram": "https://www.instagram.com/ieeeuop/",
+  "linkedin": "https://www.linkedin.com/company/ieee-student-branch-university-of-peradeniya/",
   "youtube": "https://www.youtube.com/@ieeeperadeniya8445",
   "vtoolsEnabled": true,
   "vtoolsBranchSpoid": "STB18711",
