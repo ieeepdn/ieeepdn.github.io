@@ -1,7 +1,7 @@
 # Builds the site and publishes it to GitHub Pages.
 #  - on every push to main (a Pages CMS save is a push)
-#  - every 30 minutes: syncs events from IEEE vTools; commits and republishes only when something changed
-#  - every 6 hours: republishes anyway, so "upcoming" events move to "past" and timed spotlights/forms open and close
+#  - once a day (05:47 Sri Lanka time): syncs events from IEEE vTools, commits any changes and republishes, so
+#    "upcoming" events move to "past" and timed spotlights/forms open and close
 #  - by hand: Actions → "Build & deploy" → Run workflow (tick "full history" to re-import every vTools event)
 name: Build & deploy
 
@@ -9,7 +9,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '17 0 * * *' # 00:17 UTC = 05:47 in Sri Lanka (off the hour, when GitHub is less busy)
   workflow_dispatch:
     inputs:
       full_history:
@@ -29,6 +29,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     outputs:
       deploy: ${{ steps.decide.outputs.deploy }}
     steps:
@@ -65,14 +66,8 @@ jobs:
 
       - name: Decide whether to publish
         id: decide
-        run: |
-          deploy=false
-          if [ "${{ github.event_name }}" != "schedule" ]; then deploy=true; fi
-          if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then deploy=true; fi
-          # scheduled runs at 00:xx, 06:xx, 12:xx, 18:xx UTC (first half hour) always republish
-          if [ "${{ github.event_name }}" = "schedule" ] && [ $(( 10#$(date -u +%H) % 6 )) -eq 0 ] && [ $(( 10#$(date -u +%M) )) -lt 30 ]; then deploy=true; fi
-          echo "deploy=$deploy" >> "$GITHUB_OUTPUT"
-          echo "Publish: $deploy"
+        # every run publishes: pushes, the daily sync (dates move on even when vTools has nothing new) and manual runs
+        run: echo "deploy=true" >> "$GITHUB_OUTPUT"
 
       - name: Cache resized images
         if: steps.decide.outputs.deploy == 'true'
@@ -116,6 +111,7 @@ jobs:
     needs: build
     if: needs.build.outputs.deploy == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

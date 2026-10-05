@@ -63,7 +63,7 @@ export default async function AboutPage() {
         <div className="container-x grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
           <Reveal className="relative grid aspect-[5/4] place-items-center overflow-hidden rounded-[2rem] bg-[radial-gradient(ellipse_at_center,#7a1f1f,#2a0808_70%)]">
             <div className="grid-lines absolute inset-0 opacity-30" />
-            <Image src="/brand/uop-crest.png" alt="University of Peradeniya crest" width={340} height={340} className="relative w-[58%] max-w-[340px] drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
+            <Image src="/brand/uop-crest.webp" alt="University of Peradeniya crest" width={340} height={340} className="relative w-[58%] max-w-[340px] drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
             <div className="absolute inset-x-0 bottom-0 p-6 text-white">
               <span className="font-mono text-xs tracking-widest text-white/80">UNIVERSITY OF PERADENIYA · EST. 1942</span>
             </div>

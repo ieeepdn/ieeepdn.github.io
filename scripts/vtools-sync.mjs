@@ -2,7 +2,7 @@
 /**
  * IEEE vTools → content/events/*.json
  *
- * Runs in GitHub Actions every 30 minutes (see .github/workflows/site.yml) and can be run by hand:
+ * Runs in GitHub Actions once a day (see .github/workflows/site.yml) and can be run by hand:
  *   node scripts/vtools-sync.mjs           # each unit's Upcoming + Recent events
  *   node scripts/vtools-sync.mjs --full    # each unit's entire history
  *
@@ -70,6 +70,13 @@ const stripHtml = (html) =>
     .replace(/&#39;|&apos;/g, "'")
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
+    .replace(/&ldquo;|&#8220;/g, '“')
+    .replace(/&rdquo;|&#8221;/g, '”')
+    .replace(/&lsquo;|&#8216;/g, '‘')
+    .replace(/&rsquo;|&#8217;/g, '’')
+    .replace(/&ndash;|&#8211;/g, '–')
+    .replace(/&mdash;|&#8212;/g, '—')
+    .replace(/&hellip;|&#8230;/g, '…')
     .replace(/[ \t]+/g, ' ')
     .replace(/\n\s*\n+/g, '\n')
     .trim()

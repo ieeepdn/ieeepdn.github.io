@@ -12,6 +12,7 @@ const vertex = /* glsl */ `
   uniform vec2 uMouse;
   uniform float uMouseStrength;
   uniform float uScroll;
+  uniform float uPointScale;
   attribute float aRand;
   varying float vHeight;
   varying float vFade;
@@ -58,7 +59,7 @@ const vertex = /* glsl */ `
     vec4 mv = modelViewMatrix * vec4(p, 1.0);
     gl_Position = projectionMatrix * mv;
     float size = (1.25 + aRand * 1.6 + max(p.y, 0.0) * 0.9);
-    gl_PointSize = size * (46.0 / -mv.z);
+    gl_PointSize = size * (46.0 / -mv.z) * uPointScale;
     vFade = smoothstep(62.0, 12.0, -mv.z);
   }
 `
@@ -91,14 +92,20 @@ export default function SignalField({ className }: { className?: string }) {
     if (!el) return
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const small = window.innerWidth < 768
+    // phones and low-end laptops get a lighter field: fewer points, 1× resolution and ~30 fps
+    const nav = navigator as Navigator & { deviceMemory?: number; connection?: { saveData?: boolean } }
+    const weak = small || (nav.hardwareConcurrency ?? 8) <= 4 || (nav.deviceMemory ?? 8) <= 4
+    const still = reduce || Boolean(nav.connection?.saveData)
 
     let renderer: THREE.WebGLRenderer
     try {
-      renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true, powerPreference: 'high-performance' })
+      renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true, powerPreference: weak ? 'low-power' : 'high-performance' })
     } catch {
       return // no WebGL — the CSS gradient behind stays visible
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, small ? 1.5 : 1.75))
+    const fullRatio = Math.min(window.devicePixelRatio, small ? 1.5 : 1.75)
+    const ratio = weak ? 1 : fullRatio
+    renderer.setPixelRatio(ratio)
     renderer.setClearColor(0x000000, 0)
     el.appendChild(renderer.domElement)
     renderer.domElement.style.width = '100%'
@@ -109,8 +116,8 @@ export default function SignalField({ className }: { className?: string }) {
     camera.position.set(0, 7.5, 22)
     camera.lookAt(0, 0, -6)
 
-    const cols = small ? 120 : 220
-    const rows = small ? 70 : 120
+    const cols = weak ? 110 : 220
+    const rows = weak ? 64 : 120
     const w = 80
     const d = 60
     const positions = new Float32Array(cols * rows * 3)
@@ -134,6 +141,8 @@ export default function SignalField({ className }: { className?: string }) {
       uMouse: { value: new THREE.Vector2(999, 999) },
       uMouseStrength: { value: 0 },
       uScroll: { value: 0 },
+      // points are sized in device pixels: keep them the same size on screen at the lower resolution
+      uPointScale: { value: ratio / fullRatio },
     }
     const mat = new THREE.ShaderMaterial({
       vertexShader: vertex,
@@ -184,9 +193,12 @@ export default function SignalField({ className }: { className?: string }) {
     const clock = new THREE.Clock()
     let raf = 0
     const baseY = camera.position.y
-    const tick = () => {
+    let lastFrame = 0
+    const tick = (now = 0) => {
       raf = requestAnimationFrame(tick)
       if (!visible || document.hidden) return
+      if (weak && now - lastFrame < 32) return
+      lastFrame = now
       const t = clock.getElapsedTime()
       uniforms.uTime.value = t
       uniforms.uMouse.value.lerp(target, 0.08)
@@ -197,7 +209,7 @@ export default function SignalField({ className }: { className?: string }) {
       camera.lookAt(0, -scroll * 3, -6)
       renderer.render(scene, camera)
     }
-    if (reduce) {
+    if (still) {
       uniforms.uTime.value = 12
       renderer.render(scene, camera)
     } else {

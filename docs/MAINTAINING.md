@@ -3,7 +3,7 @@
 How the site is hosted, edited and kept up to date. For an overview of the project, see the [README](../README.md).
 
 The site is a static Next.js build published on **GitHub Pages**. Content lives as JSON in [`content/`](../content) and is
-edited with **[Pages CMS](https://pagescms.org)**; events are synced from **IEEE vTools** by GitHub Actions every 30 minutes.
+edited with **[Pages CMS](https://pagescms.org)**; events are synced from **IEEE vTools** by GitHub Actions once a day.
 
 ---
 
@@ -69,9 +69,10 @@ Things to know when editing:
 
 `scripts/vtools-sync.mjs` keeps the events in `content/events/` up to date:
 
-- Every 30 minutes GitHub Actions reads each unit's **Upcoming** and **Recent** lists from vTools (by SPOID),
+- Once a day (05:47 Sri Lanka time) GitHub Actions reads each unit's **Upcoming** and **Recent** lists from vTools (by SPOID),
   fetches new or changed events, copies posters/photos into `public/media` and commits the changes. The first run
   (and *Run workflow → full history*) imports every event ever hosted.
+- Need an event on the site sooner? **Actions → Build & deploy → Run workflow** syncs and republishes right away.
 - Unit SPOIDs live in **Chapters → <chapter> → IEEE vTools** (branch: **Site settings → vTools**). Matching
   rules, in order: host or co-host SPOID → host name + chapter keywords → hosts named "…Peradeniy…" go to the branch.
 - vTools owns the title, dates, description, venue and links (edit them in vTools). Webmasters own the cover,
@@ -110,6 +111,6 @@ Notes:
 - When the site lives in a sub-folder (`<org>.github.io/<repo>/`), the workflow sets `NEXT_PUBLIC_BASE_PATH`
   automatically; with a custom domain it is empty.
 - Upcoming/past events, timed spotlights and form open/close times are decided when the site is built — the
-  workflow republishes at least every 6 hours, and after every change.
+  workflow republishes once a day, and after every change.
 - If you add a field: add it to `.pages.yml` (and to `src/content/schema.json` if it is an image, file or
   reference) and use it in the components.

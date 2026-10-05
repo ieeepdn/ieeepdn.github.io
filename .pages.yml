@@ -2752,7 +2752,7 @@ content:
         hidden: true
   - name: events
     label: Events
-    description: Synced from IEEE vTools every 30 minutes (title, dates, venue come
+    description: Synced from IEEE vTools once a day (title, dates, venue come
       from vTools — edit them there). You can change the cover, photos,
       category, hide an event or feature it.
     type: collection

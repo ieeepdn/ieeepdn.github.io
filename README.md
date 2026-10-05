@@ -29,7 +29,7 @@ The site is a static website — there is no server to run or pay for.
 | --- | --- |
 | **Framework** | [Next.js](https://nextjs.org) (React, static export) with [Tailwind CSS](https://tailwindcss.com) |
 | **Content** | JSON files in [`content/`](content), edited through [Pages CMS](https://pagescms.org) |
-| **Events** | Synced from IEEE vTools every 30 minutes by [GitHub Actions](.github/workflows/site.yml) |
+| **Events** | Synced from IEEE vTools once a day by [GitHub Actions](.github/workflows/site.yml) |
 | **Hosting** | [GitHub Pages](https://pages.github.com) |
 
 Every change to `main` — a webmaster saving in Pages CMS, or a new event arriving from vTools — rebuilds the site

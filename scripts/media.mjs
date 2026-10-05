@@ -1,7 +1,8 @@
 /**
  * Prepares images for the static site (runs before `next dev` / `next build`):
  *  - reads every image under public/media (what Pages CMS uploads to)
- *  - writes resized WebP copies to public/media/_sizes (thumb 480 px, card 960 px, hero 1920 px wide)
+ *  - writes WebP copies to public/media/_sizes (thumb 480 px, card 960 px, hero 1920 px wide — or the image's own
+ *    width when it is narrower, never enlarged)
  *  - writes src/content/media-index.json with each image's size and its resized copies
  * Resized copies are cached: an image is only processed again when it changes.
  */
@@ -50,12 +51,15 @@ const worker = async () => {
         height = turned ? meta.width : meta.height
       }
       const sizes = {}
-      for (const [name, w] of Object.entries(SIZES)) {
-        if (!width || width <= w) continue // never enlarge (same as Payload)
+      for (const [name, target] of Object.entries(SIZES)) {
+        if (!width || /\.gif$/i.test(file)) continue // keep GIFs as they are (they may be animated)
+        // never enlarge: an image narrower than the target gets a WebP copy at its own width, so pages never
+        // have to load the original JPG/PNG (often several times larger)
+        const w = Math.min(width, target)
         const out = path.join(SIZES_DIR, `${stem}-${w}.webp`)
         const h = Math.round((height * w) / width)
         if (!fs.existsSync(out) || fs.statSync(out).mtimeMs < stat.mtimeMs) {
-          await sharp(file).rotate().resize({ width: w }).webp({ quality: name === 'thumb' ? 78 : 80 }).toFile(out)
+          await sharp(file).rotate().resize({ width: w }).webp({ quality: name === 'thumb' ? 76 : 78, effort: 5 }).toFile(out)
           made++
         }
         sizes[name] = { url: `/media/_sizes/${stem}-${w}.webp`, width: w, height: h }

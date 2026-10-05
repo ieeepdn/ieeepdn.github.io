@@ -17,7 +17,7 @@ export function SiteFooter({ settings, chapters }: { settings: SiteSetting; chap
       <div className="container-x relative grid gap-14 pb-10 pt-24 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-4">
-            <Image src="/brand/logo-mark.png" alt="" width={56} height={56} className="size-14 object-contain" />
+            <Image src="/brand/logo-mark.webp" alt="" width={56} height={56} className="size-14 object-contain" />
             <div className="leading-tight">
               <div className="font-display text-2xl font-extrabold">IEEE Student Branch</div>
               <div className="text-white/60">University of Peradeniya</div>
@@ -75,7 +75,7 @@ export function SiteFooter({ settings, chapters }: { settings: SiteSetting; chap
           <div aria-hidden className="pointer-events-none absolute -left-24 -top-24 size-72 rounded-full bg-ieee/40 blur-3xl" />
           <div aria-hidden className="pointer-events-none absolute -bottom-28 right-10 size-64 rounded-full bg-cyan/10 blur-3xl" />
           <a href="https://www.ieee.org/" target="_blank" rel="noreferrer" className="relative w-fit opacity-90 transition hover:opacity-100">
-            <Image src="/brand/ieee-white.png" alt="IEEE" width={160} height={47} className="h-10 w-auto md:h-12" />
+            <Image src="/brand/ieee-white.webp" alt="IEEE" width={160} height={47} className="h-10 w-auto md:h-12" />
           </a>
           <p className="relative max-w-xl text-[15px] leading-relaxed text-white/65">
             A student branch of <span className="text-white">IEEE</span>, the world’s largest technical professional
@@ -83,7 +83,7 @@ export function SiteFooter({ settings, chapters }: { settings: SiteSetting; chap
             <span className="text-white">IEEE Sri Lanka Section</span>.
           </p>
           <a href="https://www.pdn.ac.lk/" target="_blank" rel="noreferrer" className="relative flex items-center gap-3 opacity-90 transition hover:opacity-100">
-            <Image src="/brand/uop-crest.png" alt="" width={52} height={52} className="size-12 object-contain" />
+            <Image src="/brand/uop-crest.webp" alt="" width={52} height={52} className="size-12 object-contain" />
             <span className="flex flex-col leading-tight">
               <span className="font-display font-bold">University of Peradeniya</span>
               <span className="text-sm text-white/55">Faculty of Engineering</span>

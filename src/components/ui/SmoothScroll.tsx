@@ -6,12 +6,16 @@ import { usePathname } from 'next/navigation'
 let lenis: Lenis | null = null
 export const getLenis = () => lenis
 
-/** Buttery inertial scrolling (disabled for users who prefer reduced motion). */
+/**
+ * Buttery inertial scrolling for mouse and trackpad. Touch screens keep the phone's own scrolling (it is already
+ * smooth, and running an animation loop on every frame costs battery and makes slower phones stutter).
+ */
 export function SmoothScroll() {
   const pathname = usePathname()
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    if (window.matchMedia('(pointer: coarse)').matches) return
     lenis = new Lenis({ duration: 1.1, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true })
     let raf = 0
     const loop = (time: number) => {

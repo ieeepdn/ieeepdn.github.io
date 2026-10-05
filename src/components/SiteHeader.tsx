@@ -99,7 +99,7 @@ export function SiteHeader({
               aria-label="IEEE Student Branch, University of Peradeniya — home"
             >
               <Image
-                src="/brand/logo-mark.png"
+                src="/brand/logo-mark.webp"
                 alt=""
                 width={44}
                 height={44}

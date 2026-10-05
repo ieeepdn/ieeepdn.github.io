@@ -336,7 +336,7 @@ async function Events({ b, ctx, i }: { b: EventsBlock; ctx: BlockCtx; i: number 
       />
       {list.length === 0 ? (
         <div className="rounded-[1.5rem] border border-dashed border-ink/20 p-10 text-ink-3">
-          When {ctx.chapter.shortName} publishes an event on IEEE vTools, it appears here within 30 minutes.
+          When {ctx.chapter.shortName} publishes an event on IEEE vTools, it appears here within a day.
         </div>
       ) : (
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">

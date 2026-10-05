@@ -3,6 +3,7 @@ import { cache } from 'react'
 import type { Chapter, Committee, Event, Form, Media, Page, Post, Program, Album, SiteSetting } from '@/payload-types'
 import { activeSpotlight } from './spotlight'
 import { hydrate, rawCollection, rawFile } from './content'
+import { decodeEntities } from './html'
 
 /**
  * The same data functions the Payload version had, now reading the JSON files in /content at build time.
@@ -118,7 +119,11 @@ export const getPost = cache(async (slug: string): Promise<Post | null> => {
   return p ? hydrate<Post>('posts', p, 2) : null
 })
 
-const eventsRaw = cache(() => rawCollection('events').filter((e) => !e.hidden && e.start))
+const eventsRaw = cache(() =>
+  rawCollection('events')
+    .filter((e) => !e.hidden && e.start)
+    .map((e) => (typeof e.summary === 'string' ? { ...e, summary: decodeEntities(e.summary) } : e)),
+)
 /** Build time — the site is rebuilt by GitHub Actions after every vTools sync and every few hours. */
 const now = () => Date.now()
 const isUpcoming = (e: any) => time(e.end) >= now() || time(e.start) >= now()
@@ -135,6 +140,34 @@ export const getEvents = cache(
     return list.slice(0, opts.limit ?? 100).map((e) => hydrate<Event>('events', e, 1))
   },
 )
+
+/**
+ * An event trimmed to what a card needs (title, dates, venue, chapter colour, cover image). The events page
+ * hands ~250 of these to the browser, so leaving out descriptions and full chapter records keeps it light.
+ */
+export const slimEvent = (e: Event): Event => {
+  const ch = e.chapter && typeof e.chapter === 'object' ? e.chapter : null
+  const cv = e.cover && typeof e.cover === 'object' ? e.cover : null
+  return {
+    id: e.id,
+    title: e.title,
+    slug: e.slug,
+    vtoolsId: e.vtoolsId,
+    source: e.source,
+    start: e.start,
+    end: e.end,
+    category: e.category,
+    summary: e.summary ? (e.summary.length > 220 ? `${e.summary.slice(0, 217)}…` : e.summary) : e.summary,
+    venue: e.venue,
+    virtual: e.virtual,
+    registrationUrl: e.registrationUrl,
+    featured: e.featured,
+    chapter: ch ? ({ id: ch.id, name: ch.name, shortName: ch.shortName, slug: ch.slug, kind: ch.kind, accent: ch.accent } as Chapter) : e.chapter,
+    cover: cv
+      ? ({ id: cv.id, url: cv.url, alt: cv.alt, width: cv.width, height: cv.height, focalX: cv.focalX, focalY: cv.focalY, sizes: { thumb: cv.sizes?.thumb, card: cv.sizes?.card } } as Media)
+      : null,
+  } as Event
+}
 
 /** Every event that gets its own page. */
 export const getAllEvents = cache(async (): Promise<Event[]> => eventsRaw().map((e) => hydrate<Event>('events', e, 1)))

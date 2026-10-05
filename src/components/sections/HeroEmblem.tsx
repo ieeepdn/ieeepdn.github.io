@@ -94,7 +94,7 @@ export function HeroEmblem({ chapters, className }: { chapters: EmblemChapter[];
             className="relative size-full"
           >
             <Image
-              src="/brand/logo-mark.png"
+              src="/brand/logo-mark.webp"
               alt="IEEE Student Branch, University of Peradeniya"
               fill
               priority

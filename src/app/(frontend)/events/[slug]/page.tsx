@@ -10,7 +10,7 @@ import { MediaFrame } from '@/components/ui/MediaFrame'
 import { PhotoSet } from '@/components/ui/Photos'
 import { isPhoto, toPhoto } from '@/lib/photos'
 import { dateLong, isMidnight, timeRange } from '@/lib/format'
-import { stripHtml } from '@/lib/html'
+import { decodeEntities, stripHtml } from '@/lib/html'
 
 
 export const dynamicParams = false
@@ -36,7 +36,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
   const more = (await getEvents({ when: 'upcoming', limit: 4 })).filter((e) => e.id !== event.id).slice(0, 3)
   const cover = mediaInfo(event.cover, 'hero', event.title)
   const gallery = (event.gallery ?? []).map((m) => toPhoto(m, { caption: event.title })).filter(isPhoto)
-  const body = event.descriptionHtml ? stripHtml(event.descriptionHtml) : event.summary ?? ''
+  const body = event.descriptionHtml ? decodeEntities(stripHtml(event.descriptionHtml)) : event.summary ?? ''
 
   const gcal = new URL('https://calendar.google.com/calendar/render')
   const toCal = (iso?: string | null) => (iso ? new Date(iso).toISOString().replace(/[-:]|\.\d{3}/g, '') : '')

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { PageHero } from '@/components/PageHero'
 import { EventsExplorer } from '@/components/EventsExplorer'
 import { VtoolsBadge } from '@/components/VtoolsBadge'
-import { getChapters, getEvents, getSettings } from '@/lib/data'
+import { getChapters, getEvents, getSettings, slimEvent } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Events',
@@ -28,8 +28,8 @@ export default async function EventsPage() {
         <VtoolsBadge lastSync={settings.vtoolsLastSync} dark className="mt-2 w-fit" />
       </PageHero>
       <EventsExplorer
-        upcoming={upcoming}
-        past={past}
+        upcoming={upcoming.map(slimEvent)}
+        past={past.map(slimEvent)}
         chapters={chapters.map((c) => ({ id: c.id, slug: c.slug ?? '', shortName: c.shortName, accent: c.accent ?? '#00629B', kind: c.kind }))}
         initialWhen={!upcoming.length ? 'past' : 'upcoming'}
       />

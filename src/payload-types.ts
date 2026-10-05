@@ -1607,7 +1607,7 @@ export interface Post {
   _status?: ('draft' | 'published') | null;
 }
 /**
- * Events sync automatically from IEEE vTools every 30 minutes. Edit title/date/venue in vTools; here you can add a cover photo, hide an event or request it on the home page.
+ * Events sync automatically from IEEE vTools once a day. Edit title/date/venue in vTools; here you can add a cover photo, hide an event or request it on the home page.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "events".

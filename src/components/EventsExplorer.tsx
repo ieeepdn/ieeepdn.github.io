@@ -57,6 +57,12 @@ export function EventsExplorer({
 
   const chapterName = chapters.find((c) => c.slug === chapter)?.shortName
 
+  // show a page of cards at a time — rendering (and animating) all ~250 at once makes phones stutter
+  const PAGE = 12
+  const [shown, setShown] = useState(PAGE)
+  useEffect(() => setShown(PAGE), [when, chapter, cat, q])
+  const visible = list.slice(0, shown)
+
   return (
     <section className="bg-paper atmos pb-28">
       <div className="sticky top-0 z-30 border-b border-line bg-paper/85 backdrop-blur-xl">
@@ -129,7 +135,7 @@ export function EventsExplorer({
           </p>
           <motion.div layout className="grid gap-5 md:grid-cols-2">
             <AnimatePresence mode="popLayout">
-              {list.map((e) => (
+              {visible.map((e) => (
                 <motion.div
                   key={e.id}
                   layout
@@ -144,13 +150,24 @@ export function EventsExplorer({
               ))}
             </AnimatePresence>
           </motion.div>
+          {list.length > shown && (
+            <div className="mt-10 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setShown((n) => n + PAGE)}
+                className="inline-flex h-12 items-center rounded-full border border-line bg-surface px-6 text-sm font-semibold text-ink transition hover:border-ink/30"
+              >
+                Show more events <span className="ml-2 font-mono text-xs text-ink-3">{shown} of {list.length}</span>
+              </button>
+            </div>
+          )}
           {list.length === 0 && (
             <div className="flex flex-col items-start gap-4 rounded-[1.5rem] border border-dashed border-ink/20 bg-surface p-10">
               <span className="font-display text-2xl font-bold">
                 Nothing {when === 'upcoming' ? 'scheduled' : 'found'}{chapterName ? ` for ${chapterName}` : ''} yet.
               </span>
               <p className="max-w-lg text-ink-3">
-                New events appear here within 30 minutes of being published on IEEE vTools. Check the past events or follow
+                New events appear here within a day of being published on IEEE vTools. Check the past events or follow
                 the calendar so you don’t miss the next one.
               </p>
               <button type="button" onClick={() => { setChapter('all'); setCat('all'); setQ('') }} className="rounded-full bg-ink px-5 py-3 text-sm font-semibold text-paper">
@@ -178,7 +195,7 @@ export function EventsExplorer({
             <ol className="mt-4 flex list-decimal flex-col gap-2 pl-5 text-[15px] leading-relaxed text-ink-2">
               <li>Create the event in IEEE vTools under your chapter.</li>
               <li>It appears here and on your chapter page automatically.</li>
-              <li>Add a cover photo or request a home-page spot from the webmaster console.</li>
+              <li>Add a cover photo or ask the branch webmaster to feature it on the home page.</li>
             </ol>
             <a href="https://events.vtools.ieee.org/" target="_blank" rel="noreferrer" className="mt-5 inline-block font-semibold text-brand underline-offset-4 hover:underline">
               Open vTools Events
