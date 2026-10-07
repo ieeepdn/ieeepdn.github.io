@@ -4,7 +4,7 @@
   "start": "2025-09-23T09:00",
   "end": "2025-09-27T19:00",
   "category": "talk",
-  "summary": "The IEEE PES Student Branch Chapter of the University of Peradeniya actively participated in EngEX 2025, the grand exhibition organized to \ncelebrate the Engineering Faculty&rsquo;s 75th anniversary. As part of this event, the society showcased a wind turbine prototype demonstrating the working mechanism and princip…",
+  "summary": "The IEEE PES Student Branch Chapter of the University of Peradeniya actively participated in EngEX 2025, the grand exhibition organized to \ncelebrate the Engineering Faculty’s 75th anniversary. As part of this event, the society showcased a wind turbine prototype demonstrating the working mechanism and principles of…",
   "descriptionHtml": "<p>The IEEE PES Student Branch Chapter of the University of Peradeniya actively participated in EngEX 2025, the grand exhibition organized to&nbsp;<br>celebrate the Engineering Faculty&rsquo;s 75th anniversary. As part of this event, the society showcased a wind turbine prototype demonstrating the working mechanism and principles of wind energy conversion. Additionally, an interactive Python-based game was developed to illustrate the concept of grid balancing in modern power systems. These exhibits aimed to educate visitors on sustainable energy technologies and promote awareness about the role of power systems in achieving a greener future. <br><br><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/af08f932-d2a8-4f8b-b04a-b6bc6c8c4e0b\" width=\"566\" height=\"424\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/79b1d85a-8242-4bc6-b099-062ad7fb8a18\" width=\"562\" height=\"422\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/4d233e8f-8be0-45da-826e-be1c0b9490e8\" width=\"563\" height=\"422\"><img src=\"https://events.vtools.ieee.org/vtools_ui/media/display/6cf34ab9-43d7-4beb-a6f1-d55eb8251cfc\" width=\"562\" height=\"749\"></p>",
   "venue": "DEEE Building, Faculty of Engineering",
   "city": "Peradeniya",
@@ -20,8 +20,8 @@
   "source": "vtools",
   "vtoolsId": "529570",
   "hostName": "University of Peradeniy,PE31",
-  "syncedAt": "2026-10-01T22:17",
+  "syncedAt": "2026-10-07T06:15",
   "slug": "engex2025-procedure-of-wind-turbine-and-about-grid-stability",
   "chapter": "48524e5f-f32e-57e6-a6b4-84bd5e468dc5",
-  "updatedAt": "2026-10-01T16:47:59.270Z"
+  "updatedAt": "2026-10-07T06:15"
 }
