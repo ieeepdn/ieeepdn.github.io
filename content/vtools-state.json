@@ -1,6 +1,6 @@
 {
-  "lastSync": "2026-10-07T00:45:01.513Z",
-  "lastResult": "OK · 77 events found for 8 units · 0 new · 14 updated",
+  "lastSync": "2026-10-10T00:45:18.086Z",
+  "lastResult": "OK · 80 events found for 8 units · 3 new · 0 updated · 1 photos imported",
   "historyImported": true,
   "ignored": [],
   "known": [
@@ -218,6 +218,9 @@
     "571818",
     "580538",
     "580542",
-    "582497"
+    "582497",
+    "583801",
+    "583816",
+    "583818"
   ]
 }
