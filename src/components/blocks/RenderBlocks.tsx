@@ -299,7 +299,7 @@ async function Gallery({ b, ctx, i }: { b: GalleryBlock; ctx: BlockCtx; i: numbe
   let galleryHref = `/gallery?chapter=${ctx.chapter.slug}`
   if (!photos.length) {
     const albumId = typeof b.album === 'object' ? b.album?.id : b.album
-    const albums = albumId ? [await getAlbum(albumId)].filter((a) => a !== null) : await getAlbums(ctx.chapter.id)
+    const albums = albumId ? [await getAlbum(albumId)].filter((a) => a !== null) : await getAlbums(ctx.chapter.id, true)
     photos = albums.flatMap((a) => (a.photos ?? []).map((p) => toPhoto(p, { caption: a.title, chip }))).filter(isPhoto)
     if (albumId) galleryHref = `/gallery?chapter=${ctx.chapter.slug}`
   }

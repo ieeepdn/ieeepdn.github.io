@@ -1,6 +1,7 @@
 # Buttons in Pages CMS that change content for you:
-#  - Committees → "Start next term": copies a committee into the next term and keeps the old one online as history
-#    (scripts/committee-new-term.mjs)
+#  - Committees → "Duplicate for a new term": copies a committee (with all its people) into another term; the
+#    original stays online as history (scripts/committee-new-term.mjs)
+#  - Chapter sub-pages, News & stories, Forms → "Duplicate": saves a copy as a draft (scripts/duplicate-entry.mjs)
 #  - Chapter sub-pages → "Fill with a starter layout": adds the starter sections of a competition, conference,
 #    project or info page (scripts/page-template.mjs)
 # Each run saves the change to the repository and republishes the site.
@@ -43,6 +44,7 @@ jobs:
           case "$action" in
             committee-new-term) node scripts/committee-new-term.mjs ;;
             page-template) node scripts/page-template.mjs ;;
+            duplicate) node scripts/duplicate-entry.mjs ;;
             *) echo "::error::Unknown button '$action'"; exit 1 ;;
           esac
 

@@ -39,7 +39,7 @@ export default async function HomePage() {
     getEvents({ when: 'past', limit: 6 }),
     getFeaturedPosts(4),
     getPrograms(),
-    getAlbums(),
+    getAlbums(undefined, true),
   ])
 
 

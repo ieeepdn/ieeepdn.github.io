@@ -12,13 +12,16 @@ export type MosaicPhoto = Photo & { fx?: number; fy?: number }
 /**
  * Editorial photo mosaic: one lead photo, three supporting ones and a gallery door.
  * Static on purpose — auto-scrolling strips get ignored and are hard to read.
- * Picks landscape event photos (posters stay in the gallery, where they are shown uncropped)
- * and spreads the picks across albums.
+ * Picks photos that suit the tiles and spreads the picks across albums; a photo of a very different shape
+ * (a poster, a panorama) is shown whole instead of being cropped.
  */
 function pick(photos: MosaicPhoto[], n: number) {
   const ratio = (p: MosaicPhoto) => p.w / p.h
-  const good = photos.filter((p) => ratio(p) >= 1.2 && ratio(p) <= 2.2)
-  const pool = good.length >= n ? good : [...good, ...photos.filter((p) => !good.includes(p))]
+  // the tiles are roughly square: landscape event photos (4:3, 3:2) fill them best, then square ones
+  // (often posters); anything else is still shown whole (see TileImage)
+  const best = photos.filter((p) => ratio(p) >= 1.2 && ratio(p) <= 1.6)
+  const fine = photos.filter((p) => !best.includes(p) && ratio(p) >= 0.9 && ratio(p) <= 1.8)
+  const pool = [...best, ...fine, ...photos.filter((p) => !best.includes(p) && !fine.includes(p))]
   const byAlbum = new Map<string, MosaicPhoto[]>()
   for (const p of pool) {
     const k = p.caption ?? ''
@@ -31,6 +34,25 @@ function pick(photos: MosaicPhoto[], n: number) {
     for (const l of lanes) if (l[round] && out.length < n) out.push(l[round])
   }
   return out
+}
+
+/**
+ * A photo in a fixed-shape tile. When the photo's shape is far from the tile's (a poster, a tall phone photo,
+ * a wide group shot in a square tile) it is shown whole on a blurred copy of itself instead of being cropped.
+ */
+function TileImage({ p, tile, src, sizes, className }: { p: MosaicPhoto; tile: number; src: string; sizes: string; className?: string }) {
+  const shape = p.w / p.h
+  const contain = Math.abs(Math.log(shape / tile)) > Math.log(1.35)
+  if (!contain) {
+    return <Image src={src} alt={p.alt} fill sizes={sizes} className={className} style={{ objectPosition: `${p.fx ?? 50}% ${p.fy ?? 50}%` }} />
+  }
+  return (
+    <>
+      <Image src={p.src} alt="" aria-hidden fill sizes="160px" className="scale-125 object-cover opacity-80 blur-2xl saturate-150" />
+      <span aria-hidden className="absolute inset-0 bg-night/25" />
+      <Image src={src} alt={p.alt} fill sizes={sizes} className="object-contain p-[3%] drop-shadow-[0_18px_30px_rgba(3,10,19,0.45)] transition duration-700 group-hover:scale-[1.03]" />
+    </>
+  )
 }
 
 export function MomentsMosaic({
@@ -94,13 +116,13 @@ export function MomentsMosaic({
                 className="group relative block size-full overflow-hidden rounded-2xl bg-night-2 md:rounded-[1.5rem]"
                 aria-label={`Open photo: ${p.alt || p.caption || 'event photo'}`}
               >
-                <Image
+                <TileImage
+                  p={p}
+                  // approximate tile shapes: the lead tile and the others are near-square, the wide tile ~2:1
+                  tile={i === 0 ? 1.15 : i === 3 && !door ? 2.1 : 1}
                   src={i === 0 ? p.full : p.src}
-                  alt={p.alt}
-                  fill
                   sizes={i === 0 ? '(min-width: 768px) 50vw, 100vw' : '(min-width: 768px) 25vw, 50vw'}
                   className="object-cover transition duration-[1.2s] ease-out group-hover:scale-[1.05]"
-                  style={{ objectPosition: `${p.fx ?? 50}% ${p.fy ?? 50}%` }}
                 />
                 <span
                   className={clsx(

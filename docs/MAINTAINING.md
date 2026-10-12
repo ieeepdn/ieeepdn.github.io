@@ -56,7 +56,7 @@ Then in **Settings → Pages → Custom domain** enter `ieee.soc.pdn.ac.lk`, sav
 | Branch email, address, social links, Google Analytics, vTools | **Website → Contact, links & vTools** |
 | A chapter's header photo, logo, colour, about text, big numbers | **Chapters → Chapter pages** → the chapter (top fields) |
 | The sections of a chapter page (events, stories, photos, team, FAQ…) | **Chapters → Chapter pages** → the chapter → **Page sections** |
-| A committee | **Chapters → Committees** |
+| A committee (or start next year’s) | **Chapters → Committees** (“Duplicate for a new term”) |
 | A flagship event, competition, conference or project page | **Chapters → Chapter sub-pages** |
 | Pera Xtreme, Predicta, MentorSpark cards and pages | **Programmes, news & events → Flagship programmes** |
 | A story, a cover photo on a vTools event, hiding an event | **Programmes, news & events → News & stories / Events** |
@@ -64,15 +64,30 @@ Then in **Settings → Pages → Custom domain** enter `ieee.soc.pdn.ac.lk`, sav
 
 ### Buttons that do the work for you
 
-- **Committees → open a committee → “Start next term”** (top right): copies the committee into a new entry for the
-  next term (e.g. 2026/27 → 2027/28) and shows that one on the chapter page. The old committee is **kept** and stays
-  online as history at `/chapters/<chapter>/committee`. Refresh the Committees list after a minute, open the new
-  entry and change the people. **Never overwrite last year’s committee** — the history would be lost.
+- **Committees → open last year’s committee → “Duplicate for a new term”** (top right): saves a copy with all the
+  people for the next term (e.g. 2026/27 → 2027/28). The copy starts **hidden**, so you can take your time: after a
+  minute refresh Committees, open the copy, change the people, then untick **Hide from the website** — it replaces
+  the old committee on the chapter page. Last year’s committee is never changed and stays online as history at
+  `/chapters/<chapter>/committee`. **Never overwrite last year’s committee** — the history would be lost.
+- **Chapter sub-pages, News & stories, Forms → “Duplicate”**: saves a copy as a draft, e.g. last year’s flagship
+  page for the new edition, or a registration form for the next event.
 - **Chapter sub-pages → create a page, Save, then “Fill with a starter layout”**: adds ready-made sections for a
   flagship event / competition, conference, project or info page, with [bracketed] placeholder text to replace.
   Refresh the page after a minute to see them.
 
-Both buttons run a small GitHub Actions job (*Pages CMS buttons*), save the change and republish the site.
+The buttons run a small GitHub Actions job (*Pages CMS buttons*), save the change and republish the site.
+
+### Photo albums
+
+- **Chapters → Photo albums → + Add**: give it a title, chapter and date, then **drag a whole folder’s worth of
+  photos** into *Photos* (or click to pick several). Drag photos to reorder them.
+- **Cover photo** (optional) leads the album; otherwise the first photo does. **Pin** keeps an album at the top of
+  the Gallery, **Hide** takes it off the site, and **Keep out of the mosaics** keeps it off the home page and
+  chapter photo tiles (it still shows in the Gallery).
+- Big phone photos are fine: each publish shrinks any photo over 2400 px or 1.5 MB, and the site makes small
+  WebP copies for visitors.
+- The Gallery page never crops photos. The photo tiles on the home and chapter pages show posters and very wide
+  or tall photos whole instead of cutting them.
 
 ### Things to know when editing
 
@@ -132,7 +147,8 @@ npm run serve        # preview out/ like GitHub Pages does
 | `scripts/media.mjs` | Makes the 480/960/1920 px WebP copies and `src/content/media-index.json` (cached in CI) |
 | `scripts/vtools-sync.mjs` | IEEE vTools sync |
 | `.github/workflows/site.yml` | Sync → commit → build → deploy |
-| `.github/workflows/cms-actions.yml` | The Pages CMS buttons: `scripts/committee-new-term.mjs`, `scripts/page-template.mjs` (layouts in `scripts/page-templates.mjs`) |
+| `.github/workflows/cms-actions.yml` | The Pages CMS buttons: `scripts/committee-new-term.mjs`, `scripts/duplicate-entry.mjs`, `scripts/page-template.mjs` (layouts in `scripts/page-templates.mjs`) |
+| `scripts/shrink-uploads.mjs` | Resizes uploaded photos over 2400 px / 1.5 MB before each build |
 
 Notes:
 

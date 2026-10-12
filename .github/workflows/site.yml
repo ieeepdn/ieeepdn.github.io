@@ -42,6 +42,13 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      - name: Shrink very large uploaded photos
+        continue-on-error: true
+        run: node scripts/shrink-uploads.mjs
+
       - name: Sync events from IEEE vTools
         id: sync
         continue-on-error: true # vTools being down must never stop the site from publishing
@@ -49,7 +56,7 @@ jobs:
           VTOOLS_MODE: ${{ inputs.full_history && 'full' || '' }}
         run: node scripts/vtools-sync.mjs
 
-      - name: Commit synced events
+      - name: Commit synced events and resized photos
         id: commit
         run: |
           git config user.name "vtools-sync[bot]"
@@ -57,7 +64,7 @@ jobs:
           # vtools-state.json changes on every run (time of last sync) — only commit when events or photos changed
           if [ -n "$(git status --porcelain -- content public ':!content/vtools-state.json')" ]; then
             git add content public
-            git commit -m "vTools sync: $(node -p "require('./content/vtools-state.json').lastResult.slice(0, 120)")"
+            git commit -m "Automatic: vTools sync and photo resizing — $(node -p "require('./content/vtools-state.json').lastResult.slice(0, 100)")"
             git pull --rebase --autostash origin main && git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
@@ -78,10 +85,6 @@ jobs:
             src/content/media-index.json
           key: media-${{ hashFiles('public/media/**', '!public/media/_sizes/**') }}
           restore-keys: media-
-
-      - name: Install
-        if: steps.decide.outputs.deploy == 'true'
-        run: npm ci --no-audit --no-fund
 
       - name: Configure GitHub Pages
         if: steps.decide.outputs.deploy == 'true'

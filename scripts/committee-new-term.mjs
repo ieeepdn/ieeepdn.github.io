@@ -1,12 +1,17 @@
 #!/usr/bin/env node
 /**
- * "Start next term" — run by the Pages CMS button on a committee (see .github/workflows/committee-new-term.yml).
+ * "Duplicate for a new term" — run by the Pages CMS button on a committee (see .github/workflows/cms-actions.yml).
  *
- * Copies the committee the button was pressed on into a new entry for the next term and marks it as the one the
- * website shows ("current"). The old committee is kept unchanged, only un-ticked, so it stays online as history at
- * /chapters/<chapter>/committee/<term>. The webmaster then opens the new entry and changes the people.
+ * Copies the committee the button was pressed on into a new entry for another term, with all its people, so the
+ * webmaster only changes what is different. The original is never changed and stays online as history at
+ * /chapters/<chapter>/committee/<term>.
  *
- * Input: the Pages CMS payload (JSON) in $PAYLOAD — context.path is the committee file, inputs.term the new term.
+ *  - By default the copy is hidden (“work in progress”): edit it, then untick “Hide from the website” and it
+ *    replaces the old committee on the chapter page (the newest shown term wins).
+ *  - With “Show it on the chapter page now” ticked, the copy is published straight away.
+ *
+ * Input: the Pages CMS payload (JSON) in $PAYLOAD — context.path is the committee file, inputs.term the new term,
+ * inputs.publish (checkbox).
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -57,21 +62,13 @@ const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(
 const newFile = `${DIR}/${slug(chapter?.slug || 'committee')}-${slug(term)}.json`
 if (fs.existsSync(path.join(ROOT, newFile))) fail(`${newFile} already exists — open that committee in Pages CMS instead.`)
 
-// every committee of this chapter steps back; the new one is the one the website shows
-for (const f of fs.readdirSync(path.join(ROOT, DIR)).filter((f) => f.endsWith('.json'))) {
-  const p = path.join(ROOT, DIR, f)
-  const c = read(p)
-  if (String(c.chapter) === String(old.chapter) && c.current) {
-    c.current = false
-    write(p, c)
-  }
-}
-
-const { updatedAt, ...rest } = old
+const publish = payload?.inputs?.publish === true || payload?.inputs?.publish === 'true'
+const { updatedAt, hidden, ...rest } = old
 const title = old.title && old.title.includes(old.term) ? old.title.replace(old.term, term) : `${chapter?.shortName ?? 'Committee'} · ${term}`
-write(path.join(ROOT, newFile), { ...rest, id: randomUUID(), title, term, current: true })
+// "current" + newest term = the committee the chapter page shows; a hidden copy waits until it is unticked
+write(path.join(ROOT, newFile), { ...rest, id: randomUUID(), title, term, current: true, ...(publish ? {} : { hidden: true }) })
 
-const summary = `${chapter?.shortName ?? 'Committee'}: started ${term} (copied from ${old.term}, which stays online as history)`
+const summary = `${chapter?.shortName ?? 'Committee'}: duplicated ${old.term} as ${term}${publish ? ' (published)' : ' (hidden until ready)'}`
 fs.appendFileSync(process.env.GITHUB_OUTPUT || '/dev/null', `summary=${summary}\nfile=${newFile}\n`)
 console.log(summary)
-console.log(`New entry: ${newFile} — open it in Pages CMS and change the people.`)
+console.log(`New entry: ${newFile} — open it in Pages CMS, change the people${publish ? '' : ', then untick “Hide from the website”'}.`)

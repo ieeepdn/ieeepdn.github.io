@@ -41,8 +41,8 @@ You don't need to touch any code. Sign in at **[app.pagescms.org](https://app.pa
 account (ask the branch webmaster to add you as a collaborator) and edit your chapter's page, sub-pages, news,
 albums and committee there. Events come from vTools automatically — publish them in vTools as usual.
 
-The [maintainer guide](docs/MAINTAINING.md) has a “where to change what” table, the **Start next term** and
-**Fill with a starter layout** buttons, theme options, forms and the vTools sync.
+The [maintainer guide](docs/MAINTAINING.md) has a “where to change what” table, the **Duplicate** and
+**Fill with a starter layout** buttons, photo albums, theme options, forms and the vTools sync.
 
 ## Running it locally
 

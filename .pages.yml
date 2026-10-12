@@ -2743,7 +2743,7 @@ content:
       hidden: true
   - name: committees
     label: Committees
-    description: 'One entry per chapter per term. Don’t overwrite last year’s committee: open it and press “Start next term” (top right) — it copies the committee into the new term and keeps the old one online as history.'
+    description: 'One entry per chapter per term. To start a new year, open last year’s committee and press “Duplicate for a new term” (top right): you get a copy with all the people, hidden until you finish editing it. Last year’s committee stays online as history.'
     type: collection
     path: content/committees
     format: json
@@ -2786,9 +2786,13 @@ content:
         label: '{fields.name}'
     - name: current
       label: Shown on the chapter page
-      description: Tick it on the committee of the current term only.
+      description: When several committees of a chapter are ticked, the newest term is shown on the chapter page.
       default: true
       type: boolean
+    - name: hidden
+      label: Hide from the website (work in progress)
+      type: boolean
+      description: A copy made with “Duplicate for a new term” starts hidden. Untick this when the new committee is ready — it then replaces the old one on the chapter page.
     - name: title
       label: Title
       hidden: true
@@ -2897,20 +2901,23 @@ content:
       hidden: true
     actions:
     - name: committee-new-term
-      label: Start next term
+      label: Duplicate for a new term
       scope: entry
       workflow: cms-actions.yml
       confirm:
-        title: Start the next committee term?
-        message: This copies this committee into a new entry for the next term and shows that one on the chapter page. This committee stays online as history. Afterwards, refresh Committees and open the new entry to change the people.
-        button: Start new term
+        title: Duplicate this committee?
+        message: Saves a copy of this committee — with all its people — for another term. This committee is not changed and stays online as history. After about a minute, refresh Committees and open the copy to change the people.
+        button: Duplicate
       fields:
       - name: term
         label: New term (leave empty for the next year, e.g. 2026/27 → 2027/28)
         type: text
+      - name: publish
+        label: Show the copy on the chapter page straight away (otherwise it stays hidden until you untick “Hide”)
+        type: checkbox
   - name: pages
     label: Chapter sub-pages
-    description: 'Extra pages under a chapter: flagship events, competitions, conferences, projects. Create the page, save it once, then press “Fill with a starter layout” (top right) to get ready-made sections to edit.'
+    description: 'Extra pages under a chapter: flagship events, competitions, conferences, projects. Create the page, save it once, then press “Fill with a starter layout” (top right) to get ready-made sections to edit. “Duplicate” copies a page, e.g. last year’s flagship page for the new edition.'
     type: collection
     path: content/pages
     format: json
@@ -3131,9 +3138,21 @@ content:
       - name: append
         label: Add after the existing sections
         type: checkbox
+    - name: duplicate
+      label: Duplicate
+      scope: entry
+      workflow: cms-actions.yml
+      confirm:
+        title: Duplicate this page?
+        message: Saves a copy (as a draft where possible). After about a minute, refresh the list and open the copy.
+        button: Duplicate
+      fields:
+      - name: title
+        label: Title of the copy (leave empty for “… (copy)”)
+        type: text
   - name: albums
     label: Photo albums
-    description: Event photos for the gallery and chapter pages.
+    description: Event photos for the Gallery page, chapter pages and the home page. Drop many photos at once into “Photos”, drag them to reorder; the cover (or the first photo) leads the album.
     type: collection
     path: content/albums
     format: json
@@ -3185,7 +3204,25 @@ content:
       options:
         media: images
         multiple: true
-      description: Upload several at once. The first photo is the album cover.
+        unique: true
+      description: Drag several photos in at once. Drag to reorder. Photos are never cropped on the Gallery page.
+    - name: cover
+      label: Cover photo (optional)
+      type: image
+      options:
+        media: images
+      description: 'Leads the album and its card. Empty: the first photo.'
+    - name: pinned
+      label: Pin to the top of the Gallery
+      type: boolean
+    - name: notInMosaic
+      label: Keep out of the home page and chapter photo mosaics
+      type: boolean
+      description: The album still shows on the Gallery page.
+    - name: hidden
+      label: Hide this album
+      type: boolean
+      description: Takes the album off the website without deleting the photos.
     - name: description
       label: Description
       type: text
@@ -3481,6 +3518,19 @@ content:
     - name: updatedAt
       type: string
       hidden: true
+    actions:
+    - name: duplicate
+      label: Duplicate
+      scope: entry
+      workflow: cms-actions.yml
+      confirm:
+        title: Duplicate this story?
+        message: Saves a copy (as a draft where possible). After about a minute, refresh the list and open the copy.
+        button: Duplicate
+      fields:
+      - name: title
+        label: Title of the copy (leave empty for “… (copy)”)
+        type: text
   - name: events
     label: Events
     description: Synced from IEEE vTools once a day (title, dates, venue come from vTools — edit them there). You can change the cover, photos, category, hide an event or feature it.
@@ -3795,6 +3845,19 @@ content:
     - name: updatedAt
       type: string
       hidden: true
+    actions:
+    - name: duplicate
+      label: Duplicate
+      scope: entry
+      workflow: cms-actions.yml
+      confirm:
+        title: Duplicate this form?
+        message: Saves a copy (as a draft where possible). After about a minute, refresh the list and open the copy.
+        button: Duplicate
+      fields:
+      - name: title
+        label: Title of the copy (leave empty for “… (copy)”)
+        type: text
   - name: documents
     label: Files
     description: PDFs and other files for the Downloads section.

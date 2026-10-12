@@ -75,7 +75,12 @@ export const flattenCommittee = (c: Committee): CommitteePerson[] => {
   return out
 }
 
-const committeesRaw = cache(() => rawCollection('committees').slice().sort((a, b) => String(b.term ?? '').localeCompare(String(a.term ?? ''))))
+// newest term first; a committee marked "Hide from the website" (a copy still being edited) is left out
+const committeesRaw = cache(() =>
+  rawCollection('committees')
+    .filter((c) => !c.hidden)
+    .sort((a, b) => String(b.term ?? '').localeCompare(String(a.term ?? ''))),
+)
 
 /** Every committee of a chapter, newest term first (for the history page). */
 export const getCommittees = cache(async (chapterId: number | string): Promise<Committee[]> =>
@@ -192,12 +197,28 @@ export const getPrograms = cache(async (): Promise<Program[]> =>
 
 export const getProgram = cache(async (slug: string): Promise<Program | null> => (await getPrograms()).find((p) => p.slug === slug) ?? null)
 
-export const getAlbums = cache(async (chapterId?: number | string): Promise<Album[]> =>
+/**
+ * Photo albums, newest first (pinned albums before the rest). Hidden albums are left out; the chosen cover photo
+ * leads the album. `forMosaic` leaves out albums that are kept off the home page and chapter photo mosaics.
+ */
+const albumsRaw = cache(() =>
   rawCollection('albums')
+    .filter((a) => !a.hidden)
+    .sort((a, b) => Number(Boolean(b.pinned)) - Number(Boolean(a.pinned)) || time(b.date) - time(a.date)),
+)
+const withCover = (a: Album): Album => {
+  const cover = (a as Album & { cover?: Media | null }).cover
+  if (!cover || typeof cover !== 'object') return a
+  const rest = (a.photos ?? []).filter((p) => !(p && typeof p === 'object' && p.url === cover.url))
+  return { ...a, photos: [cover, ...rest] }
+}
+
+export const getAlbums = cache(async (chapterId?: number | string, forMosaic = false): Promise<Album[]> =>
+  albumsRaw()
     .filter((a) => !chapterId || same(a.chapter, chapterId))
-    .sort(byDesc('date'))
-    .slice(0, 60)
-    .map((a) => hydrate<Album>('albums', a, 1)),
+    .filter((a) => !forMosaic || !a.notInMosaic)
+    .slice(0, 100)
+    .map((a) => withCover(hydrate<Album>('albums', a, 1))),
 )
 
 export { asMedia, mediaUrl, mediaInfo, asChapter, accentVars, type MaybeMedia, type MediaInfo } from './media'
@@ -266,5 +287,5 @@ export const countResponses = async (_formId: number | string) => 0
 
 export const getAlbum = cache(async (id: number | string): Promise<Album | null> => {
   const a = rawCollection('albums').find((x) => same(x.id, id) || x.slug === id)
-  return a ? hydrate<Album>('albums', a, 1) : null
+  return a ? withCover(hydrate<Album>('albums', a, 1)) : null
 })

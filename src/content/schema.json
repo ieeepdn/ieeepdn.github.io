@@ -232,6 +232,11 @@
       "many": true
     },
     {
+      "name": "cover",
+      "kind": "media",
+      "many": false
+    },
+    {
       "name": "chapter",
       "kind": "rel",
       "to": "chapters",
