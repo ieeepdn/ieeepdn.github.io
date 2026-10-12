@@ -26,7 +26,8 @@ import {
   mediaUrl,
 } from '@/lib/data'
 import { dateShort, dayOf, monthOf } from '@/lib/format'
-import { milestones } from '@/lib/milestones'
+import { getHome, type HomeSectionName } from '@/lib/site'
+import { Fragment } from 'react'
 
 
 export default async function HomePage() {
@@ -72,22 +73,15 @@ export default async function HomePage() {
 
   const [lead, ...rest] = posts
 
-  return (
-    <>
-      {spotlight?.style === 'hero' ? (
-        <SpotlightHero s={spotlight} />
-      ) : (
-        <Hero
-          kicker={settings.heroKicker ?? 'Est. 19 July 2001'}
-          title={settings.heroTitle ?? 'Sri Lanka’s first IEEE Student Branch.'}
-          accent={settings.heroAccent ?? 'Still building the future.'}
-          text={settings.heroText ?? ''}
-          nextEvent={nextEvent}
-          chapters={society.map((c) => ({ slug: c.slug ?? '', shortName: c.shortName, accent: c.accent ?? '#00629B', logo: mediaUrl(c.logo, 'thumb') }))}
-        />
-      )}
+  const home = getHome()
+  const copyOf = (name: HomeSectionName) => {
+    const s = home.sections.find((x) => x.section === name)
+    return s ? { eyebrow: s.eyebrow, heading: s.heading, text: s.text } : undefined
+  }
 
-      {/* chapter ticker */}
+  // every home page section, by the name editors use in Pages CMS → Home page → Sections
+  const render: Record<HomeSectionName, (prev?: HomeSectionName) => React.ReactNode> = {
+    'Chapter ticker': () => (
       <div className="border-y border-white/10 bg-night py-5 text-white">
         <Marquee duration={45}>
           {[...society, ...society].map((c, i) => (
@@ -98,17 +92,20 @@ export default async function HomePage() {
           ))}
         </Marquee>
       </div>
-
-      {spotlight?.style === 'banner' && <SpotlightBanner s={spotlight} />}
-
+    ),
+    'Spotlight banner': () => (spotlight?.style === 'banner' ? <SpotlightBanner s={spotlight} /> : null),
+    'Why we exist': () => (
       <Manifesto
-        statement="We inspire future engineers to achieve, and lead our community to greater heights — by giving every student a platform to reach out to the world and try everything, because we believe in the impact engineers can make to build a better tomorrow for everyone."
+        statement={home.statement ?? 'We inspire future engineers to achieve, and lead our community to greater heights.'}
         stats={(settings.stats ?? []).map((s) => ({ value: s.value, suffix: s.suffix, label: s.label }))}
         vision={settings.vision ?? ''}
         mission={settings.mission ?? ''}
+        copy={copyOf('Why we exist')}
       />
-
+    ),
+    Chapters: () => (
       <ChaptersBento
+        copy={copyOf('Chapters')}
         chapters={society.map((c, i) => ({
           slug: c.slug ?? '',
           shortName: c.shortName,
@@ -123,46 +120,57 @@ export default async function HomePage() {
           upcoming: upcoming.filter((e) => asChapter(e.chapter)?.id === c.id).length,
         }))}
       />
-
-      <ProgrammesScroller
-        programmes={programmes.map((p) => ({
-          slug: p.slug ?? '',
-          name: p.name,
-          edition: p.edition,
-          tagline: p.tagline,
-          summary: p.summary,
-          accent: p.accent ?? '#00629B',
-          cover: mediaUrl(p.cover, 'hero'),
-          stats: (p.stats ?? []).map((s) => ({ value: s.value, label: s.label })),
-        }))}
-      />
-
-      <section className="bg-paper atmos pb-28 md:pb-36">
-        <div className="container-x">
-          <SectionHeader
-            eyebrow={upcoming.length ? 'Coming up' : 'Recently'}
-            title={upcoming.length ? 'Don’t miss what’s next.' : 'What we’ve been up to.'}
-            link={{ href: '/events', label: 'All events' }}
-          />
-          <Reveal className="mb-8">
-            <VtoolsBadge lastSync={settings.vtoolsLastSync} />
-          </Reveal>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {events.map((e, i) => (
-              <Reveal key={e.id} delay={i * 0.08} className="h-full">
-                <EventCard event={e} past={!upcoming.length} />
-              </Reveal>
-            ))}
+    ),
+    'Flagship programmes': () =>
+      programmes.length ? (
+        <ProgrammesScroller
+          copy={copyOf('Flagship programmes')}
+          programmes={programmes.map((p) => ({
+            slug: p.slug ?? '',
+            name: p.name,
+            edition: p.edition,
+            tagline: p.tagline,
+            summary: p.summary,
+            accent: p.accent ?? '#00629B',
+            cover: mediaUrl(p.cover, 'hero'),
+            stats: (p.stats ?? []).map((s) => ({ value: s.value, label: s.label })),
+          }))}
+        />
+      ) : null,
+    Events: (prev) => {
+      const c = copyOf('Events')
+      // straight after the programmes (same background) the section needs no extra space on top
+      return (
+        <section className={prev === 'Flagship programmes' ? 'bg-paper atmos pb-28 md:pb-36' : 'bg-paper atmos pb-28 pt-28 md:pb-36 md:pt-36'}>
+          <div className="container-x">
+            <SectionHeader
+              eyebrow={c?.eyebrow ?? (upcoming.length ? 'Coming up' : 'Recently')}
+              title={c?.heading ?? (upcoming.length ? 'Don’t miss what’s next.' : 'What we’ve been up to.')}
+              text={c?.text}
+              link={{ href: '/events', label: 'All events' }}
+            />
+            <Reveal className="mb-8">
+              <VtoolsBadge lastSync={settings.vtoolsLastSync} />
+            </Reveal>
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {events.map((e, i) => (
+                <Reveal key={e.id} delay={i * 0.08} className="h-full">
+                  <EventCard event={e} past={!upcoming.length} />
+                </Reveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      <Timeline items={milestones} />
-
-      {lead && (
+        </section>
+      )
+    },
+    'History timeline': () => (home.timeline.length ? <Timeline items={home.timeline} copy={copyOf('History timeline')} /> : null),
+    'News & stories': () => {
+      if (!lead) return null
+      const c = copyOf('News & stories')
+      return (
         <section className="bg-mist atmos py-28 md:py-36">
           <div className="container-x">
-            <SectionHeader eyebrow="News & stories" title="From the chapters." link={{ href: '/news', label: 'All stories' }} />
+            <SectionHeader eyebrow={c?.eyebrow ?? 'News & stories'} title={c?.heading ?? 'From the chapters.'} text={c?.text} link={{ href: '/news', label: 'All stories' }} />
             <div className="grid gap-12 lg:grid-cols-[1.35fr_1fr]">
               <Reveal>
                 <PostCard post={lead} large />
@@ -177,13 +185,42 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
+      )
+    },
+    'Photo moments': () => {
+      const c = copyOf('Photo moments')
+      return photos.length ? (
+        <MomentsMosaic photos={photos} eyebrow={c?.eyebrow} title={c?.heading ?? 'Life at the branch.'} totalLabel={`${photoCount} photos in ${albums.length} albums`} />
+      ) : null
+    },
+    Video: () => (settings.showreel ? <Showreel videoId={settings.showreel} channel={settings.youtube} copy={copyOf('Video')} /> : null),
+    'Call to action': () => {
+      const c = copyOf('Call to action')
+      return <CtaBand title={c?.heading ?? home.cta.title} text={c?.text ?? home.cta.text} />
+    },
+  }
+
+  return (
+    <>
+      {spotlight?.style === 'hero' ? (
+        <SpotlightHero s={spotlight} />
+      ) : (
+        <Hero
+          kicker={settings.heroKicker ?? 'Est. 19 July 2001'}
+          title={settings.heroTitle ?? 'Sri Lanka’s first IEEE Student Branch.'}
+          accent={settings.heroAccent ?? 'Still building the future.'}
+          text={settings.heroText ?? ''}
+          background={home.hero.background}
+          image={home.hero.image}
+          nextEvent={nextEvent}
+          chapters={society.map((c) => ({ slug: c.slug ?? '', shortName: c.shortName, accent: c.accent ?? '#00629B', logo: mediaUrl(c.logo, 'thumb') }))}
+        />
       )}
-
-      <MomentsMosaic photos={photos} title="Life at the branch." totalLabel={`${photoCount} photos in ${albums.length} albums`} />
-
-      {settings.showreel && <Showreel videoId={settings.showreel} channel={settings.youtube} />}
-
-      <CtaBand />
+      {home.sections
+        .filter((s) => s.show)
+        .map((s, i, shown) => (
+          <Fragment key={s.section}>{render[s.section](shown[i - 1]?.section)}</Fragment>
+        ))}
     </>
   )
 }

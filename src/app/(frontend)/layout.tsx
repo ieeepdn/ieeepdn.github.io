@@ -7,6 +7,13 @@ import '@fontsource/ibm-plex-sans/latin-600.css'
 import '@fontsource/ibm-plex-sans/latin-700.css'
 import '@fontsource/ibm-plex-mono/latin-400.css'
 import '@fontsource/ibm-plex-mono/latin-500.css'
+// font choices offered in Pages CMS → Theme & colours (a font file is only downloaded when it is used)
+import '@fontsource-variable/space-grotesk/wght.css'
+import '@fontsource-variable/outfit/wght.css'
+import '@fontsource-variable/plus-jakarta-sans/wght.css'
+import '@fontsource-variable/fraunces/wght.css'
+import '@fontsource-variable/dm-sans/wght.css'
+import '@fontsource-variable/source-sans-3/wght.css'
 import './globals.css'
 import { SmoothScroll } from '@/components/ui/SmoothScroll'
 import { SiteHeader } from '@/components/SiteHeader'
@@ -15,6 +22,7 @@ import { ScrollProgress } from '@/components/ui/ScrollProgress'
 import { Analytics } from '@/components/Analytics'
 import { getChapters, getSettings, getSpotlight } from '@/lib/data'
 import { themeScript } from '@/lib/theme'
+import { getTheme } from '@/lib/site'
 
 const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://ieee.soc.pdn.ac.lk'
 
@@ -44,13 +52,15 @@ export const viewport: Viewport = {
 
 export default async function FrontendLayout({ children }: { children: React.ReactNode }) {
   const [settings, chapters, spotlight] = await Promise.all([getSettings(), getChapters(), getSpotlight()])
+  const theme = getTheme()
   const announcement = settings.announcement?.active
     ? { text: settings.announcement.text ?? '', url: settings.announcement.url ?? '' }
     : (spotlight?.topBar ?? null)
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: themeScript(theme.defaultMode) }} />
+        {theme.css && <style dangerouslySetInnerHTML={{ __html: theme.css }} />}
       </head>
       <body className="min-h-dvh bg-paper text-ink">
         <a

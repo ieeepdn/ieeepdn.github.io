@@ -15,7 +15,7 @@ function Word({ children, progress, range }: { children: string; progress: Motio
 }
 
 /** Scroll-scrubbed manifesto — words light up as you read. */
-export function Manifesto({ statement, stats, vision, mission }: { statement: string; stats: Stat[]; vision: string; mission: string }) {
+export function Manifesto({ statement, stats, vision, mission, copy }: { statement: string; stats: Stat[]; vision: string; mission: string; copy?: { eyebrow?: string; heading?: string; text?: string } }) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.8', 'end 0.45'] })
   const words = statement.split(' ')
@@ -24,9 +24,9 @@ export function Manifesto({ statement, stats, vision, mission }: { statement: st
     <section id="story" className="relative bg-paper atmos">
       <div className="container-x grid gap-16 py-28 md:py-40 lg:grid-cols-[0.34fr_1fr]">
         <Reveal className="flex flex-col gap-4 lg:sticky lg:top-32 lg:self-start">
-          <span className="eyebrow text-brand">Why we exist</span>
+          <span className="eyebrow text-brand">{copy?.eyebrow ?? 'Why we exist'}</span>
           <span className="max-w-[16ch] font-display text-2xl font-bold leading-tight text-ink-2">
-            The link between the IEEE global body and every engineering student at Peradeniya.
+            {copy?.heading ?? 'The link between the IEEE global body and every engineering student at Peradeniya.'}
           </span>
         </Reveal>
         <div ref={ref}>

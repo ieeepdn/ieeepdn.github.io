@@ -1,8 +1,8 @@
 {
   "id": "c51283af-6ab5-5a90-b8b5-ffbe558582ce",
   "title": "ComSoc · 2025/26",
-  "term": "2026/27",
-  "current": true,
+  "term": "2025/26",
+  "current": false,
   "advisors": [
     {
       "name": "Dr. Himal Suraweera",
@@ -13,28 +13,28 @@
   "executive": [
     {
       "position": "Chair",
-      "name": "Shanan Adams",
-      "photo": "/media/adamssl-shanan-adams.jpg"
+      "name": "Janidu Rathnasiri",
+      "photo": "/media/comsoc-058.jpg"
     },
     {
       "position": "Secretary",
-      "name": "Vibhavi Kariyawasam",
-      "photo": "/media/photo-ngvk-kariyawasam.jpeg"
+      "name": "Tharuka Welagedara",
+      "photo": "/media/comsoc-059.jpg"
     },
     {
       "position": "Junior Treasurer",
-      "name": "Induka Rathnayake",
-      "photo": "/media/induka-rathnayake-pginb-rathnayaka.jpeg"
+      "name": "Eeshawa Randiya",
+      "photo": "/media/comsoc-060.jpg"
     },
     {
       "position": "Vice Chair",
-      "name": "Damindu Thathsara Yapa",
-      "photo": "/media/damindu-yapa-committee-member-damindu-thathsara.jpg"
+      "name": "Shanan Adams",
+      "photo": "/media/comsoc-061.jpg"
     },
     {
       "position": "Assistant Junior Treasurer",
-      "name": "Iresha Madumali",
-      "photo": "/media/img20240719060936-iresha-madhumali.jpg"
+      "name": "Savinu Nadew",
+      "photo": "/media/comsoc-066.jpg"
     }
   ],
   "teams": [
@@ -42,19 +42,19 @@
       "name": "Webmaster",
       "members": [
         {
-          "name": "E. A. V. Ranulaka",
+          "name": "Anupa Rathnayake",
           "role": "lead",
-          "photo": "/media/whatsapp-image-2026-08-01-at-212835-eav-ranulaka.jpeg"
+          "photo": "/media/comsoc-062.jpg"
         },
         {
-          "name": "Sathurjika Niththijanantham",
+          "name": "Shane Baines",
           "role": "member",
-          "photo": "/media/img-20260209-wa00321-sathurjika-niththijanantham.jpg"
+          "photo": "/media/comsoc-071.jpg"
         },
         {
-          "name": "Hasala Kavinda",
+          "name": "Damindu Thathsara",
           "role": "member",
-          "photo": "/media/hasala-kavinda-hasala-kavinda-chandrasekara.jpg"
+          "photo": "/media/comsoc-072.jpg"
         }
       ]
     },
@@ -62,19 +62,19 @@
       "name": "Design",
       "members": [
         {
-          "name": "Ginuri Ranawaka",
+          "name": "Pavani Pathirana",
           "role": "lead",
-          "photo": "/media/1759574137648-ginuri-ranawaka.jpg"
+          "photo": "/media/comsoc-063.jpg"
         },
         {
-          "name": "Thisanda Ninduwara",
+          "name": "Ginuri Ranawaka",
           "role": "member",
-          "photo": "/media/geminigeneratedimagehgql6vhgql6vhgql-thisanda-ninduwara.png"
+          "photo": "/media/comsoc-067.jpg"
         },
         {
-          "name": "Senithu Sethmin ",
+          "name": "Chama Wickramage",
           "role": "member",
-          "photo": "/media/img-20240727-wa0046-senithu-sethmin.jpg"
+          "photo": "/media/comsoc-068.jpg"
         }
       ]
     },
@@ -82,24 +82,19 @@
       "name": "Program",
       "members": [
         {
-          "name": "Durga Sathasivam",
+          "name": "Chalana Rashmika",
           "role": "lead",
-          "photo": "/media/sdurga-s-durga.jpg"
+          "photo": "/media/comsoc-064.jpg"
         },
         {
-          "name": "Lukman Rizvi",
+          "name": "Sakuni Abeywickrama",
           "role": "member",
-          "photo": "/media/img117698758760951-lukman-rizvi.jpg"
+          "photo": "/media/comsoc-069.jpg"
         },
         {
-          "name": "Savindu Weerakoon",
+          "name": "Tishan Dissanayake",
           "role": "member",
-          "photo": "/media/1785320918346-cato.png"
-        },
-        {
-          "name": "Dhanushka Amarakoon",
-          "role": "member",
-          "photo": "/media/fbimg1777948350127-dhanushka-amarakoon.jpg"
+          "photo": "/media/comsoc-070.jpg"
         }
       ]
     },
@@ -107,39 +102,19 @@
       "name": "Reporting",
       "members": [
         {
-          "name": "Chama Samarasekara",
+          "name": "Dewmini Chamathka",
           "role": "lead",
-          "photo": "/media/img4055-chama-samarasekara.jpeg"
+          "photo": "/media/comsoc-065.jpg"
         },
         {
-          "name": "Nimashi Sandeepani",
+          "name": "Vibhavi Kariyawasam",
           "role": "member",
-          "photo": "/media/image-nimashi-sandeepani.jpg"
+          "photo": "/media/comsoc-073.jpg"
         },
         {
-          "name": "Rashmi Nisansala",
+          "name": "Roshan Milinda",
           "role": "member",
-          "photo": "/media/img20260729192138-kar-nisansala.jpg"
-        }
-      ]
-    },
-    {
-      "name": "Technical",
-      "members": [
-        {
-          "name": "Jeenuka Seneviratne",
-          "role": "lead",
-          "photo": "/media/img-20260809-wa0003-j-c-s-seneviratne.jpg"
-        },
-        {
-          "name": "Sithum Thenuka",
-          "role": "member",
-          "photo": "/media/img2871-lp-sithum.jpeg"
-        },
-        {
-          "name": "Yasitha Gihan",
-          "role": "member",
-          "photo": "/media/img3434-yasitha-gihan-gunasekara.jpg"
+          "photo": "/media/comsoc-074.jpg"
         }
       ]
     },
@@ -147,28 +122,28 @@
       "name": "Committee",
       "members": [
         {
-          "name": "Jayathri Pabasara ",
+          "name": "G.K. Ashwinthan",
+          "role": "member",
+          "position": "Committee Member (E20)",
+          "photo": "/media/comsoc-075.jpg"
+        },
+        {
+          "name": "Seneth Rashmika",
           "role": "member",
           "position": "Committee Member (E21)",
-          "photo": "/media/jayathriprofile-pic-jp-jayasundara.png"
+          "photo": "/media/comsoc-076.jpg"
         },
         {
-          "name": "Dewni Weerasuriya",
+          "name": "Iresha Madumali",
           "role": "member",
           "position": "Committee Member (E22)",
-          "photo": "/media/20250923140334-dewni-weerasuriya.jpg"
+          "photo": "/media/comsoc-077.jpg"
         },
         {
-          "name": "Senuda Dilmith",
+          "name": "Rusith Pahasara",
           "role": "member",
-          "position": "Committee Member (E22)",
-          "photo": "/media/senuda-dilmith-committee-member-senuda-dilmith.jpg"
-        },
-        {
-          "name": "Lasindu Hasanga ",
-          "role": "member",
-          "position": "Committee Member (E24)",
-          "photo": "/media/img-20260809-wa0004-diffu-sion.jpg"
+          "position": "Committee Member (E23)",
+          "photo": "/media/comsoc-078.jpg"
         }
       ]
     }

@@ -8,7 +8,7 @@ import { CtaBand } from '@/components/sections/CtaBand'
 import { Faq } from '@/components/Faq'
 import { Reveal } from '@/components/ui/motion'
 import { getChapters, getPeople, mediaUrl } from '@/lib/data'
-import { milestones } from '@/lib/milestones'
+import { getHome } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -88,7 +88,7 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      <Timeline items={milestones} />
+      <Timeline items={getHome().timeline} />
 
       <section id="team" className="scroll-mt-24 bg-paper atmos py-24 md:py-32">
         <div className="container-x">

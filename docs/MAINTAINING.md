@@ -40,30 +40,58 @@ Then in **Settings → Pages → Custom domain** enter `ieee.soc.pdn.ac.lk`, sav
 
 1. Go to **<https://app.pagescms.org>** and sign in with GitHub. (The Pages CMS GitHub app is installed on this
    repository by the `ieeepdn` account, once.)
-2. Open the repository. The sidebar shows **Site settings, Chapters, Committees,
-   News & stories, Events, Flagship programmes, Photo albums, Pages, Forms, Files, Image descriptions**.
+2. Open the repository. The sidebar is grouped by what you want to change (table below).
 3. Add chapter webmasters: either as repository collaborators (with their own GitHub accounts), or — for people
    without a GitHub account — invite them by email as **Collaborators** in Pages CMS (they can edit content and media, not settings).
 4. Every **Save** is a Git commit. GitHub Actions rebuilds the site and it is live **2–3 minutes later**.
 
-Things to know when editing:
+### Where to change what
 
+| I want to change… | Open in Pages CMS |
+| --- | --- |
+| The home page header, announcement bar, which home sections show and in what order, their headings | **Website → Home page** |
+| The history timeline (home page and About page) | **Website → Home page → History timeline** |
+| A big event promoted on the home page, menu and top bar | **Website → Spotlight (big event)** |
+| Colours, fonts, the style of page headers, light/dark default | **Website → Theme & colours** |
+| Branch email, address, social links, Google Analytics, vTools | **Website → Contact, links & vTools** |
+| A chapter's header photo, logo, colour, about text, big numbers | **Chapters → Chapter pages** → the chapter (top fields) |
+| The sections of a chapter page (events, stories, photos, team, FAQ…) | **Chapters → Chapter pages** → the chapter → **Page sections** |
+| A committee | **Chapters → Committees** |
+| A flagship event, competition, conference or project page | **Chapters → Chapter sub-pages** |
+| Pera Xtreme, Predicta, MentorSpark cards and pages | **Programmes, news & events → Flagship programmes** |
+| A story, a cover photo on a vTools event, hiding an event | **Programmes, news & events → News & stories / Events** |
+| Photo albums, forms, PDFs, alt text | **Chapters → Photo albums**, **Forms, files & images** |
+
+### Buttons that do the work for you
+
+- **Committees → open a committee → “Start next term”** (top right): copies the committee into a new entry for the
+  next term (e.g. 2026/27 → 2027/28) and shows that one on the chapter page. The old committee is **kept** and stays
+  online as history at `/chapters/<chapter>/committee`. Refresh the Committees list after a minute, open the new
+  entry and change the people. **Never overwrite last year’s committee** — the history would be lost.
+- **Chapter sub-pages → create a page, Save, then “Fill with a starter layout”**: adds ready-made sections for a
+  flagship event / competition, conference, project or info page, with [bracketed] placeholder text to replace.
+  Refresh the page after a minute to see them.
+
+Both buttons run a small GitHub Actions job (*Pages CMS buttons*), save the change and republish the site.
+
+### Things to know when editing
+
+- **Page sections** are folded: each row shows the section number and its heading, and a badge with the section
+  type. Click a row to open it, drag ⋮⋮ to reorder, **+ Add** to add a section. “Hide this section” takes a
+  section off the page without deleting it. Empty headings use the built-in wording.
 - **Everyone with access can edit every chapter** (Pages CMS has no per-chapter permissions). Agree that each
   webmaster only edits their own chapter; every change is recorded in the repository history with the editor's
   name and can be undone (GitHub → the file → History → revert).
 - **No live preview.** Set a post or page to *Draft (hidden)* while you work on it, then switch it to *Published*.
 - **Deleting** an entry removes its file (restore it from the repository history if needed). To take a vTools
-  event off the site, tick **Hidden** rather than deleting it.
+  event off the site, tick **Hide from the website** rather than deleting it.
 - **Images:** upload in any image field. Add alt text (what the image shows) in **Image descriptions**.
-- **New sub-pages start empty** — add sections with *Add an entry* in the Sections list. Pick the chapter and
-  (optionally) a parent page; the address becomes `/chapters/<chapter>/<parent>/<slug>`, or `/<short address>`
-  when a short address is set.
+- **Page addresses:** leave “Page address” empty and it is made from the title. A sub-page lives at
+  `/chapters/<chapter>/<parent>/<address>`, or at `/<short address>` when a short address is set.
+- **Colours** are colour codes like `#00629B`. Clear a colour in Theme & colours to go back to the original.
 - **Forms:** create a free form at [formspree.io](https://formspree.io) with the chapter's email and paste its
   address into the form's *Where responses go* field. Responses arrive by email and can be exported as CSV
   there. Or paste a Google Form link into *…or link to a Google Form* instead.
-- **Committee handover:** add a new committee entry for the new term (copy the teams from last year's), tick
-  **On the website (current)** and untick it on the old one. Old committees stay at
-  `/chapters/<chapter>/committee`.
 
 ## 3. IEEE vTools events
 
@@ -94,15 +122,17 @@ npm run serve        # preview out/ like GitHub Pages does
 
 | Where | What |
 | --- | --- |
-| `content/` | All content (JSON). `settings.json`, `media.json` (alt text), `vtools-state.json`, one folder per collection |
+| `content/` | All content (JSON): `home.json`, `spotlight.json`, `theme.json`, `settings.json`, `media.json` (alt text), `vtools-state.json`, one folder per collection |
 | `public/media/` | Uploaded images (originals). `public/files/` — PDFs for the Downloads section |
 | `.pages.yml` | Pages CMS editor configuration (collections, fields, the section library) |
 | `src/lib/content.ts` | Reads `content/` and turns image paths and references back into full objects |
 | `src/lib/data.ts` | The data functions every page uses (same names as the Payload version) |
+| `src/lib/site.ts` | Home page sections and the theme (colours, fonts, header styles) from `home.json` / `theme.json` |
 | `src/content/schema.json` | Which fields are images, files or references (generated from the old Payload config) |
 | `scripts/media.mjs` | Makes the 480/960/1920 px WebP copies and `src/content/media-index.json` (cached in CI) |
 | `scripts/vtools-sync.mjs` | IEEE vTools sync |
 | `.github/workflows/site.yml` | Sync → commit → build → deploy |
+| `.github/workflows/cms-actions.yml` | The Pages CMS buttons: `scripts/committee-new-term.mjs`, `scripts/page-template.mjs` (layouts in `scripts/page-templates.mjs`) |
 
 Notes:
 

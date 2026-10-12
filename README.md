@@ -38,11 +38,11 @@ and publishes it within a few minutes.
 ## For chapter webmasters
 
 You don't need to touch any code. Sign in at **[app.pagescms.org](https://app.pagescms.org)** with your GitHub
-account (ask the branch webmaster to add you as a collaborator) and edit your chapter's page, news, albums and
-committee there. Events come from vTools automatically — publish them in vTools as usual.
+account (ask the branch webmaster to add you as a collaborator) and edit your chapter's page, sub-pages, news,
+albums and committee there. Events come from vTools automatically — publish them in vTools as usual.
 
-The [maintainer guide](docs/MAINTAINING.md) explains editing, forms, committee handovers and the vTools sync in
-detail.
+The [maintainer guide](docs/MAINTAINING.md) has a “where to change what” table, the **Start next term** and
+**Fill with a starter layout** buttons, theme options, forms and the vTools sync.
 
 ## Running it locally
 

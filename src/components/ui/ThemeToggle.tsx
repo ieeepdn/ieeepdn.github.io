@@ -30,6 +30,8 @@ export function ThemeToggle({ className }: { className?: string }) {
         saved = localStorage.getItem(KEY)
       } catch {}
       if (saved) return
+      // the site default (Pages CMS → Theme & colours) can be fixed to light or dark instead of following the device
+      if ((document.documentElement.getAttribute('data-theme-default') ?? 'system') !== 'system') return
       apply(e.matches ? 'dark' : 'light', false)
       setTheme(e.matches ? 'dark' : 'light')
     }

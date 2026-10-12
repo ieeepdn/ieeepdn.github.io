@@ -29,6 +29,8 @@ export function Hero({
   text,
   nextEvent,
   chapters = [],
+  background = 'signal',
+  image,
 }: {
   kicker: string
   title: string
@@ -36,6 +38,9 @@ export function Hero({
   text: string
   nextEvent: HeroEvent
   chapters?: EmblemChapter[]
+  /** chosen in Pages CMS → Home page → Hero: animated signal field, a photo, or a plain gradient */
+  background?: 'signal' | 'photo' | 'plain'
+  image?: string | null
 }) {
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
@@ -50,8 +55,21 @@ export function Hero({
       className="grain relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-night text-white"
     >
       {/* atmosphere */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_60%_at_70%_20%,rgba(0,98,155,0.45),transparent_60%),radial-gradient(ellipse_60%_50%_at_10%_90%,rgba(67,198,244,0.16),transparent_60%)]" />
-      <SignalField className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_80%,transparent)]" />
+      {background === 'photo' && image && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={image} alt="" className="absolute inset-0 -z-20 size-full object-cover opacity-45" fetchPriority="high" />
+      )}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            'radial-gradient(ellipse 80% 60% at 70% 20%, color-mix(in srgb, var(--color-ieee) 45%, transparent), transparent 60%), radial-gradient(ellipse 60% 50% at 10% 90%, color-mix(in srgb, var(--color-cyan) 16%, transparent), transparent 60%)' +
+            (background === 'photo' && image ? ', linear-gradient(to right, color-mix(in srgb, var(--color-night) 85%, transparent), transparent)' : ''),
+        }}
+      />
+      {background === 'signal' && (
+        <SignalField className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_80%,transparent)]" />
+      )}
       <div className="grid-lines absolute inset-0 -z-10 opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
 
       <motion.div

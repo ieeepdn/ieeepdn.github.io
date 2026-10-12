@@ -66,7 +66,7 @@ function Panel({ p, i, stacked }: { p: ProgrammeCard; i: number; stacked?: boole
   )
 }
 
-export function ProgrammesScroller({ programmes }: { programmes: ProgrammeCard[] }) {
+export function ProgrammesScroller({ programmes, copy }: { programmes: ProgrammeCard[]; copy?: { eyebrow?: string; heading?: string; text?: string } }) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] })
   const x = useTransform(scrollYProgress, [0, 1], ['0%', `-${Math.max(0, programmes.length - 1) * 64}%`])
@@ -75,12 +75,17 @@ export function ProgrammesScroller({ programmes }: { programmes: ProgrammeCard[]
     <section className="relative bg-paper atmos">
       <div className="container-x flex flex-col gap-4 pb-12 pt-28 md:flex-row md:items-end md:justify-between md:pt-36">
         <div className="flex flex-col gap-4">
-          <Reveal><span className="eyebrow text-brand">Flagship programmes</span></Reveal>
+          <Reveal><span className="eyebrow text-brand">{copy?.eyebrow ?? 'Flagship programmes'}</span></Reveal>
           <Reveal delay={0.05}>
             <h2 className="max-w-[14ch] font-display text-[clamp(2.4rem,5.5vw,5rem)] font-extrabold leading-[0.98] tracking-[-0.04em]">
-              What the branch is known for.
+              {copy?.heading ?? 'What the branch is known for.'}
             </h2>
           </Reveal>
+          {copy?.text && (
+            <Reveal delay={0.08}>
+              <p className="max-w-xl text-lg leading-relaxed text-ink-2">{copy.text}</p>
+            </Reveal>
+          )}
         </div>
         <Reveal delay={0.1}>
           <Link href="/programmes" className="link-underline font-semibold text-brand">All programmes</Link>

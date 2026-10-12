@@ -88,6 +88,8 @@ export const rawCollection = cache((collection: string): Json[] => {
       doc.updatedAt = latest(doc.updatedAt, gitDates().get(`content/${collection}/${f}`)) || doc.createdAt || fs.statSync(path.join(dir, f)).mtime.toISOString()
       doc.createdAt ||= doc.updatedAt
       doc._file = f
+      // the old console filled in page addresses automatically; Pages CMS doesn't, so an empty slug comes from the title
+      if (!doc.slug && collection !== 'pages' && collection !== 'committees') doc.slug = slugify(doc.title || doc.name || f.replace(/\.json$/, ''))
       return doc
     })
 })

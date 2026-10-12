@@ -1,0 +1,16 @@
+{
+  "colours": {
+    "primary": "#00629B",
+    "accent": "#43C6F4",
+    "highlight": "#FFB547",
+    "dark": "#030A13"
+  },
+  "fonts": {
+    "display": "Bricolage Grotesque",
+    "body": "IBM Plex Sans"
+  },
+  "heroes": {
+    "pageHero": "Photo with colour glow"
+  },
+  "defaultMode": "Follow the visitor’s device"
+}

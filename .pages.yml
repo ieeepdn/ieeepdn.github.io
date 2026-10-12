@@ -1,2255 +1,2620 @@
 # Pages CMS configuration — https://pagescms.org/docs/configuration/
-# Generated from the original Payload field definitions; edit freely.
+# The editor for the website. Sidebar groups: Website · Chapters · Programmes, news & events · Forms, files & images.
 media:
-  - name: images
-    label: Images
-    input: public/media
-    output: /media
-    categories:
-      - image
-    rename: safe
-  - name: files
-    label: Files
-    input: public/files
-    output: /files
-    categories:
-      - document
-      - compressed
-      - spreadsheet
-    rename: safe
+- name: images
+  label: Images
+  input: public/media
+  output: /media
+  categories:
+  - image
+  rename: safe
+- name: files
+  label: Files
+  input: public/files
+  output: /files
+  categories:
+  - document
+  - compressed
+  - spreadsheet
+  rename: safe
 components:
   block_chapterAbout:
     type: object
     label: About the chapter (automatic)
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: heading
-        label: Heading
-        description: Defaults to “What is <chapter>?”. Text comes from the About,
-          Mission, Highlights and Links fields.
-        type: string
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: heading
+      label: Heading
+      description: Defaults to “What is <chapter>?”. Text comes from the About, Mission, Highlights and Links fields.
+      type: string
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_text:
     type: object
     label: Text
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: content
-        label: Content
-        required: true
-        type: rich-text
-        options:
-          format: html
-          media: images
-      - name: width
-        label: Width
-        default: narrow
-        type: select
-        options:
-          values:
-            - name: narrow
-              label: Reading width
-            - name: split
-              label: Heading left, text right
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: content
+      label: Content
+      required: true
+      type: rich-text
+      options:
+        format: html
+        media: images
+    - name: width
+      label: Width
+      default: narrow
+      type: select
+      options:
+        values:
+        - name: narrow
+          label: Reading width
+        - name: split
+          label: Heading left, text right
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_mediaText:
     type: object
     label: Image + text
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: content
-        label: Content
-        type: rich-text
-        options:
-          format: html
-          media: images
-      - name: image
-        label: Image
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: content
+      label: Content
+      type: rich-text
+      options:
+        format: html
+        media: images
+    - name: image
+      label: Image
+      required: true
+      type: image
+      options:
+        media: images
+    - name: imageSide
+      label: Image Side
+      default: left
+      type: select
+      options:
+        values:
+        - name: left
+          label: Image left
+        - name: right
+          label: Image right
+    - name: buttons
+      label: Buttons
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: label
+        label: Label
         required: true
-        type: image
-        options:
-          media: images
-      - name: imageSide
-        label: Image Side
-        default: left
-        type: select
-        options:
-          values:
-            - name: left
-              label: Image left
-            - name: right
-              label: Image right
-      - name: buttons
-        label: Buttons
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-          - name: url
-            label: Url
-            description: https://… or /chapters/…
-            required: true
-            type: string
-          - name: variant
-            label: Variant
-            default: primary
-            type: select
-            options:
-              values:
-                - name: primary
-                  label: Solid
-                - name: secondary
-                  label: Outline
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
         type: string
-      - name: blockName
-        label: Block Name
+      - name: url
+        label: Link (URL)
+        description: https://… or /chapters/…
+        required: true
         type: string
+      - name: variant
+        label: Variant
+        default: primary
+        type: select
+        options:
+          values:
+          - name: primary
+            label: Solid
+          - name: secondary
+            label: Outline
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_cards:
     type: object
     label: Cards
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: columns
+      label: Columns
+      default: '3'
+      type: select
+      options:
+        values:
+        - name: '2'
+          label: 2 per row
+        - name: '3'
+          label: 3 per row
+        - name: '4'
+          label: 4 per row
+    - name: items
+      label: Items
+      description: Tracks, prize categories, rounds, projects, benefits…
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.title}'
+      fields:
+      - name: title
+        label: Title
+        required: true
         type: string
-      - name: heading
-        label: Heading
+      - name: tag
+        label: Tag
+        description: Small label, e.g. “1st place”, “Round 2”
         type: string
-      - name: intro
-        label: Intro
+      - name: text
+        label: Text
         type: text
-      - name: columns
-        label: Columns
-        default: "3"
-        type: select
+      - name: image
+        label: Image
+        type: image
         options:
-          values:
-            - name: "2"
-              label: 2 per row
-            - name: "3"
-              label: 3 per row
-            - name: "4"
-              label: 4 per row
-      - name: items
-        label: Items
-        description: Tracks, prize categories, rounds, projects, benefits…
-        type: object
-        list: true
-        fields:
-          - name: title
-            label: Title
-            required: true
-            type: string
-          - name: tag
-            label: Tag
-            description: Small label, e.g. “1st place”, “Round 2”
-            type: string
-          - name: text
-            label: Text
-            type: text
-          - name: image
-            label: Image
-            type: image
-            options:
-              media: images
-          - name: link
-            label: Link
-            description: Optional link
-            type: string
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
+          media: images
+      - name: link
+        label: Link
+        description: Optional link
         type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_stats:
     type: object
     label: Big numbers
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: items
+      label: Items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: value
+        label: Value
+        required: true
         type: string
-      - name: heading
-        label: Heading
+      - name: label
+        label: Label
+        required: true
         type: string
-      - name: items
-        label: Items
-        type: object
-        list: true
-        fields:
-          - name: value
-            label: Value
-            required: true
-            type: string
-          - name: label
-            label: Label
-            required: true
-            type: string
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_timeline:
     type: object
     label: Timeline / schedule
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: items
+      label: Items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.title}'
+      fields:
+      - name: when
+        label: When
+        required: true
         type: string
-      - name: heading
-        label: Heading
+      - name: title
+        label: Title
+        required: true
         type: string
-      - name: items
-        label: Items
-        type: object
-        list: true
-        fields:
-          - name: when
-            label: When
-            required: true
-            type: string
-          - name: title
-            label: Title
-            required: true
-            type: string
-          - name: text
-            label: Text
-            type: text
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+      - name: text
+        label: Text
+        type: text
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_gallery:
     type: object
     label: Photos
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: photos
-        label: Photos
-        description: "Pick photos — or leave empty and choose an album below. Both
-          empty: your chapter’s albums."
-        type: image
-        options:
-          media: images
-          multiple: true
-      - name: album
-        label: Album
-        type: reference
-        options:
-          collection: albums
-          value: "{fields.id}"
-          label: "{fields.title}"
-      - name: layout
-        label: Layout
-        default: mosaic
-        type: select
-        options:
-          values:
-            - name: mosaic
-              label: Mosaic (5 best photos)
-            - name: rows
-              label: Rows (every photo, uncropped)
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: photos
+      label: Photos
+      description: 'Pick photos — or leave empty and choose an album below. Both empty: your chapter’s albums.'
+      type: image
+      options:
+        media: images
+        multiple: true
+    - name: album
+      label: Album
+      type: reference
+      options:
+        collection: albums
+        value: '{fields.id}'
+        label: '{fields.title}'
+    - name: layout
+      label: Layout
+      default: mosaic
+      type: select
+      options:
+        values:
+        - name: mosaic
+          label: Mosaic (5 best photos)
+        - name: rows
+          label: Rows (every photo, uncropped)
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_events:
     type: object
     label: Events (automatic)
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: show
-        label: Show
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Upcoming, else recent
-            - name: upcoming
-              label: Upcoming only
-            - name: past
-              label: Past only
-      - name: limit
-        label: Limit
-        default: 6
-        type: number
-      - name: titleContains
-        label: Title Contains
-        description: Only events whose title contains this, e.g. “RoboFest”
-        type: string
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: show
+      label: Show
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Upcoming, else recent
+        - name: upcoming
+          label: Upcoming only
+        - name: past
+          label: Past only
+    - name: limit
+      label: Limit
+      default: 6
+      type: number
+    - name: titleContains
+      label: Title Contains
+      description: Only events whose title contains this, e.g. “RoboFest”
+      type: string
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_stories:
     type: object
     label: News (automatic)
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: limit
-        label: Limit
-        default: 3
-        type: number
-      - name: titleContains
-        label: Title Contains
-        description: Only stories whose title contains this
-        type: string
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: limit
+      label: Limit
+      default: 3
+      type: number
+    - name: titleContains
+      label: Title Contains
+      description: Only stories whose title contains this
+      type: string
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_people:
     type: object
     label: People
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: source
+      label: Source
+      default: committee
+      type: select
+      options:
+        values:
+        - name: committee
+          label: Our current committee (automatic)
+        - name: custom
+          label: People listed below (judges, speakers, organisers)
+    - name: items
+      label: Items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.name} — {fields.position}'
+      fields:
+      - name: name
+        label: Name
+        required: true
         type: string
-      - name: heading
-        label: Heading
+      - name: position
+        label: Position
+        description: Role, e.g. “Head judge”
         type: string
-      - name: source
-        label: Source
-        default: committee
-        type: select
+      - name: organisation
+        label: Organisation
+        type: string
+      - name: linkedin
+        label: LinkedIn URL
+        type: string
+      - name: photo
+        label: Photo
+        type: image
         options:
-          values:
-            - name: committee
-              label: Our current committee (automatic)
-            - name: custom
-              label: People listed below (judges, speakers, organisers)
-      - name: items
-        label: Items
-        type: object
-        list: true
-        fields:
-          - name: name
-            label: Name
-            required: true
-            type: string
-          - name: position
-            label: Position
-            description: Role, e.g. “Head judge”
-            type: string
-          - name: organisation
-            label: Organisation
-            type: string
-          - name: linkedin
-            label: LinkedIn URL
-            type: string
-          - name: photo
-            label: Photo
-            type: image
-            options:
-              media: images
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+          media: images
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_faq:
     type: object
     label: Questions & answers
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: items
+      label: Items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.q}'
+      fields:
+      - name: q
+        label: Question
+        required: true
         type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: items
-        label: Items
-        type: object
-        list: true
-        fields:
-          - name: q
-            label: Question
-            required: true
-            type: string
-          - name: a
-            label: Answer
-            required: true
-            type: text
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+      - name: a
+        label: Answer
+        required: true
+        type: text
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_form:
     type: object
     label: Form
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: intro
-        label: Intro
-        type: text
-      - name: form
-        label: Form
-        required: true
-        type: reference
-        options:
-          collection: forms
-          value: "{fields.id}"
-          label: "{fields.title}"
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: form
+      label: Form
+      required: true
+      type: reference
+      options:
+        collection: forms
+        value: '{fields.id}'
+        label: '{fields.title}'
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_downloads:
     type: object
     label: Downloads
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: items
+      label: Items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: label
+        label: Label
+        required: true
         type: string
-      - name: heading
-        label: Heading
+      - name: note
+        label: Note
         type: string
-      - name: items
-        label: Items
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-          - name: note
-            label: Note
-            type: string
-          - name: file
-            label: File
-            required: true
-            type: file
-            options:
-              media: files
-      - name: background
-        label: Background
-        default: auto
-        type: select
+      - name: file
+        label: File
+        required: true
+        type: file
         options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+          media: files
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_logos:
     type: object
     label: Sponsors & partners
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: items
+      label: Items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.name}'
+      fields:
+      - name: name
+        label: Name
+        required: true
         type: string
-      - name: heading
-        label: Heading
+      - name: tier
+        label: Tier
+        description: Groups logos, e.g. “Title sponsor”
         type: string
-      - name: items
-        label: Items
-        type: object
-        list: true
-        fields:
-          - name: name
-            label: Name
-            required: true
-            type: string
-          - name: tier
-            label: Tier
-            description: Groups logos, e.g. “Title sponsor”
-            type: string
-          - name: url
-            label: Url
-            type: string
-          - name: logo
-            label: Logo
-            required: true
-            type: image
-            options:
-              media: images
-      - name: background
-        label: Background
-        default: auto
-        type: select
+      - name: url
+        label: Link (URL)
+        type: string
+      - name: logo
+        label: Logo
+        required: true
+        type: image
         options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+          media: images
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_video:
     type: object
     label: YouTube video
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: youtube
-        label: Youtube
-        description: The video link or its ID
-        required: true
-        type: string
-      - name: caption
-        label: Caption
-        type: string
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: youtube
+      label: YouTube
+      description: The video link or its ID
+      required: true
+      type: string
+    - name: caption
+      label: Caption
+      type: string
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_pageLinks:
     type: object
     label: Sub-page cards
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: pages
-        label: Pages
-        description: Leave empty to show every published sub-page of this chapter (or of
-          this page).
-        type: reference
-        options:
-          collection: pages
-          value: "{fields.id}"
-          label: "{fields.title}"
-          multiple: true
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: pages
+      label: Pages
+      description: Leave empty to show every published sub-page of this chapter (or of this page).
+      type: reference
+      options:
+        collection: pages
+        value: '{fields.id}'
+        label: '{fields.title}'
+        multiple: true
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_schedule:
     type: object
     label: Programme schedule
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: days
+      label: Days
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: label
+        label: Label
+        required: true
         type: string
-      - name: heading
-        label: Heading
+      - name: date
+        label: Date
         type: string
-      - name: intro
-        label: Intro
-        type: text
-      - name: days
-        label: Days
+      - name: slots
+        label: Slots
+        description: In time order. Slots with the same start time are shown side by side as parallel sessions.
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.title}'
         fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-          - name: date
-            label: Date
-            type: string
-          - name: slots
-            label: Slots
-            description: In time order. Slots with the same start time are shown side by
-              side as parallel sessions.
-            type: object
-            list: true
-            fields:
-              - name: time
-                label: Time
-                required: true
-                type: string
-              - name: end
-                label: End
-                type: string
-              - name: kind
-                label: Kind
-                default: session
-                type: select
-                options:
-                  values:
-                    - name: session
-                      label: Session / talk
-                    - name: keynote
-                      label: Keynote
-                    - name: workshop
-                      label: Workshop / tutorial
-                    - name: break
-                      label: Break / meal
-                    - name: ceremony
-                      label: Ceremony / social
-              - name: title
-                label: Title
-                required: true
-                type: string
-              - name: speaker
-                label: Speaker
-                description: Speaker, chair or presenters
-                type: string
-              - name: room
-                label: Room
-                description: Room or track, e.g. “Hall A · Track 1”
-                type: string
-              - name: description
-                label: Description
-                type: text
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+        - name: time
+          label: Time
+          required: true
+          type: string
+        - name: end
+          label: End
+          type: string
+        - name: kind
+          label: Kind
+          default: session
+          type: select
+          options:
+            values:
+            - name: session
+              label: Session / talk
+            - name: keynote
+              label: Keynote
+            - name: workshop
+              label: Workshop / tutorial
+            - name: break
+              label: Break / meal
+            - name: ceremony
+              label: Ceremony / social
+        - name: title
+          label: Title
+          required: true
+          type: string
+        - name: speaker
+          label: Speaker
+          description: Speaker, chair or presenters
+          type: string
+        - name: room
+          label: Room
+          description: Room or track, e.g. “Hall A · Track 1”
+          type: string
+        - name: description
+          label: Description
+          type: text
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_speakers:
     type: object
     label: Speakers
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: columns
+      label: Columns
+      default: '3'
+      type: select
+      options:
+        values:
+        - name: '2'
+          label: 2 per row (keynotes)
+        - name: '3'
+          label: 3 per row
+        - name: '4'
+          label: 4 per row
+    - name: items
+      label: Items
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.name} — {fields.position}'
+      fields:
+      - name: name
+        label: Name
+        required: true
         type: string
-      - name: heading
-        label: Heading
+      - name: position
+        label: Role
         type: string
-      - name: columns
-        label: Columns
-        default: "3"
-        type: select
+      - name: affiliation
+        label: Affiliation
+        type: string
+      - name: talk
+        label: Talk title
+        type: string
+      - name: photo
+        label: Photo
+        type: image
         options:
-          values:
-            - name: "2"
-              label: 2 per row (keynotes)
-            - name: "3"
-              label: 3 per row
-            - name: "4"
-              label: 4 per row
-      - name: items
-        label: Items
-        type: object
-        list: true
-        fields:
-          - name: name
-            label: Name
-            required: true
-            type: string
-          - name: position
-            label: Role
-            type: string
-          - name: affiliation
-            label: Affiliation
-            type: string
-          - name: talk
-            label: Talk title
-            type: string
-          - name: photo
-            label: Photo
-            type: image
-            options:
-              media: images
-          - name: bio
-            label: Bio
-            description: Shown when a visitor opens the speaker. A blank line starts a new
-              paragraph.
-            type: text
-          - name: link
-            label: Link
-            description: Profile page, Google Scholar or LinkedIn (optional)
-            type: string
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
+          media: images
+      - name: bio
+        label: Bio
+        description: Shown when a visitor opens the speaker. A blank line starts a new paragraph.
+        type: text
+      - name: link
+        label: Link
+        description: Profile page, Google Scholar or LinkedIn (optional)
         type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_fees:
     type: object
     label: Registration fees
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: intro
-        label: Intro
-        type: text
-      - name: column1
-        label: Column1
-        description: e.g. “Early bird · until 1 Nov”
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: intro
+      label: Intro
+      type: text
+    - name: column1
+      label: Column1
+      description: e.g. “Early bird · until 1 Nov”
+      required: true
+      default: Early bird
+      type: string
+    - name: column2
+      label: Column2
+      default: Regular
+      type: string
+    - name: column3
+      label: Column3
+      description: Optional, e.g. “On the day”
+      type: string
+    - name: rows
+      label: Rows
+      type: object
+      list: true
+      fields:
+      - name: category
+        label: Category
         required: true
-        default: Early bird
         type: string
-      - name: column2
-        label: Column2
-        default: Regular
+      - name: highlight
+        label: Highlight this row
+        type: boolean
+      - name: note
+        label: Note
         type: string
-      - name: column3
-        label: Column3
-        description: Optional, e.g. “On the day”
+      - name: price1
+        label: Price1
+        required: true
         type: string
-      - name: rows
-        label: Rows
-        type: object
-        list: true
-        fields:
-          - name: category
-            label: Category
-            required: true
-            type: string
-          - name: highlight
-            label: Highlight this row
-            type: boolean
-          - name: note
-            label: Note
-            type: string
-          - name: price1
-            label: Price1
-            required: true
-            type: string
-          - name: price2
-            label: Price2
-            type: string
-          - name: price3
-            label: Price3
-            type: string
-      - name: footnote
-        label: Footnote
-        description: What the fee includes, payment method, refund policy…
-        type: text
-      - name: buttons
-        label: Buttons
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-          - name: url
-            label: Url
-            description: https://… or /chapters/…
-            required: true
-            type: string
-          - name: variant
-            label: Variant
-            default: primary
-            type: select
-            options:
-              values:
-                - name: primary
-                  label: Solid
-                - name: secondary
-                  label: Outline
-      - name: background
-        label: Background
-        default: auto
+      - name: price2
+        label: Price2
+        type: string
+      - name: price3
+        label: Price3
+        type: string
+    - name: footnote
+      label: Footnote
+      description: What the fee includes, payment method, refund policy…
+      type: text
+    - name: buttons
+      label: Buttons
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: label
+        label: Label
+        required: true
+        type: string
+      - name: url
+        label: Link (URL)
+        description: https://… or /chapters/…
+        required: true
+        type: string
+      - name: variant
+        label: Variant
+        default: primary
         type: select
         options:
           values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+          - name: primary
+            label: Solid
+          - name: secondary
+            label: Outline
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_venue:
     type: object
     label: Venue & travel
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
-        type: string
-      - name: venueName
-        label: Venue Name
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      type: string
+    - name: venueName
+      label: Venue Name
+      required: true
+      type: string
+    - name: mapQuery
+      label: Map Query
+      description: What to search on the map. Defaults to the name and address.
+      type: string
+    - name: address
+      label: Address
+      type: text
+    - name: image
+      label: Image
+      description: A photo of the venue. Without one, the map is shown in its place.
+      type: image
+      options:
+        media: images
+    - name: showMap
+      label: Offer a Google map (loads only when a visitor clicks it)
+      default: true
+      type: boolean
+    - name: notes
+      label: Notes
+      description: Getting here, accommodation, visas, parking…
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.title}'
+      fields:
+      - name: title
+        label: Title
         required: true
         type: string
-      - name: mapQuery
-        label: Map Query
-        description: What to search on the map. Defaults to the name and address.
-        type: string
-      - name: address
-        label: Address
+      - name: text
+        label: Text
+        required: true
         type: text
-      - name: image
-        label: Image
-        description: A photo of the venue. Without one, the map is shown in its place.
-        type: image
-        options:
-          media: images
-      - name: showMap
-        label: Offer a Google map (loads only when a visitor clicks it)
-        default: true
-        type: boolean
-      - name: notes
-        label: Notes
-        description: Getting here, accommodation, visas, parking…
-        type: object
-        list: true
-        fields:
-          - name: title
-            label: Title
-            required: true
-            type: string
-          - name: text
-            label: Text
-            required: true
-            type: text
-      - name: background
-        label: Background
-        default: auto
-        type: select
-        options:
-          values:
-            - name: auto
-              label: Automatic (alternates)
-            - name: paper
-              label: Light
-            - name: mist
-              label: Tinted
-            - name: dark
-              label: Dark
-            - name: accent
-              label: Chapter colour
-      - name: spacing
-        label: Spacing
-        default: normal
-        type: select
-        options:
-          values:
-            - name: normal
-              label: Normal
-            - name: compact
-              label: Compact
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “rules” → /page#rules
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: background
+      label: Background
+      default: auto
+      type: select
+      options:
+        values:
+        - name: auto
+          label: Automatic (alternates)
+        - name: paper
+          label: Light
+        - name: mist
+          label: Tinted
+        - name: dark
+          label: Dark
+        - name: accent
+          label: Chapter colour
+    - name: spacing
+      label: Spacing
+      default: normal
+      type: select
+      options:
+        values:
+        - name: normal
+          label: Normal
+        - name: compact
+          label: Compact
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “rules” → /page#rules
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_cta:
     type: object
     label: Call to action
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: heading
-        label: Heading
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: heading
+      label: Heading
+      required: true
+      type: string
+    - name: text
+      label: Text
+      type: text
+    - name: buttons
+      label: Buttons
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: label
+        label: Label
         required: true
         type: string
-      - name: text
-        label: Text
-        type: text
-      - name: buttons
-        label: Buttons
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-          - name: url
-            label: Url
-            description: https://… or /chapters/…
-            required: true
-            type: string
-          - name: variant
-            label: Variant
-            default: primary
-            type: select
-            options:
-              values:
-                - name: primary
-                  label: Solid
-                - name: secondary
-                  label: Outline
-      - name: anchor
-        label: Anchor
-        description: Optional link name, e.g. “register” → /page#register
+      - name: url
+        label: Link (URL)
+        description: https://… or /chapters/…
+        required: true
         type: string
-      - name: blockName
-        label: Block Name
-        type: string
+      - name: variant
+        label: Variant
+        default: primary
+        type: select
+        options:
+          values:
+          - name: primary
+            label: Solid
+          - name: secondary
+            label: Outline
+    - name: anchor
+      label: Link name (#anchor)
+      description: Optional link name, e.g. “register” → /page#register
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_hero:
     type: object
     label: Page header
     fields:
-      - name: hidden
-        label: Hide this section
-        description: Takes it off the page but keeps everything here, ready to switch
-          back on. The On/Off switch on the collapsed row does the same.
-        type: boolean
-      - name: eyebrow
-        label: Eyebrow
-        description: Small label above the heading (optional)
-        type: string
-      - name: heading
-        label: Heading
+    - name: hidden
+      label: Hide this section
+      description: Takes it off the page but keeps everything here, ready to switch back on. The On/Off switch on the collapsed row does the same.
+      type: boolean
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the heading (optional)
+      type: string
+    - name: heading
+      label: Heading
+      required: true
+      type: string
+    - name: text
+      label: Text
+      type: text
+    - name: image
+      label: Image
+      description: Wide background photo (≥ 1920 px)
+      type: image
+      options:
+        media: images
+    - name: dateLabel
+      label: Date (as shown)
+      description: e.g. “12–13 Dec 2026 · E-Faculty”
+      type: string
+    - name: countdownTo
+      label: Count down to
+      description: Shows a live countdown until this moment
+      type: date
+      default: ''
+      options:
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+    - name: buttons
+      label: Buttons
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: label
+        label: Label
         required: true
         type: string
-      - name: text
-        label: Text
-        type: text
-      - name: image
-        label: Image
-        description: Wide background photo (≥ 1920 px)
-        type: image
-        options:
-          media: images
-      - name: dateLabel
-        label: Date Label
-        description: e.g. “12–13 Dec 2026 · E-Faculty”
+      - name: url
+        label: Link (URL)
+        description: https://… or /chapters/…
+        required: true
         type: string
-      - name: countdownTo
-        label: Countdown To
-        description: Shows a live countdown until this moment
-        type: date
-        default: ""
+      - name: variant
+        label: Variant
+        default: primary
+        type: select
         options:
-          time: true
-          format: yyyy-MM-dd'T'HH:mm
-      - name: buttons
-        label: Buttons
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-          - name: url
-            label: Url
-            description: https://… or /chapters/…
-            required: true
-            type: string
-          - name: variant
-            label: Variant
-            default: primary
-            type: select
-            options:
-              values:
-                - name: primary
-                  label: Solid
-                - name: secondary
-                  label: Outline
-      - name: blockName
-        label: Block Name
-        type: string
+          values:
+          - name: primary
+            label: Solid
+          - name: secondary
+            label: Outline
+    - name: blockName
+      label: Note for editors
+      type: string
   block_shortText:
     type: object
     label: Short answer
     fields:
-      - name: label
-        label: Label
-        required: true
-        type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: placeholder
-        label: Placeholder
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: placeholder
+      label: Placeholder
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_email:
     type: object
     label: Email
     fields:
-      - name: label
-        label: Label
-        required: true
-        type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_phone:
     type: object
     label: Phone number
     fields:
-      - name: label
-        label: Label
-        required: true
-        type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_number:
     type: object
     label: Number
     fields:
-      - name: label
-        label: Label
-        required: true
-        type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: min
-        label: Min
-        type: number
-      - name: max
-        label: Max
-        type: number
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: min
+      label: Min
+      type: number
+    - name: max
+      label: Max
+      type: number
+    - name: blockName
+      label: Note for editors
+      type: string
   block_longText:
     type: object
     label: Paragraph
     fields:
-      - name: label
-        label: Label
-        required: true
-        type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: placeholder
-        label: Placeholder
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: placeholder
+      label: Placeholder
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_select:
     type: object
     label: Dropdown
     fields:
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: options
+      label: Options
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
       - name: label
         label: Label
         required: true
         type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: options
-        label: Options
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_radio:
     type: object
     label: Multiple choice (one answer)
     fields:
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: options
+      label: Options
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
       - name: label
         label: Label
         required: true
         type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: options
-        label: Options
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_checkboxes:
     type: object
     label: Checkboxes (several answers)
     fields:
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: options
+      label: Options
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
       - name: label
         label: Label
         required: true
         type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: options
-        label: Options
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_date:
     type: object
     label: Date
     fields:
-      - name: label
-        label: Label
-        required: true
-        type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_url:
     type: object
     label: Link (URL)
     fields:
-      - name: label
-        label: Label
-        required: true
-        type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_consent:
     type: object
     label: Agreement tick box
     fields:
-      - name: label
-        label: Label
-        required: true
-        type: string
-      - name: width
-        label: Width
-        default: full
-        type: select
-        options:
-          values:
-            - name: full
-              label: Full width
-            - name: half
-              label: Half width
-      - name: required
-        label: Required
-        default: false
-        type: boolean
-      - name: help
-        label: Help text
-        description: Shown under the question (optional)
-        type: string
-      - name: name
-        label: Name
-        hidden: true
-        type: string
-      - name: blockName
-        label: Block Name
-        type: string
+    - name: label
+      label: Label
+      required: true
+      type: string
+    - name: width
+      label: Width
+      default: full
+      type: select
+      options:
+        values:
+        - name: full
+          label: Full width
+        - name: half
+          label: Half width
+    - name: required
+      label: Required
+      default: false
+      type: boolean
+    - name: help
+      label: Help text
+      description: Shown under the question (optional)
+      type: string
+    - name: name
+      label: Name
+      hidden: true
+      type: string
+    - name: blockName
+      label: Note for editors
+      type: string
   block_section:
     type: object
     label: Section heading
     fields:
-      - name: label
+    - name: label
+      label: Heading
+      required: true
+      type: string
+    - name: help
+      label: Text under the heading
+      type: text
+    - name: blockName
+      label: Note for editors
+      type: string
+content:
+- name: website
+  label: Website
+  type: group
+  items:
+  - name: home
+    label: Home page
+    type: file
+    path: content/home.json
+    format: json
+    description: 'The home page: big header, announcement bar, which sections show and in what order, and their texts.'
+    fields:
+    - name: hero
+      label: Big header (hero)
+      type: object
+      fields:
+      - name: kicker
+        label: Small label above the title
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: accent
+        label: Second line (in colour)
+        type: string
+      - name: text
+        label: Intro text
+        type: text
+      - name: background
+        label: Background
+        type: select
+        default: Animated signal field
+        description: “Plain gradient” is the lightest for phones. “Photo” uses the photo below.
+        options:
+          values:
+          - Animated signal field
+          - Photo
+          - Plain gradient
+      - name: image
+        label: Background photo
+        type: image
+        options:
+          media: images
+        description: Used when the background is “Photo”. At least 1920 px wide; it is darkened so the text stays readable.
+    - name: announcement
+      label: Announcement bar
+      type: object
+      fields:
+      - name: active
+        label: Active
+        type: boolean
+      - name: text
+        label: Text
+        type: string
+      - name: url
+        label: Link (URL)
+        type: string
+      description: The coloured strip at the top of every page.
+    - name: sections
+      label: Home page sections
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.section}'
+      description: The home page below the header, top to bottom. Drag ⋮⋮ to reorder, untick “Show” to hide a section. Leave the texts empty to keep the built-in wording.
+      fields:
+      - name: section
+        label: Section
+        type: select
+        required: true
+        options:
+          values:
+          - Chapter ticker
+          - Spotlight banner
+          - Why we exist
+          - Chapters
+          - Flagship programmes
+          - Events
+          - History timeline
+          - News & stories
+          - Photo moments
+          - Video
+          - Call to action
+      - name: show
+        label: Show on the home page
+        type: boolean
+        default: true
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: heading
         label: Heading
+        type: string
+      - name: text
+        label: Intro text
+        type: text
+        description: 'Not used by: Chapter ticker, Spotlight banner, Why we exist, Photo moments.'
+    - name: statement
+      label: “Why we exist” statement
+      type: text
+      description: The big sentence that lights up as visitors scroll.
+    - name: stats
+      label: Big numbers (“Why we exist”)
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.value}{fields.suffix} — {fields.label}'
+      fields:
+      - name: value
+        label: Value
         required: true
         type: string
-      - name: help
-        label: Text under the heading
-        type: text
-      - name: blockName
-        label: Block Name
+      - name: suffix
+        label: Suffix
         type: string
-content:
+      - name: label
+        label: Label
+        required: true
+        type: string
+    - name: vision
+      label: Our vision
+      type: text
+    - name: mission
+      label: Our mission
+      type: text
+    - name: timeline
+      label: History timeline
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.year} — {fields.title}'
+      description: Milestones on the home page and the About page, oldest first.
+      fields:
+      - name: year
+        label: Year
+        type: string
+        required: true
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: body
+        label: Text
+        type: text
+    - name: showreel
+      label: YouTube video for the Video section
+      type: string
+      description: The video ID — the part after “watch?v=” in the YouTube link. Leave empty to hide the Video section.
+    - name: cta
+      label: Call to action band
+      type: object
+      fields:
+      - name: title
+        label: Heading
+        type: string
+      - name: text
+        label: Text
+        type: text
+  - name: spotlight
+    label: Spotlight (big event)
+    type: file
+    path: content/spotlight.json
+    format: json
+    description: Promote one big event (a conference, a flagship) on the home page, in the menu and the top bar, between two dates.
+    fields:
+    - name: active
+      label: Show the spotlight
+      type: boolean
+    - name: style
+      label: Style
+      description: “Take over” replaces the big home-page header while the spotlight is on.
+      default: banner
+      type: select
+      options:
+        values:
+        - name: banner
+          label: Banner under the hero
+        - name: hero
+          label: Take over the hero
+    - name: showFrom
+      label: Show from
+      description: Optional — starts showing at this time
+      type: date
+      default: ''
+      options:
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+    - name: showUntil
+      label: Show until
+      description: Optional — hides itself after this, e.g. the last conference day
+      type: date
+      default: ''
+      options:
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+    - name: linkType
+      label: Links to
+      default: page
+      type: select
+      options:
+        values:
+        - name: page
+          label: A page on this site
+        - name: url
+          label: Another website
+    - name: page
+      label: Page
+      description: It must be published. Its title, card text, cover and colour fill anything left empty below.
+      type: reference
+      options:
+        collection: pages
+        value: '{fields.id}'
+        label: '{fields.title}'
+    - name: url
+      label: Link (URL)
+      type: string
+    - name: eyebrow
+      label: Small label above the heading
+      description: Small label above the title
+      type: string
+    - name: title
+      label: Title
+      description: Leave empty to use the linked page’s title.
+      type: string
+    - name: text
+      label: Text
+      description: 'One or two sentences. Empty: the page’s card text.'
+      type: text
+    - name: dateLabel
+      label: Date (as shown)
+      type: string
+    - name: venue
+      label: Venue
+      type: string
+    - name: countdownTo
+      label: Count down to
+      description: Optional live countdown, e.g. to the paper deadline
+      type: date
+      default: ''
+      options:
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+    - name: countdownLabel
+      label: Countdown label
+      description: Words above the countdown
+      type: string
+    - name: image
+      label: Image
+      description: A wide photo (≥ 1920 px) or the poster — posters are never cropped
+      type: image
+      options:
+        media: images
+    - name: logo
+      label: Logo
+      description: Optional event logo (transparent PNG)
+      type: image
+      options:
+        media: images
+    - name: accent
+      label: Colour (optional)
+      description: Defaults to the linked page’s colour, else IEEE blue.
+      type: string
+      pattern:
+        regex: ^(#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6}))?$
+        message: 'Use a colour code like #00629B (or leave it empty)'
+    - name: buttons
+      label: Buttons
+      description: Up to 3. With none, a single “Learn more” button opens the link above.
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: label
+        label: Label
+        required: true
+        type: string
+      - name: url
+        label: Link (URL)
+        description: https://… or /chapters/…
+        required: true
+        type: string
+      - name: variant
+        label: Variant
+        default: primary
+        type: select
+        options:
+          values:
+          - name: primary
+            label: Solid
+          - name: secondary
+            label: Outline
+    - name: inTopBar
+      label: Also show in the top bar
+      description: When the announcement bar is off
+      type: boolean
+    - name: topBarText
+      label: Top bar text
+      type: string
+    - name: inMenu
+      label: Add to the main menu
+      type: boolean
+    - name: menuLabel
+      label: Menu label
+      type: string
+  - name: theme
+    label: Theme & colours
+    type: file
+    path: content/theme.json
+    format: json
+    description: Colours, fonts and header style for the whole site. Changes go live with the next publish (2–3 minutes).
+    fields:
+    - name: colours
+      label: Brand colours
+      type: object
+      description: 'Colour codes like #00629B. Clear a box to go back to the original colour.'
+      fields:
+      - name: primary
+        label: Main colour
+        type: string
+        pattern:
+          regex: ^(#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6}))?$
+          message: 'Use a colour code like #00629B (or leave it empty)'
+        default: '#00629B'
+        description: 'Buttons, links and the call-to-action band. IEEE blue: #00629B.'
+      - name: accent
+        label: Bright accent
+        type: string
+        pattern:
+          regex: ^(#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6}))?$
+          message: 'Use a colour code like #00629B (or leave it empty)'
+        default: '#43C6F4'
+        description: 'Highlights on dark backgrounds and links in dark mode. Original: #43C6F4.'
+      - name: highlight
+        label: Warm highlight
+        type: string
+        pattern:
+          regex: ^(#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6}))?$
+          message: 'Use a colour code like #00629B (or leave it empty)'
+        default: '#FFB547'
+        description: 'The announcement bar and badges. Original: #FFB547.'
+      - name: dark
+        label: Dark background
+        type: string
+        pattern:
+          regex: ^(#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6}))?$
+          message: 'Use a colour code like #00629B (or leave it empty)'
+        default: '#030A13'
+        description: 'Headers, footer and dark sections. Keep it very dark so white text stays readable. Original: #030A13.'
+    - name: fonts
+      label: Fonts
+      type: object
+      fields:
+      - name: display
+        label: Headings
+        type: select
+        default: Bricolage Grotesque
+        options:
+          values:
+          - Bricolage Grotesque
+          - Space Grotesk
+          - Outfit
+          - Plus Jakarta Sans
+          - Fraunces (serif)
+      - name: body
+        label: Body text
+        type: select
+        default: IBM Plex Sans
+        options:
+          values:
+          - IBM Plex Sans
+          - DM Sans
+          - Source Sans 3
+          - Plus Jakarta Sans
+    - name: heroes
+      label: Page headers
+      type: object
+      description: The dark header at the top of every page except the home page (its header is set in Home page → Big header).
+      fields:
+      - name: pageHero
+        label: Style
+        type: select
+        default: Photo with colour glow
+        options:
+          values:
+          - Photo with colour glow
+          - Brighter photo
+          - Solid colour
+        description: “Solid colour” uses the chapter’s colour (or the main colour) instead of a photo.
+    - name: defaultMode
+      label: Light or dark for first-time visitors
+      type: select
+      default: Follow the visitor’s device
+      options:
+        values:
+        - Follow the visitor’s device
+        - Light
+        - Dark
+      description: Visitors can still switch with the sun/moon button; their choice is remembered.
   - name: settings
-    label: Site settings
-    description: Home page, spotlight, announcement bar, contact details and vTools.
+    label: Contact, links & vTools
     type: file
     path: content/settings.json
     format: json
+    description: Branch email and address, social links, the volunteer form, analytics and the IEEE vTools sync.
     fields:
-      - name: spotlight
-        type: object
-        fields:
-          - name: active
-            label: Show the spotlight
-            type: boolean
-          - name: style
-            label: Style
-            description: “Take over” replaces the big home-page header while the spotlight
-              is on.
-            default: banner
-            type: select
-            options:
-              values:
-                - name: banner
-                  label: Banner under the hero
-                - name: hero
-                  label: Take over the hero
-          - name: showFrom
-            label: Show From
-            description: Optional — starts showing at this time
-            type: date
-            default: ""
-            options:
-              time: true
-              format: yyyy-MM-dd'T'HH:mm
-          - name: showUntil
-            label: Show Until
-            description: Optional — hides itself after this, e.g. the last conference day
-            type: date
-            default: ""
-            options:
-              time: true
-              format: yyyy-MM-dd'T'HH:mm
-          - name: linkType
-            label: Links to
-            default: page
-            type: select
-            options:
-              values:
-                - name: page
-                  label: A page on this site
-                - name: url
-                  label: Another website
-          - name: page
-            label: Page
-            description: It must be published. Its title, card text, cover and colour fill
-              anything left empty below.
-            type: reference
-            options:
-              collection: pages
-              value: "{fields.id}"
-              label: "{fields.title}"
-          - name: url
-            label: Url
-            type: string
-          - name: eyebrow
-            label: Eyebrow
-            description: Small label above the title
-            type: string
-          - name: title
-            label: Title
-            description: Leave empty to use the linked page’s title.
-            type: string
-          - name: text
-            label: Text
-            description: "One or two sentences. Empty: the page’s card text."
-            type: text
-          - name: dateLabel
-            label: Date Label
-            type: string
-          - name: venue
-            label: Venue
-            type: string
-          - name: countdownTo
-            label: Countdown To
-            description: Optional live countdown, e.g. to the paper deadline
-            type: date
-            default: ""
-            options:
-              time: true
-              format: yyyy-MM-dd'T'HH:mm
-          - name: countdownLabel
-            label: Countdown Label
-            description: Words above the countdown
-            type: string
-          - name: image
-            label: Image
-            description: A wide photo (≥ 1920 px) or the poster — posters are never cropped
-            type: image
-            options:
-              media: images
-          - name: logo
-            label: Logo
-            description: Optional event logo (transparent PNG)
-            type: image
-            options:
-              media: images
-          - name: accent
-            label: Colour (optional)
-            description: Defaults to the linked page’s colour, else IEEE blue.
-            type: string
-          - name: buttons
-            label: Buttons
-            description: Up to 3. With none, a single “Learn more” button opens the link
-              above.
-            type: object
-            list: true
-            fields:
-              - name: label
-                label: Label
-                required: true
-                type: string
-              - name: url
-                label: Url
-                description: https://… or /chapters/…
-                required: true
-                type: string
-              - name: variant
-                label: Variant
-                default: primary
-                type: select
-                options:
-                  values:
-                    - name: primary
-                      label: Solid
-                    - name: secondary
-                      label: Outline
-          - name: inTopBar
-            label: Also show in the top bar
-            description: When the announcement bar is off
-            type: boolean
-          - name: topBarText
-            label: Top Bar Text
-            type: string
-          - name: inMenu
-            label: Add to the main menu
-            type: boolean
-          - name: menuLabel
-            label: Menu Label
-            type: string
-      - name: heroKicker
-        label: Hero Kicker
-        default: Est. 19 July 2001 · Faculty of Engineering
+    - name: email
+      label: Email
+      default: ieeepdn@gmail.com
+      type: string
+    - name: address
+      label: Address
+      default: 'Department of Electrical & Electronic Engineering
+
+        Faculty of Engineering, University of Peradeniya
+
+        Peradeniya 20400, Sri Lanka'
+      type: text
+    - name: facebook
+      label: Facebook
+      type: string
+    - name: instagram
+      label: Instagram
+      type: string
+    - name: linkedin
+      label: LinkedIn
+      type: string
+    - name: youtube
+      label: YouTube
+      default: https://www.youtube.com/@ieeeperadeniya8445
+      type: string
+    - name: volunteerForm
+      label: Volunteer application form URL
+      type: string
+    - name: googleAnalyticsId
+      label: Google Analytics 4 measurement ID (optional)
+      description: Optional, e.g. G-ABC123XYZ. Leave empty for no analytics.
+      type: string
+    - name: vtoolsEnabled
+      label: Sync events from IEEE vTools
+      default: true
+      type: boolean
+    - name: vtoolsBranchSpoid
+      label: Student Branch organisational unit ID (SPOID)
+      description: Chapter SPOIDs are set on each chapter.
+      type: string
+    - name: vtoolsHostMatch
+      label: Branch host-name match (backup rule)
+      description: 'Backup rule: co-hosted events whose host name contains this text count as ours. vTools spells some units "Peradeniy", so keep it short.'
+      default: Peradeniya
+      type: string
+- name: chapters-group
+  label: Chapters
+  type: group
+  items:
+  - name: chapters
+    label: Chapter pages
+    description: One entry per chapter page (and the Student Branch). The details at the top fill the page header and the “About” section; “Page sections” is the rest of the page, top to bottom.
+    type: collection
+    path: content/chapters
+    format: json
+    filename: '{primary}.json'
+    view:
+      primary: name
+      fields:
+      - name
+      - shortName
+      sort:
+      - order
+      default:
+        sort: order
+        order: asc
+      search:
+      - name
+    fields:
+    - name: id
+      type: uuid
+      label: Entry ID
+      description: Created automatically — used when other entries link to this one.
+      options:
+        generate: false
+      hidden: true
+    - name: name
+      label: Chapter name
+      required: true
+      type: string
+    - name: shortName
+      label: Short name
+      description: e.g. CS, ComSoc, WIE
+      required: true
+      type: string
+    - name: tagline
+      label: Tagline
+      type: string
+      description: One line under the chapter name in the page header.
+    - name: cover
+      label: Header photo
+      type: image
+      options:
+        media: images
+      description: Wide photo behind the page header (at least 1920 px wide).
+    - name: logo
+      label: Logo
+      type: image
+      options:
+        media: images
+      description: Square logo on a white background works best.
+    - name: accent
+      label: Chapter colour
+      description: Chapter colour (hex)
+      default: '#00629B'
+      type: string
+      pattern:
+        regex: ^(#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6}))?$
+        message: 'Use a colour code like #00629B (or leave it empty)'
+    - name: about
+      label: About
+      description: Two or three short paragraphs — shown in the “About” section.
+      type: text
+    - name: mission
+      label: Mission
+      type: text
+    - name: highlights
+      label: Big numbers
+      description: Short facts shown large, e.g. “1st” / “MTT-S chapter in Sri Lanka”.
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: value
+        label: Value
+        required: true
         type: string
-      - name: heroTitle
-        label: Hero Title
-        default: Sri Lanka’s first IEEE Student Branch.
+      - name: label
+        label: Label
+        required: true
         type: string
-      - name: heroAccent
-        label: Hero Accent
-        default: Still building the future.
-        type: string
-      - name: heroText
-        label: Hero Text
-        default: Inspiring future engineers to achieve, and leading our community to
-          greater heights — through the strength of the worldwide IEEE network.
-        type: text
-      - name: announcement
-        label: Announcement
-        type: object
-        fields:
-          - name: active
-            label: Active
-            type: boolean
-          - name: text
-            label: Text
-            type: string
-          - name: url
-            label: Url
-            type: string
-      - name: stats
-        label: Stats
-        type: object
-        list: true
-        fields:
-          - name: value
-            label: Value
-            required: true
-            type: string
-          - name: suffix
-            label: Suffix
-            type: string
-          - name: label
-            label: Label
-            required: true
-            type: string
-      - name: vision
-        label: Vision
-        type: text
-      - name: mission
-        label: Mission
-        type: text
-      - name: showreel
-        label: YouTube video ID for the showreel
-        type: string
+    - name: links
+      label: Links
+      type: object
+      fields:
       - name: email
         label: Email
-        default: ieeepdn@gmail.com
         type: string
-      - name: address
-        label: Address
-        default: |-
-          Department of Electrical & Electronic Engineering
-          Faculty of Engineering, University of Peradeniya
-          Peradeniya 20400, Sri Lanka
-        type: text
+      - name: website
+        label: Website
+        type: string
       - name: facebook
         label: Facebook
         type: string
@@ -2257,1248 +2622,1250 @@ content:
         label: Instagram
         type: string
       - name: linkedin
-        label: Linkedin
+        label: LinkedIn
         type: string
-      - name: youtube
-        label: Youtube
-        default: https://www.youtube.com/@ieeeperadeniya8445
+      - name: join
+        label: Join / society membership URL
         type: string
-      - name: volunteerForm
-        label: Volunteer application form URL
-        type: string
-      - name: googleAnalyticsId
-        label: Google Analytics 4 measurement ID (optional)
-        description: Leave empty to use only the built-in analytics. Google Analytics
-          sets cookies.
-        type: string
-      - name: vtoolsEnabled
-        label: Sync events from IEEE vTools
-        default: true
-        type: boolean
-      - name: vtoolsBranchSpoid
-        label: Student Branch organisational unit ID (SPOID)
-        description: Chapter SPOIDs are set on each chapter.
-        type: string
-      - name: vtoolsHostMatch
-        label: Vtools Host Match
-        description: 'Backup rule: co-hosted events whose host name contains this text
-          count as ours. vTools spells some units "Peradeniy", so keep it
-          short.'
-        default: Peradeniya
-        type: string
-  - name: chapters
-    label: Chapters
-    description: "The branch and each chapter / affinity group: page sections,
-      details and vTools ID."
-    type: collection
-    path: content/chapters
-    format: json
-    filename: "{primary}.json"
-    view:
-      primary: name
+    - name: layout
+      label: Page sections
+      type: block
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{index}. {fields.heading}'
+      blockKey: blockType
+      blocks:
+      - name: chapterAbout
+        label: About the chapter (automatic)
+        component: block_chapterAbout
+      - name: text
+        label: Text
+        component: block_text
+      - name: mediaText
+        label: Image + text
+        component: block_mediaText
+      - name: cards
+        label: Cards
+        component: block_cards
+      - name: stats
+        label: Big numbers
+        component: block_stats
+      - name: timeline
+        label: Timeline / schedule
+        component: block_timeline
+      - name: gallery
+        label: Photos
+        component: block_gallery
+      - name: events
+        label: Events (automatic)
+        component: block_events
+      - name: stories
+        label: News (automatic)
+        component: block_stories
+      - name: people
+        label: People
+        component: block_people
+      - name: faq
+        label: Questions & answers
+        component: block_faq
+      - name: form
+        label: Form
+        component: block_form
+      - name: downloads
+        label: Downloads
+        component: block_downloads
+      - name: logos
+        label: Sponsors & partners
+        component: block_logos
+      - name: video
+        label: YouTube video
+        component: block_video
+      - name: pageLinks
+        label: Sub-page cards
+        component: block_pageLinks
+      - name: schedule
+        label: Programme schedule
+        component: block_schedule
+      - name: speakers
+        label: Speakers
+        component: block_speakers
+      - name: fees
+        label: Registration fees
+        component: block_fees
+      - name: venue
+        label: Venue & travel
+        component: block_venue
+      - name: cta
+        label: Call to action
+        component: block_cta
+      description: The chapter page, top to bottom. “+ Add” adds a section, drag ⋮⋮ to reorder, click a section to open it. “Hide this section” takes it off the page without deleting it. Headings left empty use the built-in wording.
+    - name: vtools
+      label: IEEE vTools
+      type: object
       fields:
-        - name
-        - shortName
-        - kind
-      sort:
-        - order
-      default:
-        sort: order
-        order: asc
-      search:
-        - name
-    fields:
-      - &a1
-        name: id
-        type: uuid
-        label: Entry ID
-        description: Created automatically — used when other entries link to this one.
-        options:
-          generate: false
-      - name: layout
-        label: Sections
-        type: block
-        list: true
-        blockKey: blockType
-        blocks:
-          - name: chapterAbout
-            label: About the chapter (automatic)
-            component: block_chapterAbout
-          - name: text
-            label: Text
-            component: block_text
-          - name: mediaText
-            label: Image + text
-            component: block_mediaText
-          - name: cards
-            label: Cards
-            component: block_cards
-          - name: stats
-            label: Big numbers
-            component: block_stats
-          - name: timeline
-            label: Timeline / schedule
-            component: block_timeline
-          - name: gallery
-            label: Photos
-            component: block_gallery
-          - name: events
-            label: Events (automatic)
-            component: block_events
-          - name: stories
-            label: News (automatic)
-            component: block_stories
-          - name: people
-            label: People
-            component: block_people
-          - name: faq
-            label: Questions & answers
-            component: block_faq
-          - name: form
-            label: Form
-            component: block_form
-          - name: downloads
-            label: Downloads
-            component: block_downloads
-          - name: logos
-            label: Sponsors & partners
-            component: block_logos
-          - name: video
-            label: YouTube video
-            component: block_video
-          - name: pageLinks
-            label: Sub-page cards
-            component: block_pageLinks
-          - name: schedule
-            label: Programme schedule
-            component: block_schedule
-          - name: speakers
-            label: Speakers
-            component: block_speakers
-          - name: fees
-            label: Registration fees
-            component: block_fees
-          - name: venue
-            label: Venue & travel
-            component: block_venue
-          - name: cta
-            label: Call to action
-            component: block_cta
-      - name: name
-        label: Name
-        required: true
+      - name: spoid
+        label: Organisational unit ID (SPOID)
+        description: Find it in vTools → Events → your chapter. Events hosted or co-hosted by this unit appear on the site automatically.
         type: string
-      - name: shortName
-        label: Short Name
-        description: e.g. CS, ComSoc, WIE
-        required: true
+      - name: hostNameMatch
+        label: Host-name keywords (backup rule)
+        description: 'Fallback when the SPOID is empty: events whose host name contains this text are matched (e.g. "Peradeniya").'
         type: string
-      - name: slug
-        label: Slug
-        description: Used in the page URL. Leave blank to generate it from the title.
-        type: string
-      - name: kind
-        label: Kind
-        required: true
-        default: chapter
-        type: select
-        options:
-          values:
-            - name: branch
-              label: Student Branch
-            - name: chapter
-              label: Society chapter
-            - name: affinity
-              label: Affinity group
-      - name: tagline
-        label: Tagline
-        type: string
-      - name: about
-        label: About
-        description: Two or three short paragraphs.
-        type: text
-      - name: mission
-        label: Mission
-        type: text
-      - name: accent
-        label: Accent
-        description: Chapter colour (hex)
-        default: "#00629B"
-        type: string
-      - name: founded
-        label: Founded
-        type: number
-      - name: order
-        label: Order
-        default: 10
-        type: number
-      - name: logo
-        label: Logo
-        type: image
-        options:
-          media: images
-      - name: cover
-        label: Cover
-        type: image
-        options:
-          media: images
-      - name: highlights
-        label: Highlights
-        description: Short facts shown as big numbers, e.g. "1st" / "MTT-S chapter in
-          Sri Lanka".
-        type: object
-        list: true
-        fields:
-          - name: value
-            label: Value
-            required: true
-            type: string
-          - name: label
-            label: Label
-            required: true
-            type: string
-      - name: vtools
-        label: IEEE vTools
-        type: object
-        fields:
-          - name: spoid
-            label: Organisational unit ID (SPOID)
-            description: Find it in vTools → Events → your chapter. Events hosted or
-              co-hosted by this unit appear on the site automatically.
-            type: string
-          - name: hostNameMatch
-            label: Host Name Match
-            description: 'Fallback when the SPOID is empty: events whose host name contains
-              this text are matched (e.g. "Peradeniya").'
-            type: string
-      - name: links
-        label: Links
-        type: object
-        fields:
-          - name: email
-            label: Email
-            type: string
-          - name: website
-            label: Website
-            type: string
-          - name: facebook
-            label: Facebook
-            type: string
-          - name: instagram
-            label: Instagram
-            type: string
-          - name: linkedin
-            label: Linkedin
-            type: string
-          - name: join
-            label: Join / society membership URL
-            type: string
-      - name: updatedAt
-        type: string
-        hidden: true
+    - name: slug
+      label: Page address
+      description: The page lives at /chapters/<address>. Changing it breaks old links.
+      type: string
+    - name: kind
+      label: Type
+      required: true
+      default: chapter
+      type: select
+      options:
+        values:
+        - name: branch
+          label: Student Branch
+        - name: chapter
+          label: Society chapter
+        - name: affinity
+          label: Affinity group
+      description: Branch webmaster only.
+    - name: founded
+      label: Founded (year)
+      type: number
+    - name: order
+      label: Position in lists
+      default: 10
+      type: number
+      description: Lower numbers come first.
+    - name: updatedAt
+      type: string
+      hidden: true
   - name: committees
     label: Committees
-    description: One committee per chapter per term. Tick “current” on the one the
-      site shows.
+    description: 'One entry per chapter per term. Don’t overwrite last year’s committee: open it and press “Start next term” (top right) — it copies the committee into the new term and keeps the old one online as history.'
     type: collection
     path: content/committees
     format: json
-    filename: "{fields.term}-{primary}.json"
+    filename: '{fields.term}-{primary}.json'
     view:
-      primary: term
+      primary: title
       fields:
-        - term
-        - chapter
-        - current
+      - title
+      - current
       sort:
-        - term
+      - term
       default:
         sort: term
         order: desc
       search:
-        - term
+      - title
+      - term
     fields:
-      - *a1
-      - name: title
-        label: Title
-        hidden: true
-        type: string
-      - name: term
-        label: Term
-        description: e.g. 2025/26
-        required: true
-        default: 2025/26
-        type: string
-      - name: current
-        label: On the website
-        description: The committee shown on your chapter page. Ticking it here unticks
-          the others.
-        default: true
-        type: boolean
-      - name: advisors
-        label: Advisors
-        type: object
-        list: true
-        fields:
-          - name: name
-            label: Name
-            required: true
-            type: string
-          - name: position
-            label: Position
-            default: Advisor
-            type: string
-          - name: photo
-            label: Photo
-            description: Head-and-shoulders portrait. Shown 4:5 with the face in the top
-              third.
-            type: image
-            options:
-              media: images
-          - name: linkedin
-            label: LinkedIn URL
-            type: string
-      - name: executive
-        label: Office bearers
-        description: Order = order on the page. The row whose position is exactly
-          “Chair” (or Chairman / Chairperson / President) gets the spotlight
-          card.
-        type: object
-        list: true
-        fields:
-          - name: position
-            label: Position
-            required: true
-            type: string
-          - name: name
-            label: Name
-            required: true
-            type: string
-          - name: photo
-            label: Photo
-            description: Head-and-shoulders portrait. Shown 4:5 with the face in the top
-              third.
-            type: image
-            options:
-              media: images
-          - name: linkedin
-            label: LinkedIn URL
-            type: string
-          - name: email
-            label: Email
-            description: Not shown publicly.
-            type: string
-      - name: teams
-        label: Teams
-        type: object
-        list: true
-        fields:
-          - name: name
-            label: Name
-            required: true
-            type: string
-          - name: members
-            label: Members
-            type: object
-            list: true
-            fields:
-              - name: name
-                label: Name
-                required: true
-                type: string
-              - name: role
-                label: Role
-                default: member
-                type: select
-                options:
-                  values:
-                    - name: lead
-                      label: Team lead
-                    - name: member
-                      label: Member
-              - name: position
-                label: Position
-                type: string
-              - name: photo
-                label: Photo
-                description: Head-and-shoulders portrait. Shown 4:5 with the face in the top
-                  third.
-                type: image
-                options:
-                  media: images
-      - name: chapter
-        label: Chapter
-        description: Filled in with your chapter automatically. Only branch webmasters
-          can change it.
-        required: true
-        type: reference
-        options:
-          collection: chapters
-          value: "{fields.id}"
-          label: "{fields.name}"
-      - name: updatedAt
-        type: string
-        hidden: true
-  - name: posts
-    label: News & stories
-    description: Recaps and announcements.
-    type: collection
-    path: content/posts
-    format: json
-    filename: "{primary}.json"
-    view:
-      primary: title
+    - name: id
+      type: uuid
+      label: Entry ID
+      description: Created automatically — used when other entries link to this one.
+      options:
+        generate: false
+      hidden: true
+    - name: term
+      label: Term
+      description: e.g. 2026/27
+      required: true
+      default: 2025/26
+      type: string
+    - name: chapter
+      label: Chapter
+      description: Filled in with your chapter automatically. Only branch webmasters can change it.
+      required: true
+      type: reference
+      options:
+        collection: chapters
+        value: '{fields.id}'
+        label: '{fields.name}'
+    - name: current
+      label: Shown on the chapter page
+      description: Tick it on the committee of the current term only.
+      default: true
+      type: boolean
+    - name: title
+      label: Title
+      hidden: true
+      type: string
+      description: e.g. “ComSoc · 2026/27”
+    - name: executive
+      label: Office bearers
+      description: Order = order on the page. The row whose position is exactly “Chair” (or Chairman / Chairperson / President) gets the spotlight card.
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.name} — {fields.position}'
       fields:
-        - title
-        - date
-        - chapter
-        - _status
-      sort:
-        - date
-      default:
-        sort: date
-        order: desc
-      search:
-        - title
-    fields:
-      - *a1
-      - name: title
-        label: Title
+      - name: position
+        label: Position
         required: true
         type: string
-      - name: kind
-        label: Kind
-        default: story
-        type: select
-        options:
-          values:
-            - name: recap
-              label: Event recap
-            - name: announcement
-              label: Announcement
-            - name: story
-              label: Story
-            - name: achievement
-              label: Achievement
-      - name: date
-        label: Date
-        required: true
-        type: date
-        default: ""
-        options:
-          format: yyyy-MM-dd
-      - name: excerpt
-        label: Excerpt
-        description: Shown on cards. ≤ 320 characters.
-        type: text
-      - name: cover
-        label: Cover
-        type: image
-        options:
-          media: images
-      - name: content
-        label: Content
-        type: rich-text
-        options:
-          format: html
-          media: images
-      - name: gallery
-        label: Gallery
-        description: Extra photos shown under the article.
-        type: image
-        options:
-          media: images
-          multiple: true
-      - name: cta
-        label: Call to action (optional)
-        type: object
-        fields:
-          - name: label
-            label: Label
-            type: string
-          - name: url
-            label: Url
-            type: string
-      - name: slug
-        label: Slug
-        description: Used in the page URL. Leave blank to generate it from the title.
-        type: string
-      - name: chapter
-        label: Chapter
-        description: Filled in with your chapter automatically. Only branch webmasters
-          can change it.
-        required: true
-        type: reference
-        options:
-          collection: chapters
-          value: "{fields.id}"
-          label: "{fields.name}"
-      - name: featured
-        label: Featured on home page
-        description: Branch webmasters only.
-        type: boolean
-      - name: _status
-        label: Status
-        type: select
-        default: published
-        options:
-          values:
-            - name: published
-              label: Published
-            - name: draft
-              label: Draft (hidden)
-      - name: updatedAt
-        type: string
-        hidden: true
-  - name: events
-    label: Events
-    description: Synced from IEEE vTools once a day (title, dates, venue come
-      from vTools — edit them there). You can change the cover, photos,
-      category, hide an event or feature it.
-    type: collection
-    path: content/events
-    format: json
-    filename: "{primary}.json"
-    view:
-      primary: title
-      fields:
-        - title
-        - start
-        - chapter
-        - hidden
-      sort:
-        - start
-      default:
-        sort: start
-        order: desc
-      search:
-        - title
-    fields:
-      - *a1
-      - name: title
-        label: Title
-        required: true
-        type: string
-      - name: start
-        label: Start
-        required: true
-        type: date
-        default: ""
-        options:
-          time: true
-          format: yyyy-MM-dd'T'HH:mm
-      - name: end
-        label: End
-        type: date
-        default: ""
-        options:
-          time: true
-          format: yyyy-MM-dd'T'HH:mm
-      - name: category
-        label: Category
-        default: talk
-        type: select
-        options:
-          values:
-            - name: talk
-              label: Talk / lecture
-            - name: workshop
-              label: Workshop
-            - name: competition
-              label: Competition
-            - name: visit
-              label: Field visit
-            - name: social
-              label: Social / outreach
-            - name: meeting
-              label: Meeting
-      - name: summary
-        label: Summary
-        type: text
-      - name: descriptionHtml
-        label: Description Html
-        hidden: true
-        type: text
-      - name: venue
-        label: Venue
-        type: string
-      - name: city
-        label: City
-        type: string
-      - name: virtual
-        label: Virtual
-        type: boolean
-      - name: registrationUrl
-        label: Registration Url
-        type: string
-      - name: vtoolsUrl
-        label: Vtools Url
-        type: string
-      - name: cover
-        label: Cover
-        description: The poster or best photo. Filled in from vTools automatically when
-          the event has images there.
-        type: image
-        options:
-          media: images
-      - name: gallery
-        label: Gallery
-        description: Photos shown on the event page. vTools photos are copied here on
-          the first sync.
-        type: image
-        options:
-          media: images
-          multiple: true
-      - name: vtoolsMediaDone
-        label: Vtools Media Done
-        hidden: true
-        type: boolean
-      - name: hidden
-        label: Hidden
-        description: Hide this event from the website.
-        type: boolean
-      - name: source
-        label: Source
-        readonly: true
-        default: manual
-        type: select
-        options:
-          values:
-            - name: vtools
-              label: IEEE vTools
-            - name: manual
-              label: Added manually
-      - name: vtoolsId
-        label: Vtools Id
-        readonly: true
-        type: string
-      - name: hostName
-        label: Host Name
-        readonly: true
-        type: string
-      - name: syncedAt
-        label: Synced At
-        readonly: true
-        type: date
-        default: ""
-        options:
-          time: true
-          format: yyyy-MM-dd'T'HH:mm
-      - name: slug
-        label: Slug
-        description: Used in the page URL. Leave blank to generate it from the title.
-        type: string
-      - name: chapter
-        label: Chapter
-        description: Filled in with your chapter automatically. Only branch webmasters
-          can change it.
-        required: true
-        type: reference
-        options:
-          collection: chapters
-          value: "{fields.id}"
-          label: "{fields.name}"
-      - name: featured
-        label: Featured on home page
-        description: Branch webmasters only.
-        type: boolean
-      - name: updatedAt
-        type: string
-        hidden: true
-  - name: programs
-    label: Flagship programmes
-    description: IEEEXtreme, MentorSpark, Predicta…
-    type: collection
-    path: content/programs
-    format: json
-    filename: "{primary}.json"
-    view:
-      primary: title
-      fields:
-        - title
-        - order
-      sort:
-        - order
-      default:
-        sort: order
-        order: asc
-      search:
-        - title
-    fields:
-      - *a1
       - name: name
         label: Name
         required: true
         type: string
-      - name: edition
-        label: Edition
-        description: e.g. “Predicta 1.0”, “Pera.Xtreme-24”
+      - name: photo
+        label: Photo
+        description: Head-and-shoulders portrait. Shown 4:5 with the face in the top third.
+        type: image
+        options:
+          media: images
+      - name: linkedin
+        label: LinkedIn URL
         type: string
-      - name: slug
-        label: Slug
-        description: Used in the page URL. Leave blank to generate it from the title.
+      - name: email
+        label: Email
+        description: Not shown publicly.
         type: string
-      - name: tagline
-        label: Tagline
+    - name: teams
+      label: Teams
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.name}'
+      fields:
+      - name: name
+        label: Name
         required: true
         type: string
-      - name: summary
-        label: Summary
+      - name: members
+        label: Members
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.name} — {fields.position}'
+        fields:
+        - name: name
+          label: Name
+          required: true
+          type: string
+        - name: role
+          label: Role
+          default: member
+          type: select
+          options:
+            values:
+            - name: lead
+              label: Team lead
+            - name: member
+              label: Member
+        - name: position
+          label: Position
+          type: string
+        - name: photo
+          label: Photo
+          description: Head-and-shoulders portrait. Shown 4:5 with the face in the top third.
+          type: image
+          options:
+            media: images
+    - name: advisors
+      label: Advisors & counsellors
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.name} — {fields.position}'
+      fields:
+      - name: name
+        label: Name
         required: true
+        type: string
+      - name: position
+        label: Position
+        default: Advisor
+        type: string
+      - name: photo
+        label: Photo
+        description: Head-and-shoulders portrait. Shown 4:5 with the face in the top third.
+        type: image
+        options:
+          media: images
+      - name: linkedin
+        label: LinkedIn URL
+        type: string
+    - name: updatedAt
+      type: string
+      hidden: true
+    actions:
+    - name: committee-new-term
+      label: Start next term
+      scope: entry
+      workflow: cms-actions.yml
+      confirm:
+        title: Start the next committee term?
+        message: This copies this committee into a new entry for the next term and shows that one on the chapter page. This committee stays online as history. Afterwards, refresh Committees and open the new entry to change the people.
+        button: Start new term
+      fields:
+      - name: term
+        label: New term (leave empty for the next year, e.g. 2026/27 → 2027/28)
         type: text
-      - name: accent
-        label: Accent
-        default: "#00629B"
-        type: string
-      - name: order
-        label: Order
-        default: 10
-        type: number
-      - name: cover
-        label: Cover
-        type: image
-        options:
-          media: images
-      - name: logo
-        label: Logo
-        type: image
-        options:
-          media: images
+  - name: pages
+    label: Chapter sub-pages
+    description: 'Extra pages under a chapter: flagship events, competitions, conferences, projects. Create the page, save it once, then press “Fill with a starter layout” (top right) to get ready-made sections to edit.'
+    type: collection
+    path: content/pages
+    format: json
+    filename: '{primary}.json'
+    view:
+      primary: title
+      fields:
+      - title
+      - chapter
+      - slug
+      - _status
+      sort:
+      - order
+      default:
+        sort: order
+        order: asc
+      search:
+      - title
+    fields:
+    - name: id
+      type: uuid
+      label: Entry ID
+      description: Created automatically — used when other entries link to this one.
+      options:
+        generate: false
+      hidden: true
+    - name: title
+      label: Title
+      required: true
+      type: string
+    - name: chapter
+      label: Chapter
+      description: Filled in with your chapter automatically. Only branch webmasters can change it.
+      required: true
+      type: reference
+      options:
+        collection: chapters
+        value: '{fields.id}'
+        label: '{fields.name}'
+    - name: parent
+      label: Inside page (optional)
+      description: Choose a page to put this one under it, e.g. “Rules” under “Pera Xtreme”.
+      type: reference
+      options:
+        collection: pages
+        value: '{fields.id}'
+        label: '{fields.title}'
+    - name: _status
+      label: Status
+      type: select
+      default: published
+      options:
+        values:
+        - name: published
+          label: Published
+        - name: draft
+          label: Draft (hidden)
+    - name: summary
+      label: Card text
+      description: One or two sentences for the card that links to this page.
+      type: text
+    - name: cover
+      label: Card & header photo
+      description: Card image. Falls back to the header photo.
+      type: image
+      options:
+        media: images
+    - name: accent
+      label: Page colour (optional)
+      description: A conference or flagship brand colour. Leave empty to use the chapter colour.
+      type: string
+      pattern:
+        regex: ^(#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6}))?$
+        message: 'Use a colour code like #00629B (or leave it empty)'
+    - name: layout
+      label: Page sections
+      type: block
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{index}. {fields.heading}'
+      blockKey: blockType
+      blocks:
+      - name: hero
+        label: Page header
+        component: block_hero
+      - name: text
+        label: Text
+        component: block_text
+      - name: mediaText
+        label: Image + text
+        component: block_mediaText
+      - name: cards
+        label: Cards
+        component: block_cards
       - name: stats
-        label: Stats
-        type: object
-        list: true
-        fields:
-          - name: value
-            label: Value
-            required: true
-            type: string
-          - name: label
-            label: Label
-            required: true
-            type: string
-      - name: sections
-        label: Sections
-        type: object
-        list: true
-        fields:
-          - name: heading
-            label: Heading
-            required: true
-            type: string
-          - name: body
-            label: Body
-            required: true
-            type: text
-          - name: points
-            label: Points
-            type: object
-            list: true
-            fields:
-              - name: text
-                label: Text
-                required: true
-                type: string
-      - name: links
-        label: Links
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Label
-            required: true
-            type: string
-          - name: url
-            label: Url
-            required: true
-            type: string
-          - name: primary
-            label: Primary
-            type: boolean
-      - name: contacts
-        label: Contacts
-        type: object
-        list: true
-        fields:
-          - name: name
-            label: Name
-            required: true
-            type: string
-          - name: role
-            label: Role
-            type: string
-          - name: email
-            label: Email
-            type: string
+        label: Big numbers
+        component: block_stats
+      - name: timeline
+        label: Timeline / schedule
+        component: block_timeline
       - name: gallery
-        label: Gallery
-        type: image
+        label: Photos
+        component: block_gallery
+      - name: events
+        label: Events (automatic)
+        component: block_events
+      - name: stories
+        label: News (automatic)
+        component: block_stories
+      - name: people
+        label: People
+        component: block_people
+      - name: faq
+        label: Questions & answers
+        component: block_faq
+      - name: form
+        label: Form
+        component: block_form
+      - name: downloads
+        label: Downloads
+        component: block_downloads
+      - name: logos
+        label: Sponsors & partners
+        component: block_logos
+      - name: video
+        label: YouTube video
+        component: block_video
+      - name: pageLinks
+        label: Sub-page cards
+        component: block_pageLinks
+      - name: schedule
+        label: Programme schedule
+        component: block_schedule
+      - name: speakers
+        label: Speakers
+        component: block_speakers
+      - name: fees
+        label: Registration fees
+        component: block_fees
+      - name: venue
+        label: Venue & travel
+        component: block_venue
+      - name: cta
+        label: Call to action
+        component: block_cta
+      description: The chapter page, top to bottom. “+ Add” adds a section, drag ⋮⋮ to reorder, click a section to open it. “Hide this section” takes it off the page without deleting it. Headings left empty use the built-in wording.
+    - name: showInNav
+      label: Show in the chapter menu
+      default: true
+      type: boolean
+    - name: order
+      label: Order
+      description: Lower comes first
+      default: 10
+      type: number
+    - name: slug
+      label: Page address
+      description: Leave empty to use the title. The page lives at /chapters/<chapter>/<address>.
+      type: string
+    - name: shortPath
+      label: Short address (optional)
+      description: e.g. conf2026 → the page is also at /conf2026. Branch webmaster only.
+      type: string
+    - name: metaTitle
+      label: Title for Google & link previews
+      description: Defaults to the page title
+      type: string
+    - name: metaDescription
+      label: Description for Google & link previews
+      description: Shown in Google and link previews. Defaults to the card text.
+      type: text
+    - name: template
+      label: Start from
+      description: Fills the page with starter sections. Replace the [bracketed] text, delete what you don’t need.
+      default: competition
+      type: select
+      options:
+        values:
+        - name: competition
+          label: Flagship event / competition — header, about, tracks, timeline, prizes, FAQ, register
+        - name: conference
+          label: Conference — call for papers, dates, speakers, schedule, fees, venue, committee, FAQ
+        - name: project
+          label: Project — header, story, impact numbers, photos
+        - name: info
+          label: Info page — header and text
+        - name: blank
+          label: Blank page
+      hidden: true
+    - name: updatedAt
+      type: string
+      hidden: true
+    actions:
+    - name: page-template
+      label: Fill with a starter layout
+      scope: entry
+      workflow: cms-actions.yml
+      confirm:
+        title: Add starter sections?
+        message: Adds ready-made sections with [bracketed] placeholder text. Refresh the page in a minute to see them, then replace the placeholders and delete what you don’t need.
+        button: Add sections
+      fields:
+      - name: template
+        label: Layout
+        type: select
+        required: true
+        default: competition
         options:
-          media: images
-          multiple: true
-      - name: updatedAt
-        type: string
-        hidden: true
+        - label: Flagship event / competition — header, about, tracks, timeline, prizes, FAQ, register
+          value: competition
+        - label: Conference — call for papers, dates, speakers, schedule, fees, venue, committee, FAQ
+          value: conference
+        - label: Project — header, story, impact numbers, photos
+          value: project
+        - label: Info page — header and text
+          value: info
+      - name: append
+        label: Add after the existing sections
+        type: checkbox
   - name: albums
     label: Photo albums
     description: Event photos for the gallery and chapter pages.
     type: collection
     path: content/albums
     format: json
-    filename: "{primary}.json"
+    filename: '{primary}.json'
     view:
       primary: title
       fields:
-        - title
-        - date
-        - chapter
+      - title
+      - date
+      - chapter
       sort:
-        - date
+      - date
       default:
         sort: date
         order: desc
       search:
-        - title
+      - title
     fields:
-      - *a1
-      - name: title
-        label: Title
-        required: true
-        type: string
-      - name: date
-        label: Date
-        type: date
-        default: ""
-        options:
-          format: yyyy-MM-dd
-      - name: description
-        label: Description
-        type: text
-      - name: photos
-        label: Photos
-        required: true
-        type: image
-        options:
-          media: images
-          multiple: true
-      - name: slug
-        label: Slug
-        description: Used in the page URL. Leave blank to generate it from the title.
-        type: string
-      - name: chapter
-        label: Chapter
-        description: Filled in with your chapter automatically. Only branch webmasters
-          can change it.
-        required: true
-        type: reference
-        options:
-          collection: chapters
-          value: "{fields.id}"
-          label: "{fields.name}"
-      - name: updatedAt
-        type: string
-        hidden: true
-  - name: pages
-    label: Pages
-    description: "Chapter sub-pages: flagship events, competitions, conferences and
-      projects."
+    - name: id
+      type: uuid
+      label: Entry ID
+      description: Created automatically — used when other entries link to this one.
+      options:
+        generate: false
+      hidden: true
+    - name: title
+      label: Title
+      required: true
+      type: string
+    - name: chapter
+      label: Chapter
+      description: Filled in with your chapter automatically. Only branch webmasters can change it.
+      required: true
+      type: reference
+      options:
+        collection: chapters
+        value: '{fields.id}'
+        label: '{fields.name}'
+    - name: date
+      label: Date
+      type: date
+      default: ''
+      options:
+        format: yyyy-MM-dd
+    - name: photos
+      label: Photos
+      required: true
+      type: image
+      options:
+        media: images
+        multiple: true
+      description: Upload several at once. The first photo is the album cover.
+    - name: description
+      label: Description
+      type: text
+    - name: slug
+      label: Address
+      description: Leave empty to use the title.
+      type: string
+    - name: updatedAt
+      type: string
+      hidden: true
+- name: programmes-news
+  label: Programmes, news & events
+  type: group
+  items:
+  - name: programs
+    label: Flagship programmes
+    description: 'The branch’s flagship programmes (Pera Xtreme, Predicta, MentorSpark…): a card on the home page and a page at /programmes/<address>. For a full event page with schedules, speakers and registration, use a Chapter sub-page.'
     type: collection
-    path: content/pages
+    path: content/programs
     format: json
-    filename: "{primary}.json"
+    filename: '{primary}.json'
     view:
       primary: title
       fields:
-        - title
-        - chapter
-        - slug
-        - _status
+      - title
+      - order
       sort:
-        - order
+      - order
       default:
         sort: order
         order: asc
       search:
-        - title
+      - title
     fields:
-      - *a1
-      - name: title
-        label: Title
+    - name: id
+      type: uuid
+      label: Entry ID
+      description: Created automatically — used when other entries link to this one.
+      options:
+        generate: false
+      hidden: true
+    - name: name
+      label: Programme name
+      required: true
+      type: string
+    - name: edition
+      label: Latest edition
+      description: e.g. “Predicta 1.0”, “Pera.Xtreme-24”
+      type: string
+    - name: tagline
+      label: Tagline
+      required: true
+      type: string
+      description: One line, shown large on the card.
+    - name: summary
+      label: Summary
+      required: true
+      type: text
+      description: A short paragraph for the home page card.
+    - name: cover
+      label: Card & header photo
+      type: image
+      options:
+        media: images
+    - name: logo
+      label: Logo
+      type: image
+      options:
+        media: images
+    - name: accent
+      label: Programme colour
+      default: '#00629B'
+      type: string
+      pattern:
+        regex: ^(#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6}))?$
+        message: 'Use a colour code like #00629B (or leave it empty)'
+      description: 'A colour code, e.g. #00629B (IEEE blue).'
+    - name: stats
+      label: Big numbers
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: value
+        label: Value
         required: true
         type: string
-      - name: template
-        label: Start from
-        description: Fills the page with starter sections. Replace the [bracketed] text,
-          delete what you don’t need.
-        default: competition
-        type: select
-        options:
-          values:
-            - name: competition
-              label: Flagship event / competition — header, about, tracks, timeline, prizes,
-                FAQ, register
-            - name: conference
-              label: Conference — call for papers, dates, speakers, schedule, fees, venue,
-                committee, FAQ
-            - name: project
-              label: Project — header, story, impact numbers, photos
-            - name: info
-              label: Info page — header and text
-            - name: blank
-              label: Blank page
-      - name: layout
-        label: Sections
-        type: block
-        list: true
-        blockKey: blockType
-        blocks:
-          - name: hero
-            label: Page header
-            component: block_hero
-          - name: text
-            label: Text
-            component: block_text
-          - name: mediaText
-            label: Image + text
-            component: block_mediaText
-          - name: cards
-            label: Cards
-            component: block_cards
-          - name: stats
-            label: Big numbers
-            component: block_stats
-          - name: timeline
-            label: Timeline / schedule
-            component: block_timeline
-          - name: gallery
-            label: Photos
-            component: block_gallery
-          - name: events
-            label: Events (automatic)
-            component: block_events
-          - name: stories
-            label: News (automatic)
-            component: block_stories
-          - name: people
-            label: People
-            component: block_people
-          - name: faq
-            label: Questions & answers
-            component: block_faq
-          - name: form
-            label: Form
-            component: block_form
-          - name: downloads
-            label: Downloads
-            component: block_downloads
-          - name: logos
-            label: Sponsors & partners
-            component: block_logos
-          - name: video
-            label: YouTube video
-            component: block_video
-          - name: pageLinks
-            label: Sub-page cards
-            component: block_pageLinks
-          - name: schedule
-            label: Programme schedule
-            component: block_schedule
-          - name: speakers
-            label: Speakers
-            component: block_speakers
-          - name: fees
-            label: Registration fees
-            component: block_fees
-          - name: venue
-            label: Venue & travel
-            component: block_venue
-          - name: cta
-            label: Call to action
-            component: block_cta
-      - name: summary
-        label: Summary
-        description: One or two sentences for the card.
-        type: text
-      - name: cover
-        label: Cover
-        description: Card image. Falls back to the header photo.
-        type: image
-        options:
-          media: images
-      - name: accent
-        label: Page colour (optional)
-        description: A conference or flagship brand colour. Leave empty to use the
-          chapter colour.
+      - name: label
+        label: Label
+        required: true
         type: string
-      - name: showInNav
-        label: Show in the chapter menu
-        default: true
+      description: Up to 3, e.g. “24h” / “global coding marathon”.
+    - name: sections
+      label: Page sections
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.heading}'
+      fields:
+      - name: heading
+        label: Heading
+        required: true
+        type: string
+      - name: body
+        label: Body
+        required: true
+        type: text
+      - name: points
+        label: Points
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.text}'
+        fields:
+        - name: text
+          label: Text
+          required: true
+          type: string
+      description: 'The programme page: a heading, a paragraph and bullet points per section.'
+    - name: links
+      label: Buttons
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: label
+        label: Label
+        required: true
+        type: string
+      - name: url
+        label: Link (URL)
+        required: true
+        type: string
+      - name: primary
+        label: Primary
         type: boolean
-      - name: order
-        label: Order
-        description: Lower comes first
-        default: 10
-        type: number
-      - name: parent
-        label: Parent
-        description: "Optional: put this page under another page, e.g. “Rules” under
-          “RoboFest”."
-        type: reference
-        options:
-          collection: pages
-          value: "{fields.id}"
-          label: "{fields.title}"
-      - name: metaTitle
-        label: Meta Title
-        description: Defaults to the page title
-        type: string
-      - name: metaDescription
-        label: Meta Description
-        description: Shown in Google and link previews. Defaults to the card text.
-        type: text
-      - name: slug
-        label: Slug
-        description: Page address. Leave blank to use the title.
-        type: string
-      - name: shortPath
-        label: Short address
-        description: Branch webmaster only. Makes the page open at
-          ieee.soc.pdn.ac.lk/<short address> — for conferences and flagships
-          printed on posters. Its sub-pages follow (/conf2026/registration).
-        type: string
-      - name: chapter
-        label: Chapter
-        description: Filled in with your chapter automatically. Only branch webmasters
-          can change it.
+      description: Tick “Primary” for the main button (e.g. Register).
+    - name: contacts
+      label: Contact people
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.name}'
+      fields:
+      - name: name
+        label: Name
         required: true
-        type: reference
-        options:
-          collection: chapters
-          value: "{fields.id}"
-          label: "{fields.name}"
-      - name: _status
-        label: Status
-        type: select
-        default: published
-        options:
-          values:
-            - name: published
-              label: Published
-            - name: draft
-              label: Draft (hidden)
-      - name: updatedAt
         type: string
-        hidden: true
+      - name: role
+        label: Role
+        type: string
+      - name: email
+        label: Email
+        type: string
+    - name: gallery
+      label: Photos
+      type: image
+      options:
+        media: images
+        multiple: true
+    - name: slug
+      label: Page address
+      description: Leave empty to use the name. The page lives at /programmes/<address>.
+      type: string
+    - name: order
+      label: Position
+      default: 10
+      type: number
+      description: Lower numbers come first.
+    - name: updatedAt
+      type: string
+      hidden: true
+  - name: posts
+    label: News & stories
+    description: Recaps and announcements.
+    type: collection
+    path: content/posts
+    format: json
+    filename: '{primary}.json'
+    view:
+      primary: title
+      fields:
+      - title
+      - date
+      - chapter
+      - _status
+      sort:
+      - date
+      default:
+        sort: date
+        order: desc
+      search:
+      - title
+    fields:
+    - name: id
+      type: uuid
+      label: Entry ID
+      description: Created automatically — used when other entries link to this one.
+      options:
+        generate: false
+      hidden: true
+    - name: title
+      label: Title
+      required: true
+      type: string
+    - name: chapter
+      label: Chapter
+      description: Filled in with your chapter automatically. Only branch webmasters can change it.
+      required: true
+      type: reference
+      options:
+        collection: chapters
+        value: '{fields.id}'
+        label: '{fields.name}'
+    - name: date
+      label: Date
+      required: true
+      type: date
+      default: ''
+      options:
+        format: yyyy-MM-dd
+    - name: kind
+      label: Type
+      default: story
+      type: select
+      options:
+        values:
+        - name: recap
+          label: Event recap
+        - name: announcement
+          label: Announcement
+        - name: story
+          label: Story
+        - name: achievement
+          label: Achievement
+    - name: _status
+      label: Status
+      type: select
+      default: published
+      options:
+        values:
+        - name: published
+          label: Published
+        - name: draft
+          label: Draft (hidden)
+    - name: excerpt
+      label: Short summary
+      description: One or two sentences for the card.
+      type: text
+    - name: cover
+      label: Cover photo
+      type: image
+      options:
+        media: images
+    - name: content
+      label: Story
+      type: rich-text
+      options:
+        format: html
+        media: images
+    - name: gallery
+      label: Gallery
+      description: Extra photos shown under the article.
+      type: image
+      options:
+        media: images
+        multiple: true
+    - name: cta
+      label: Call to action (optional)
+      type: object
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: url
+        label: Link (URL)
+        type: string
+    - name: featured
+      label: Featured on home page
+      description: Branch webmasters only.
+      type: boolean
+    - name: slug
+      label: Page address
+      description: Leave empty to use the title.
+      type: string
+    - name: updatedAt
+      type: string
+      hidden: true
+  - name: events
+    label: Events
+    description: Synced from IEEE vTools once a day (title, dates, venue come from vTools — edit them there). You can change the cover, photos, category, hide an event or feature it.
+    type: collection
+    path: content/events
+    format: json
+    filename: '{primary}.json'
+    view:
+      primary: title
+      fields:
+      - title
+      - start
+      - chapter
+      - hidden
+      sort:
+      - start
+      default:
+        sort: start
+        order: desc
+      search:
+      - title
+    fields:
+    - name: id
+      type: uuid
+      label: Entry ID
+      description: Created automatically — used when other entries link to this one.
+      options:
+        generate: false
+      hidden: true
+    - name: title
+      label: Title
+      required: true
+      type: string
+    - name: chapter
+      label: Chapter
+      description: Filled in with your chapter automatically. Only branch webmasters can change it.
+      required: true
+      type: reference
+      options:
+        collection: chapters
+        value: '{fields.id}'
+        label: '{fields.name}'
+    - name: start
+      label: Start
+      required: true
+      type: date
+      default: ''
+      options:
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+    - name: end
+      label: End
+      type: date
+      default: ''
+      options:
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+    - name: category
+      label: Category
+      default: talk
+      type: select
+      options:
+        values:
+        - name: talk
+          label: Talk / lecture
+        - name: workshop
+          label: Workshop
+        - name: competition
+          label: Competition
+        - name: visit
+          label: Field visit
+        - name: social
+          label: Social / outreach
+        - name: meeting
+          label: Meeting
+    - name: hidden
+      label: Hide from the website
+      description: Takes the event off the site. Use this instead of deleting a vTools event.
+      type: boolean
+    - name: featured
+      label: Featured on home page
+      description: Branch webmasters only.
+      type: boolean
+    - name: cover
+      label: Cover photo
+      description: The poster or best photo. Filled in from vTools automatically when the event has images there.
+      type: image
+      options:
+        media: images
+    - name: gallery
+      label: Photos
+      description: Photos shown on the event page. vTools photos are copied here on the first sync.
+      type: image
+      options:
+        media: images
+        multiple: true
+    - name: summary
+      label: Summary
+      type: text
+    - name: venue
+      label: Venue
+      type: string
+    - name: city
+      label: City
+      type: string
+    - name: virtual
+      label: Virtual
+      type: boolean
+    - name: registrationUrl
+      label: Registration link
+      type: string
+    - name: vtoolsUrl
+      label: vTools link
+      type: string
+    - name: vtoolsId
+      label: vTools event number
+      readonly: true
+      type: string
+    - name: hostName
+      label: Host (from vTools)
+      readonly: true
+      type: string
+    - name: slug
+      label: Page address
+      description: Leave empty to use the title.
+      type: string
+    - name: descriptionHtml
+      label: Description (from vTools)
+      hidden: true
+      type: text
+    - name: source
+      label: Source
+      readonly: true
+      default: manual
+      type: select
+      options:
+        values:
+        - name: vtools
+          label: IEEE vTools
+        - name: manual
+          label: Added manually
+      hidden: true
+    - name: syncedAt
+      label: Synced At
+      readonly: true
+      type: date
+      default: ''
+      options:
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+      hidden: true
+    - name: vtoolsMediaDone
+      label: Vtools Media Done
+      hidden: true
+      type: boolean
+    - name: updatedAt
+      type: string
+      hidden: true
+- name: forms-files
+  label: Forms, files & images
+  type: group
+  items:
   - name: forms
     label: Forms
     description: Registration and feedback forms.
     type: collection
     path: content/forms
     format: json
-    filename: "{primary}.json"
+    filename: '{primary}.json'
     view:
       primary: title
       fields:
-        - title
-        - chapter
+      - title
+      - chapter
       sort:
-        - title
+      - title
       default:
         sort: title
         order: asc
       search:
-        - title
+      - title
     fields:
-      - *a1
-      - name: title
-        label: Title
-        required: true
-        type: string
-      - name: intro
-        label: Intro
-        description: Shown above the questions on the form’s own page.
-        type: text
-      - name: fields
-        label: Fields
-        type: block
-        list: true
-        blockKey: blockType
-        blocks:
-          - name: shortText
-            label: Short answer
-            component: block_shortText
-          - name: email
-            label: Email
-            component: block_email
-          - name: phone
-            label: Phone number
-            component: block_phone
-          - name: number
-            label: Number
-            component: block_number
-          - name: longText
-            label: Paragraph
-            component: block_longText
-          - name: select
-            label: Dropdown
-            component: block_select
-          - name: radio
-            label: Multiple choice (one answer)
-            component: block_radio
-          - name: checkboxes
-            label: Checkboxes (several answers)
-            component: block_checkboxes
-          - name: date
-            label: Date
-            component: block_date
-          - name: url
-            label: Link (URL)
-            component: block_url
-          - name: consent
-            label: Agreement tick box
-            component: block_consent
-          - name: section
-            label: Section heading
-            component: block_section
-      - name: submitLabel
-        label: Submit Label
-        default: Submit
-        type: string
-      - name: confirmationTitle
-        label: Confirmation Title
-        default: Thank you!
-        type: string
-      - name: confirmationMessage
-        label: Confirmation Message
-        default: Your response has been recorded.
-        type: text
-      - name: opensAt
-        label: Opens At
-        description: Optional
-        type: date
-        default: ""
-        options:
-          time: true
-          format: yyyy-MM-dd'T'HH:mm
-      - name: closesAt
-        label: Closes At
-        description: Optional — the form closes itself
-        type: date
-        default: ""
-        options:
-          time: true
-          format: yyyy-MM-dd'T'HH:mm
-      - name: maxResponses
-        label: Max Responses
-        description: Optional cap, e.g. 60 seats
-        type: number
-      - name: onePerEmail
-        label: One response per email address
-        description: Needs an Email question
-        type: boolean
-      - name: status
-        label: Status
-        default: open
-        type: select
-        options:
-          values:
-            - name: open
-              label: Open
-            - name: closed
-              label: Closed
-      - name: slug
-        label: Slug
-        description: Used in the page URL. Leave blank to generate it from the title.
-        type: string
-      - name: chapter
-        label: Chapter
-        description: Filled in with your chapter automatically. Only branch webmasters
-          can change it.
-        required: true
-        type: reference
-        options:
-          collection: chapters
-          value: "{fields.id}"
-          label: "{fields.name}"
-      - name: endpoint
-        label: Where responses go (Formspree URL)
-        type: string
-        description: Create a free form at formspree.io with the chapter email and paste
-          its address, e.g. https://formspree.io/f/abcdwxyz. Responses arrive by
-          email and can be exported as CSV there.
-      - name: externalUrl
-        label: …or link to a Google Form
-        type: string
-        description: Leave the Formspree address empty and paste a Google Form link to
-          send visitors there instead.
-      - name: updatedAt
-        type: string
-        hidden: true
+    - name: id
+      type: uuid
+      label: Entry ID
+      description: Created automatically — used when other entries link to this one.
+      options:
+        generate: false
+      hidden: true
+    - name: title
+      label: Title
+      required: true
+      type: string
+    - name: chapter
+      label: Chapter
+      description: Filled in with your chapter automatically. Only branch webmasters can change it.
+      required: true
+      type: reference
+      options:
+        collection: chapters
+        value: '{fields.id}'
+        label: '{fields.name}'
+    - name: endpoint
+      label: Where responses go (Formspree URL)
+      type: string
+      description: Create a free form at formspree.io with the chapter email and paste its address, e.g. https://formspree.io/f/abcdwxyz. Responses arrive by email and can be exported as CSV there.
+    - name: externalUrl
+      label: …or link to a Google Form
+      type: string
+      description: Leave the Formspree address empty and paste a Google Form link to send visitors there instead.
+    - name: status
+      label: Status
+      default: open
+      type: select
+      options:
+        values:
+        - name: open
+          label: Open
+        - name: closed
+          label: Closed
+    - name: intro
+      label: Intro
+      description: Shown above the questions on the form’s own page.
+      type: text
+    - name: fields
+      label: Questions
+      type: block
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{index}. {fields.heading}'
+      blockKey: blockType
+      blocks:
+      - name: shortText
+        label: Short answer
+        component: block_shortText
+      - name: email
+        label: Email
+        component: block_email
+      - name: phone
+        label: Phone number
+        component: block_phone
+      - name: number
+        label: Number
+        component: block_number
+      - name: longText
+        label: Paragraph
+        component: block_longText
+      - name: select
+        label: Dropdown
+        component: block_select
+      - name: radio
+        label: Multiple choice (one answer)
+        component: block_radio
+      - name: checkboxes
+        label: Checkboxes (several answers)
+        component: block_checkboxes
+      - name: date
+        label: Date
+        component: block_date
+      - name: url
+        label: Link (URL)
+        component: block_url
+      - name: consent
+        label: Agreement tick box
+        component: block_consent
+      - name: section
+        label: Section heading
+        component: block_section
+    - name: submitLabel
+      label: Submit button text
+      default: Submit
+      type: string
+    - name: confirmationTitle
+      label: Thank-you title
+      default: Thank you!
+      type: string
+    - name: confirmationMessage
+      label: Thank-you message
+      default: Your response has been recorded.
+      type: text
+    - name: opensAt
+      label: Opens at
+      description: Optional
+      type: date
+      default: ''
+      options:
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+    - name: closesAt
+      label: Closes at
+      description: Optional — the form closes itself
+      type: date
+      default: ''
+      options:
+        time: true
+        format: yyyy-MM-dd'T'HH:mm
+    - name: slug
+      label: Form address
+      description: The form lives at /forms/<address>. Leave empty to use the title.
+      type: string
+    - name: maxResponses
+      label: Maximum responses
+      description: Optional cap, e.g. 60 seats
+      type: number
+      hidden: true
+    - name: onePerEmail
+      label: One response per email address
+      description: Needs an Email question
+      type: boolean
+      hidden: true
+    - name: updatedAt
+      type: string
+      hidden: true
   - name: documents
     label: Files
     description: PDFs and other files for the Downloads section.
     type: collection
     path: content/documents
     format: json
-    filename: "{primary}.json"
+    filename: '{primary}.json'
     view:
       primary: title
       fields:
-        - title
-        - chapter
+      - title
+      - chapter
       sort:
-        - title
+      - title
       default:
         sort: title
         order: asc
       search:
-        - title
+      - title
     fields:
-      - *a1
-      - name: title
-        label: Title
-        required: true
-        type: string
-      - name: chapter
-        label: Chapter
-        type: reference
-        options:
-          collection: chapters
-          value: "{fields.id}"
-          label: "{fields.name}"
-      - name: file
-        type: file
-        required: true
-        options:
-          media: files
-      - name: updatedAt
-        type: string
-        hidden: true
+    - name: id
+      type: uuid
+      label: Entry ID
+      description: Created automatically — used when other entries link to this one.
+      options:
+        generate: false
+      hidden: true
+    - name: title
+      label: Title
+      required: true
+      type: string
+    - name: chapter
+      label: Chapter
+      type: reference
+      options:
+        collection: chapters
+        value: '{fields.id}'
+        label: '{fields.name}'
+    - name: file
+      type: file
+      required: true
+      options:
+        media: files
+      label: File
+    - name: updatedAt
+      type: string
+      hidden: true
   - name: media-info
     label: Image descriptions
-    description: Alt text (what the image shows), photo credit and focal point for
-      images. Add a row when you upload an important image.
+    description: Alt text (what the image shows), photo credit and focal point for images. Add a row when you upload an important image.
     type: file
     path: content/media.json
     format: json
     list: true
     fields:
-      - name: file
-        type: image
-        required: true
-        options:
-          media: images
-      - name: alt
-        type: string
-        label: Alt text
-        description: What the image shows. For a poster, type the text on it.
-      - name: credit
-        type: string
-      - name: focalX
-        type: number
-        label: Focal point X (%)
-        description: 0 = left, 100 = right. Default 50.
-      - name: focalY
-        type: number
-        label: Focal point Y (%)
-        description: 0 = top, 100 = bottom. Default 50.
+    - name: file
+      type: image
+      required: true
+      options:
+        media: images
+    - name: alt
+      type: string
+      label: Alt text
+      description: What the image shows. For a poster, type the text on it.
+    - name: credit
+      type: string
+    - name: focalX
+      type: number
+      label: Focal point X (%)
+      description: 0 = left, 100 = right. Default 50.
+    - name: focalY
+      type: number
+      label: Focal point Y (%)
+      description: 0 = top, 100 = bottom. Default 50.

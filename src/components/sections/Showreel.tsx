@@ -4,22 +4,26 @@ import { Play } from 'lucide-react'
 import { Reveal } from '../ui/motion'
 
 /** Click-to-play YouTube (no cookies, nothing loads until the visitor asks). */
-export function Showreel({ videoId, channel }: { videoId: string; channel?: string | null }) {
+export function Showreel({ videoId, channel, copy }: { videoId: string; channel?: string | null; copy?: { eyebrow?: string; heading?: string; text?: string } }) {
   const [play, setPlay] = useState(false)
   return (
     <section className="relative overflow-hidden bg-night py-24 text-white md:py-32">
       <div className="pointer-events-none absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-cyan/50 to-transparent" />
       <div className="container-x grid items-center gap-12 lg:grid-cols-[0.8fr_1.4fr]">
         <div className="flex flex-col gap-5">
-          <Reveal><span className="eyebrow text-cyan">Watch</span></Reveal>
+          <Reveal><span className="eyebrow text-cyan">{copy?.eyebrow ?? 'Watch'}</span></Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-display text-[clamp(2.3rem,4.6vw,4.2rem)] font-extrabold leading-[0.98] tracking-[-0.04em]">
-              Missed a webinar? <span className="text-gradient">Catch up.</span>
+              {copy?.heading ?? (
+                <>
+                  Missed a webinar? <span className="text-gradient">Catch up.</span>
+                </>
+              )}
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-md text-lg leading-relaxed text-white/65">
-              Past events, workshops and talks live on the branch YouTube channel — subscribe so you never miss one.
+              {copy?.text ?? 'Past events, workshops and talks live on the branch YouTube channel — subscribe so you never miss one.'}
             </p>
           </Reveal>
           {channel && (

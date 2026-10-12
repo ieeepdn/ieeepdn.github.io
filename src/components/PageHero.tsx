@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import Image from 'next/image'
 import { Reveal, SplitHeading } from './ui/motion'
+import { getTheme } from '@/lib/site'
 
 export function PageHero({
   eyebrow,
@@ -22,12 +23,15 @@ export function PageHero({
   /** portrait URLs shown as a faded mosaic when there is no cover image */
   mosaic?: string[]
 }) {
+  // Pages CMS → Theme & colours → Page headers: photo with a colour glow (default), a brighter photo, or solid colour
+  const style = getTheme().pageHero
+  const tint = accent ?? 'var(--color-ieee)'
   return (
-    <section className="grain relative isolate overflow-hidden bg-night text-white">
-      {image && (
-        <Image src={image} alt="" fill priority sizes="100vw" className="-z-20 object-cover opacity-35" />
+    <section className="grain relative isolate overflow-hidden bg-night text-white" style={style === 'solid' ? { background: tint } : undefined}>
+      {image && style !== 'solid' && (
+        <Image src={image} alt="" fill priority sizes="100vw" className={clsx('-z-20 object-cover', style === 'photo' ? 'opacity-60' : 'opacity-35')} />
       )}
-      {!image && mosaic && mosaic.length >= 8 && (
+      {(!image || style === 'solid') && mosaic && mosaic.length >= 8 && (
         <div aria-hidden className="absolute inset-y-0 right-0 -z-20 grid w-full grid-cols-4 content-center opacity-30 [mask-image:linear-gradient(to_left,black_20%,transparent_85%)] md:w-2/3 md:grid-cols-6">
           {mosaic.slice(0, 24).map((m, i) => (
             <div key={i} className="relative aspect-square">
@@ -39,7 +43,12 @@ export function PageHero({
       <div
         className="absolute inset-0 -z-10"
         style={{
-          background: `radial-gradient(ellipse 70% 70% at 80% 10%, ${accent ?? '#00629B'}99, transparent 65%), linear-gradient(to bottom, rgba(3,10,19,0.35), #030a13)`,
+          background:
+            style === 'solid'
+              ? 'linear-gradient(to bottom, transparent 40%, color-mix(in srgb, var(--color-night) 55%, transparent))'
+              : style === 'photo'
+                ? `radial-gradient(ellipse 70% 70% at 80% 10%, color-mix(in srgb, ${tint} 45%, transparent), transparent 65%), linear-gradient(to bottom, color-mix(in srgb, var(--color-night) 20%, transparent), color-mix(in srgb, var(--color-night) 85%, transparent))`
+                : `radial-gradient(ellipse 70% 70% at 80% 10%, color-mix(in srgb, ${tint} 60%, transparent), transparent 65%), linear-gradient(to bottom, color-mix(in srgb, var(--color-night) 35%, transparent), var(--color-night))`,
         }}
       />
       <div className="grid-lines absolute inset-0 -z-10 opacity-30 [mask-image:radial-gradient(ellipse_at_top_right,black,transparent_70%)]" />

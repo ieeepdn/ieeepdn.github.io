@@ -1,0 +1,60 @@
+# Buttons in Pages CMS that change content for you:
+#  - Committees → "Start next term": copies a committee into the next term and keeps the old one online as history
+#    (scripts/committee-new-term.mjs)
+#  - Chapter sub-pages → "Fill with a starter layout": adds the starter sections of a competition, conference,
+#    project or info page (scripts/page-template.mjs)
+# Each run saves the change to the repository and republishes the site.
+name: Pages CMS buttons
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: Pages CMS payload (JSON)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: content-actions
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Make the change
+        id: change
+        env:
+          PAYLOAD: ${{ inputs.payload }}
+        run: |
+          action=$(node -p "JSON.parse(process.env.PAYLOAD).action?.name ?? ''")
+          echo "Button: $action"
+          case "$action" in
+            committee-new-term) node scripts/committee-new-term.mjs ;;
+            page-template) node scripts/page-template.mjs ;;
+            *) echo "::error::Unknown button '$action'"; exit 1 ;;
+          esac
+
+      - name: Save
+        run: |
+          git config user.name "pages-cms-button[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content
+          git commit -m "${{ steps.change.outputs.summary }}"
+          git pull --rebase --autostash origin main && git push
+
+      - name: Publish the site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run site.yml --ref main

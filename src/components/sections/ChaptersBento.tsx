@@ -28,24 +28,24 @@ const hexToRgba = (hex: string, a: number) => {
   return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`
 }
 
-export function ChaptersBento({ chapters }: { chapters: ChapterCard[] }) {
+export function ChaptersBento({ chapters, copy }: { chapters: ChapterCard[]; copy?: { eyebrow?: string; heading?: string; text?: string } }) {
   return (
     <section className="relative overflow-hidden bg-night py-28 text-white md:py-36">
       <div className="grid-lines pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_at_top,black,transparent_65%)]" />
       <div className="container-x relative">
         <div className="mb-14 grid items-end gap-8 lg:grid-cols-[1.2fr_1fr]">
           <div className="flex flex-col gap-5">
-            <Reveal><span className="eyebrow text-cyan">Chapters &amp; affinity groups</span></Reveal>
+            <Reveal><span className="eyebrow text-cyan">{copy?.eyebrow ?? 'Chapters & affinity groups'}</span></Reveal>
             <SplitHeading
-              text="Seven communities. One branch."
+              text={copy?.heading ?? 'Seven communities. One branch.'}
               className="font-display text-[clamp(2.4rem,5.5vw,5rem)] font-extrabold leading-[0.98] tracking-[-0.04em]"
-              highlight={['One', 'branch']}
+              highlight={copy?.heading ? [] : ['One', 'branch']}
             />
           </div>
           <Reveal delay={0.15}>
             <p className="max-w-lg text-lg leading-relaxed text-white/65">
-              Every chapter has its own webmaster, its own page and its own events — so what you see here is what’s
-              actually happening this week.
+              {copy?.text ??
+                'Every chapter has its own webmaster, its own page and its own events — so what you see here is what’s actually happening this week.'}
             </p>
           </Reveal>
         </div>

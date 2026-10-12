@@ -3,6 +3,7 @@ import { cache } from 'react'
 import type { Chapter, Committee, Event, Form, Media, Page, Post, Program, Album, SiteSetting } from '@/payload-types'
 import { activeSpotlight } from './spotlight'
 import { hydrate, rawCollection, rawFile } from './content'
+import { homeSettings } from './site'
 import { decodeEntities } from './html'
 
 /**
@@ -21,7 +22,10 @@ const same = (a: unknown, b: unknown) => {
 
 export const getSettings = cache(async (): Promise<SiteSetting> => {
   const state = rawFile('vtools-state.json')
-  const s = hydrate<SiteSetting>('site-settings', { ...rawFile('settings.json'), id: 'settings' }, 1)
+  // Site settings are split over three files in Pages CMS: settings.json (contact, links, vTools),
+  // home.json (hero, announcement, numbers…) and spotlight.json — put back together here
+  const merged = { ...rawFile('settings.json'), ...homeSettings(rawFile('home.json')), spotlight: rawFile('spotlight.json'), id: 'settings' }
+  const s = hydrate<SiteSetting>('site-settings', merged, 1)
   return { ...s, vtoolsLastSync: state.lastSync ?? null, vtoolsLastResult: state.lastResult ?? null } as SiteSetting
 })
 

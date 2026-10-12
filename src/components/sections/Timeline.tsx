@@ -6,7 +6,7 @@ import { Reveal } from '../ui/motion'
 export type Milestone = { year: string; title: string; body: string }
 
 /** 25-year story as a scroll-drawn timeline. */
-export function Timeline({ items }: { items: Milestone[] }) {
+export function Timeline({ items, copy }: { items: Milestone[]; copy?: { eyebrow?: string; heading?: string; text?: string } }) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.75', 'end 0.6'] })
   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1])
@@ -16,16 +16,20 @@ export function Timeline({ items }: { items: Milestone[] }) {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan/40 to-transparent" />
       <div className="container-x grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="flex flex-col gap-5 lg:sticky lg:top-32 lg:self-start">
-          <Reveal><span className="eyebrow text-cyan">2001 — 2026</span></Reveal>
+          <Reveal><span className="eyebrow text-cyan">{copy?.eyebrow ?? '2001 — 2026'}</span></Reveal>
           <Reveal delay={0.05}>
             <h2 className="font-display text-[clamp(2.4rem,5vw,4.6rem)] font-extrabold leading-[0.98] tracking-[-0.04em]">
-              Twenty-five years of <span className="text-gradient">firsts.</span>
+              {copy?.heading ?? (
+                <>
+                  Twenty-five years of <span className="text-gradient">firsts.</span>
+                </>
+              )}
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-md text-lg leading-relaxed text-white/65">
-              From the first IEEE student branch in the country to seven active chapters — a quarter-century of
-              engineers building for a better tomorrow.
+              {copy?.text ??
+                'From the first IEEE student branch in the country to seven active chapters — a quarter-century of engineers building for a better tomorrow.'}
             </p>
           </Reveal>
         </div>
